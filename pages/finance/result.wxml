@@ -1,0 +1,16 @@
+<view class="bdcg">
+  <view class="bdcg_a">
+    <view class="a">
+      <icon type="success" size="60" color="#14bab4" />
+    </view>
+    <view class="b">
+      <text class="txta">恭喜，已提交成功</text>
+      <view class="txtb">您的申请已提交，棉联客服稍候将联系您，请耐心等候。
+        <text bindtap="makePhoneCall">如有疑问请联系棉联客服：{{phoneNumberFmt}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="bdcg_b">
+    <button class="but_green" bindtap="toIndex">返回首页</button>
+  </view>
+</view>

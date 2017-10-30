@@ -1,0 +1,50 @@
+
+<view class="contenta">
+    <view class="list">
+        <view class="l">需还款总金额</view>
+        <view class="r t18">￥{{itemDetail.needRepayMoneyFmt}}</view>
+    </view>
+
+    <view class="list">
+        <view class="l">未还款金额</view>
+        <view class="r t18">￥{{itemDetail.surplusFmt}}</view>
+    </view>
+    <view class="list">
+        <view class="l">最后还款日</view>
+        <view class="r">{{itemDetail.expiryDate}}</view>
+    </view>
+</view>   
+<view class="contenta">
+    <view class="list">
+        <view class="l">融资单号</view>
+        <view class="r">{{itemDetail.loanCode}}</view>
+    </view>
+    <view class="list">
+        <view class="l">起息日</view>
+        <view class="r">{{itemDetail.valueDate}}</view>
+    </view>
+     <view class="list">
+        <view class="l">融资金额</view>
+        <view class="r">￥{{itemDetail.loanMoneyFmt}}</view>
+    </view>
+     <view class="list">
+        <view class="l">融资利率</view>
+        <view class="r">{{itemDetail.interestRateFmt}}%</view>
+    </view>
+     <view class="list">
+        <view class="l">已计息金额</view>
+        <view class="r red">￥+{{itemDetail.interestFmt}}</view>
+    </view>
+     <view class="list">
+        <view class="l">服务费</view>
+        <view class="r">￥{{itemDetail.chargeFmt}}</view>
+    </view>
+    <view class="list">
+        <view class="l">状态</view>
+        <view class="r">
+            <block wx:if="{{itemDetail.status == 0}}"><text class="txta">申请中</text></block>
+            <block wx:if="{{itemDetail.status == 1}}"><text class="txta">计息中</text></block>
+            <block wx:if="{{itemDetail.status == 2}}"><text class="txta">已结束</text></block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,102 @@
+<view class="step">
+<!-- 完成状态添加类名finish 未完成添加Notfinish -->
+  <view class='stepNum finish'>
+    <view>1</view>
+    <view>基础信息</view>
+  </view>
+  <view class='stepNum Notfinish'>
+    <view>2</view>
+    <view>附加信息</view>
+  </view>
+  <view class='stepNum Notfinish'>
+    <view>3</view>
+    <view>挂牌完成</view>
+  </view>
+  <!-- 一二步骤之间的进度条高亮在line0 之后添加类line1 -->
+  <view class='line0 '></view>
+  <!-- 二三步骤之间的进度条高亮在line0 之后添加类line3 -->
+  <view class='line2 '></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>品种</view>
+  <view class='rightBar'>
+    <picker mode="selector" range-key="name" value="{{breedIndex}}" range="{{breedArray}}" bindchange="breedChange">
+      <view class="picker">{{breedPlaceholder}}{{breedArray[breedIndex]['name']}}
+         <image src="/images/other/record-right.png"></image> 
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>等级</view>
+  <view class='rightBar'>
+    <picker mode="selector" range-key="name" value="{{gradeIndex}}" range="{{gradeArray}}" bindchange="gradeChange">
+      <view class="picker">{{gradePlaceholder}}{{gradeArray[gradeIndex]['name']}}
+         <image src="/images/other/record-right.png"></image> 
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>商品名称</view>
+  <view class='rightBar'><input type="text"></input></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>价格</view>
+  <view class='rightBar'><input type="number"></input><text>元/吨</text></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>重量</view>
+  <view class='rightBar'><input type="number"></input><text>吨</text></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>存储库</view>
+  <view class='rightBar'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      {{region[0]}}{{region[1]}}{{region[2]}}
+       <image src="/images/other/dingwei.png"></image>  
+    </view>
+  </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>竞价开始日期</view>
+  <view class='rightBar'>
+    <picker mode="date" value="{{date}}" start="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+        <image src="/images/other/date.png" style='width:20px'></image> 
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>竞价开始时间</view>
+  <view class='rightBar'>
+    <picker mode="time" value="{{time}}" start="09:00" end="18:00" bindchange="bindTimeChange">
+      <view class="picker">
+        {{time}}
+        <image src="/images/other/time.png" style='width:20px'></image> 
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>竞价时长</view>
+  <view class='rightBar'><input type="number" value='5'></input><text>分钟</text></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>有效天数</view>
+  <view class='rightBar'>
+    <picker mode="selector" range-key="name" value="{{indateIndex}}" range="{{indateArray}}" bindchange="indateChange"> 
+      <view class="picker">{{indatePlaceholder}}{{indateArray[indateIndex]['name']}}
+      </view>
+    </picker>
+    <text>天</text>
+  </view>
+</view>
+
+<view class='btn'>
+  <button>下一步</button>
+</view>

@@ -1,0 +1,58 @@
+<view class="zc_content">
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">付款日期</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="date" bindchange="payDateBind" value="{{payDateValue}}">
+        <view class="picker">
+          {{payDateValue}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">付款方式</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="selector" bindchange="bindPayTypeChange" range="{{payTypeObjArray}}" range-key="payTypeName">
+        <view class="picker">
+          {{payTypePlaceholder}}{{payTypeObjArray[payTypeIndex]['payTypeName']}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">付款金额</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" placeholder="请输入付款金额" value="{{payMoneyValue}}" bindinput="bindPayMoney" />
+      <view class="allin" bindtap="moneyAllBind">全部</view>
+    </view>
+  </view>
+  <view class="weui_cell" style="height:115px;">
+    <view class="weui_cella">
+      <label class="weui_label">
+        <view>凭证(选填)</view>
+      </label>
+    </view>
+    <view class="weui_cellb">
+      <view class="pz" bindtap="choosePicLicense">
+        <block wx:if="{{pictureProof == ''}}">
+          <image src="../../../images/other/pz.png" class="imgc"></image>
+          <text>未上传</text>
+        </block>
+        <block wx:else>
+          <image src="{{tempFilePath}}" style="width:99%;height:99%;"></image>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="makePayment">{{buttonText}}</button>
+  </view>
+</view>

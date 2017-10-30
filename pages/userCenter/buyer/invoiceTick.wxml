@@ -1,0 +1,46 @@
+<view class="contenta">
+    <view class="list">
+        <view class="l">发票号码</view>
+        <view class="r">{{itemDetail.invoiceCode}}</view>
+    </view>
+     <view class="list">
+        <view class="l">附票张数</view>
+        <view class="r">{{itemDetail.attachDocs}}</view>
+    </view>
+     <view class="list">
+        <view class="l">开票日期</view>
+        <view class="r">{{itemDetail.invoiceDate}}</view>
+    </view>
+     <view class="list">
+        <view class="l">发票金额</view>
+        <view class="r">￥{{itemDetail.money}}</view>
+    </view>
+     <view class="list">
+        <view class="l">发票数量</view>
+        <view class="r">{{itemDetail.amount}}</view>
+    </view>
+    <view class="list">
+        <view class="l">状态</view>
+        <view class="r">
+            <block wx:if="{{itemDetail.status == 1 }}"><text class="a">未确认</text></block>
+            <block wx:if="{{itemDetail.status == 2 }}"><text class="b">已确认</text></block>
+            <block wx:if="{{itemDetail.status == 9 }}"><text class="c">已作废</text></block>
+        </view>
+    </view>
+     <view class="list">
+        <view class="l">发票凭证</view>
+        <view class="r">
+            <block wx:if="{{tempFilePath == ''}}"><text>未上传</text></block>
+            <block wx:else><image src="{{tempFilePath}}" bindtap="previewImage" /></block>
+        </view>
+    </view>
+</view>
+
+<!--如果对方已确认则以下两个按钮不要-->
+<block wx:if="{{itemDetail.status == 1 }}">
+   <view class="bottom">
+        <view>
+            <button class="but_green" bindtap="confirmInvoice">确认收票</button>
+        </view>
+    </view>
+</block>

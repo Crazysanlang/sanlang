@@ -1,0 +1,272 @@
+page {
+  background-color: #fff;
+}
+
+.lista {
+  height: 100px;
+  background: #fff;
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  display: -webkit-flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.lista image {
+  width: 35px;
+  height: 30px;
+}
+
+.lista .zy {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.lista .vl {
+  flex: 2;
+}
+
+.lista .vl .a {
+  height: 30px;
+  padding-top: 15px;
+}
+
+.lista .vl .a .ha {
+  font-size: 14px;
+  color: #14bab4;
+}
+
+.lista .vl .a .hb {
+  font-size: 12px;
+  padding-left: 12px;
+}
+
+.lista .vl .a .hc {
+  color: #6a6a6a;
+  font-size: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.lista .vl .b {
+  display: flex;
+  height: 30px;
+}
+
+.lista .vl .b .cqm {
+  height: 14px;
+}
+
+.lista .vl .b .cqm .m {
+  color: #9a9a9a;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.lista .vl .b .cqm:first-child .m {
+  padding-left: 0;
+}
+
+.lista .vl .b .cqm .n {
+  font-size: 16px;
+  padding-right: 5px;
+}
+
+.lista .vl .b .sg {
+  color: #ddd;
+  padding-top: 2px;
+}
+
+.lista .vl .c {
+  color: #9a9a9a;
+  font-size: 12px;
+}
+
+.lista .vl .c .m {
+}
+
+.lista .vl .c .n {
+}
+
+.lista .vl .c image {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  padding-right: 3px;
+}
+
+.lista .vr {
+  text-align: right;
+  float: right;
+}
+
+.lista .vr .a {
+  font-size: 12px;
+  color: #a2a2a2;
+  padding-top: 17px;
+  height: 15px;
+}
+
+/* .lista .vr .b {
+  color: #ff7f00;
+  font-size: 24px;
+  height: 26px;
+} */
+.lista .vr .b {
+  color: #ff7f00;
+  font-size: 38rpx;
+  height: 26px;
+  line-height: 26px;
+}
+ .lista .vr .b text{
+  font-size: 12px;
+} 
+.lista .vr .c {
+  font-size: 10px;
+  color: #9a9a9a;
+  height: 14px;
+}
+
+.lista .vr .d {
+  font-size: 14px;
+}
+
+.lista .vr .d text {
+  font-size: 10px;
+  color: #9a9a9a;
+  padding-right: 5px;
+}
+
+.titgwc {
+  padding: 0 5%;
+  height: 35px;
+  border-bottom: 2px solid #ddd;
+  margin-top: 15px;
+}
+
+.titgwc label {
+  padding-right: 10px;
+}
+
+.titgwc label icon {
+  position: relative;
+  top: 7px;
+}
+
+.titgwc text {
+  background-color: #14bab4;
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.checkbok {
+  padding-right: 10px;
+}
+
+.checkbok icon {
+  position: relative;
+  top: 12px;
+}
+
+.xz {
+  background-color: #fffef9;
+}
+
+.bottom {
+  height: 50px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  width: 100%;
+}
+
+.bottom .a {
+  flex: 1;
+  color: #a2a2a2;
+  font-size: 12px;
+  padding-left: 5%;
+}
+
+.bottom .a .m {
+  height: 16px;
+  padding-top: 6px;
+}
+
+.bottom .a .n {
+}
+
+.bottom .a .n text {
+  font-size: 16px;
+  color: #ff7f00;
+}
+
+.bottom .b {
+}
+
+.bottom .b button {
+  width: 110px;
+  border-radius: 0;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.titgwc .gf {
+  background-color: #fff;
+  color: #4a4a4a;
+}
+
+.melist {
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.melistblock {
+  display: flex;
+  padding: 0 5%;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.melistblock .a {
+  font-size: 16px;
+  flex: 1;
+}
+
+.melistblock .b {
+  flex: 1;
+  font-size: 14px;
+  color: #999;
+  text-align: right;
+}
+
+.melistblock image {
+  width: 8px;
+  height: 16px;
+  float: right;
+  padding-top: 12px;
+  padding-left: 10px;
+}
+
+.jghj {
+  text-align: right;
+  padding: 10px 5%;
+  font-size: 12px;
+  color: #999;
+}
+
+.jghj text {
+  font-size: 14px;
+  color: #ff7f00;
+}
+
+.redborder {
+  border-bottom: 1px solid #f00;
+}

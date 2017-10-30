@@ -1,0 +1,58 @@
+<view class="hczy">
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">会员级别</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" value="{{userInfo.member.memberLevelName == '' ? '普通会员' : userInfo.member.memberLevelName}}" disabled="true" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">公司名称</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" value="{{userInfo.member.corpNameFull}}" disabled="true" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">公司简称</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入公司简称" value="{{userInfo.member.corpName}}" bindinput="corpNameBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">公司类型</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="selector" bindchange="memberTypeChange" value="{{memberTypeIndex}}" range="{{memberTypeObjArray}}" range-key="memberTypeName">
+        <view class="picker">
+          {{memberTypePlaceholder}}{{memberTypeObjArray[memberTypeIndex]['memberTypeName']}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">公司传真</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" placeholder="请输入公司传真" value="{{userInfo.member.fax}}" bindinput="faxBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">公司邮箱</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入公司邮箱" value="{{userInfo.member.email}}" bindinput="emailBind" />
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="updateMember">确认修改</button>
+  </view>
+</view>

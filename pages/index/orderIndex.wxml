@@ -1,0 +1,24 @@
+<view class="logo">
+    <image src="../../images/other/logo.png"  />
+</view>
+
+<view class="welml">欢迎进入棉联</view>
+
+<view class="htbox">
+    <image src="../../images/other/ht.png"  />
+    <text>合同号：{{orderID}}</text>
+</view>
+<view class="melist">
+    <button class="but_green" bindtap="toOrderDetail">查看订单</button>
+</view>
+
+<view class="botbox">
+    <view bindtap="toIndex">
+        <image src="../../images/bidding/1.png"  />
+        <text>首页</text>
+    </view>
+    <view bindtap="toUserCenter">
+        <image src="../../images/me/1.png"  />
+        <text>账户</text>
+    </view>
+</view>

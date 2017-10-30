@@ -1,0 +1,125 @@
+<view class="ldjj">
+  <view class="ldjjlist">
+    <view class="l">
+      <view class="la">
+         <text class="txta">江西</text> 
+        <text class="txtb">2017早籼稻谷</text>
+      </view>
+      <view class="lb">
+        <text class="txta">散粮</text>
+        <text class="txtb">5000</text>
+        <text class="txtc">吨</text>
+      </view>
+      <view class="lc">
+        <text class="txta">竞拍时间</text>
+        <text class="txtb">14:00~15:00</text>
+      </view>
+    </view>
+    <view class="r">
+      <view class="la">
+         <view class="jzj price-wks">3000</view> 
+          <!-- <view class="jzj price-jj">3000</view>   -->
+         <!-- <view class="jzj price-over">3000</view>  -->
+        <view class="dw">
+          <text class="a">基准价</text>
+          <text class="b">元/吨</text>
+        </view>
+      </view>
+      <view class="lb">
+        <button class="btn_wks">未开始</button>    
+        <!-- <button class="btn_jj">立即出价</button>      -->
+        <!-- <button class="btn_jh">查看出价</button>   -->
+        <!-- <button class="btn_yjs">已结束</button>     -->
+      </view>
+      <view class="lc">
+        <!-- 还剩<text class='text_jj'>03:00</text>结束      -->
+        还剩<text class='text_wks'>03:00</text>开始    
+        <!-- <text>竞价已结束</text> -->
+      </view>
+    </view>
+  </view>
+</view>
+<view class="ldjj">
+  <view class="ldjjlist">
+    <view class="l">
+      <view class="la">
+         <text class="txta">江西</text> 
+        <text class="txtb">2017早籼稻谷</text>
+      </view>
+      <view class="lb">
+        <text class="txta">散粮</text>
+        <text class="txtb">5000</text>
+        <text class="txtc">吨</text>
+      </view>
+      <view class="lc">
+        <text class="txta">竞拍时间</text>
+        <text class="txtb">14:00~15:00</text>
+      </view>
+    </view>
+    <view class="r">
+      <view class="la">
+         <!-- <view class="jzj price-wks">3000</view>  -->
+           <view class="jzj price-jj">3000</view>   
+         <!-- <view class="jzj price-over">3000</view>  -->
+        <view class="dw">
+          <text class="a">当前价</text>
+          <text class="b">元/吨</text>
+        </view>
+      </view>
+      <view class="lb">
+        <!-- <button class="btn_wks">未开始</button>     -->
+         <!-- <button class="btn_jj">立即出价</button>       -->
+         <button class="btn_jh">查看出价</button>   
+        <!-- <button class="btn_yjs">已结束</button>     -->
+      </view>
+      <view class="lc">
+        <!-- 还剩<text class='text_wks'>03:00</text>开始     -->
+         还剩<text class='text_jj'>03:00</text>结束      
+        <!-- <text>竞价已结束</text> -->
+      </view>
+    </view>
+  </view>
+</view>
+<view class="ldjj">
+  <view class="ldjjlist">
+    <view class="l">
+      <view class="la">
+         <text class="txta">江西</text> 
+        <text class="txtb">2017早籼稻谷</text>
+      </view>
+      <view class="lb">
+        <text class="txta">散粮</text>
+        <text class="txtb">5000</text>
+        <text class="txtc">吨</text>
+      </view>
+      <view class="lc">
+        <text class="txta">竞拍时间</text>
+        <text class="txtb">14:00~15:00</text>
+      </view>
+    </view>
+    <view class="r">
+      <view class="la">
+         <!-- <view class="jzj price-wks">3000</view>  -->
+          <!-- <view class="jzj price-jj">3000</view>   -->
+          <view class="jzj price-over">3000</view>  
+        <view class="dw">
+          <text class="a">成交价</text>
+          <text class="b">元/吨</text>
+        </view>
+      </view>
+      <view class="lb">
+        <!-- <button class="btn_wks">未开始</button>     -->
+        <!-- <button class="btn_jj">立即出价</button>      -->
+        <!-- <button class="btn_jh">查看出价</button>   -->
+         <button class="btn_yjs">已结束</button>     
+      </view>
+      <view class="lc">
+        <!-- 还剩<text class='text_jj'>03:00</text>结束      -->
+        <!-- 还剩<text class='text_wks'>03:00</text>开始     -->
+         <text>竞价已结束</text> 
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view class="zwsj">暂无数据</view> -->
+

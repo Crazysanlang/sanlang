@@ -1,0 +1,42 @@
+
+<view class="recordList">
+  <view class='top'>
+    <view class='number'>单号：<text>C198008699</text></view>
+    <view class='date'>2017-09-13</view>
+  </view>
+  <view class='listCont'>
+    <view class='contTop'>
+      <view class='name'>2017早籼粳稻</view>
+      <view class='weight'>交易量：<text>2000</text>吨</view>
+    </view>
+    <view class='attribute'>
+      <view>
+        <text class="a">等级</text> 
+        <text class="">一等</text>
+        <text class='apart'>|</text>
+        <text class="a">品种</text> 
+        <text class="b">水稻</text>
+        <text class='apart'>|</text>
+        <text class="a">品牌</text> 
+        <text class="b">稻花香</text>
+      </view>
+       <view class='price'>我出价<text>1920</text>元/吨 </view> 
+    </view>
+    <view class='attribute'>
+      <view>
+        <text class="a">年份</text>
+        <text class="b">2017</text>
+        <text class='apart'>|</text>
+        <text class="a">杂质</text>
+        <text class="b">0.1%</text>
+        <text class='apart'>|</text>
+        <text class="a">含水率</text>
+        <text class="b">0.5%</text>
+      </view>
+       <view class='price'>当前价<text>2000</text>元/吨 </view> 
+    </view>
+    <view class='contBot'>
+      <view><image src="/images/other/ck.png"></image>江西省粮食储备库玉山县六都乡六都村储备分库</view>
+    </view>
+  </view>
+</view>

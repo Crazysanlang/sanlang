@@ -1,0 +1,12 @@
+<view class="bdcg">
+    <view class="bdcg_a">
+        <view class="a"><icon type="waiting" size="60" color="#14bab4"/></view>
+        <view class="b">
+            <text class="txta">已提交成功，待对方确认</text>
+            <text class="txtb">您可以去"我的订单"查看状态</text>
+        </view>
+    </view>
+    <view class="bdcg_b">
+        <button class="but_green" bindtap="toShop">返回商城</button>
+    </view>
+</view>

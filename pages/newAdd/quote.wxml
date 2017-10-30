@@ -1,0 +1,37 @@
+  <view class="wycj_a">
+      <view class="n">当前价：<text>3000</text> 元/吨</view>
+      <view class="f">可售数量：<text>2000</text> 吨</view>
+  </view>
+  <view class="tc_modal">
+      <view class="ljcj_a">
+          <button class="down" disabled="{{downMoneyDisabled}}" bindtap="dialogJianMoney"><image src="../../images/other/minus.png" class="imgdx"></image></button>
+          <view class="c">
+              <input type="number" class="ljcj_input" value="3000" bindinput="bindDialogMoney"  focus="{{dialogInputFocus}}" />
+          </view>
+          <button class="up" bindtap="dialogJiaMoney"><image src="../../images/other/raise.png" class="imgdx"></image></button>
+      </view>
+      <view class="ljcj_b">
+          每次加价幅度为100元
+      </view>
+      <view class="ljcj_c">
+          <view class="l">数量</view>
+          <view class="r"><input type="number" placeholder="这里输入数量（吨）" value="{{dialogAmount}}" bindinput="bindDialogAmount" focus="{{dialogAmountFocus}}" />
+          
+          </view>
+          <view bindtap="dialogAmountAll" class="z">全部</view>
+      </view>
+      <view class="ljcj_d">
+          <button class="but_red" bindtap="powerDrawer" data-statu="open" >立即出价</button>
+      </view>
+  </view>
+  <!-- 确认出价弹窗 -->
+  <!--mask-->
+  <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+  <view class="layerBox" animation="{{animationData}}" wx:if="{{showModalStatus}}">
+    <view style="text-indent:-10rpx">出价后不可撤销竞价</view>
+    <view class='inquiry'>是否确认出价？</view>
+    <view class="btn">
+      <button class="btn-ok" bindtap="submitQuote">确定</button>
+      <button class="btn-close" bindtap="powerDrawer" data-statu="close">取消</button>
+    </view>
+  </view>

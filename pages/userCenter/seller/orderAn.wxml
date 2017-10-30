@@ -1,0 +1,109 @@
+<view class="hczy">
+       <view class="rzje" bindtap="toContacts">
+            <text class="a">联系买家</text>
+            <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+        </view>
+
+        <view class="weui_cell" style="margin-top:10px;">
+            <view class="weui_cella">
+                <label class="weui_label">提货单位</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" disabled="true" type="text" value="{{itemDetail.buyMemberName}}" />
+            </view>
+        </view>
+
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">联系人电话</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" disabled="true" type="number" value="{{itemDetail.buyUserMobile}}" />
+            </view>
+        </view>
+        
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">联系人</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" disabled="true" type="text" value="{{itemDetail.buyUserName}}" />
+            </view>
+        </view>
+
+        <view class="weui_cell" style="margin-top:10px;">
+            <view class="weui_cella">
+                <label class="weui_label">定金金额</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" type="number" placeholder="请输入定金金额" bindinput="bindDeposit" />
+            </view>
+        </view>
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">最后支付日</label>
+            </view>
+            <view class="weui_cellb">
+                <picker mode="date" bindchange="lastDepositDateBind" value="{{lastDepositDateValue}}">
+                <view class="picker">
+                    {{lastDepositDateValue}}
+                    <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+                </view>
+                </picker>
+            </view>
+        </view>
+
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">提货方式</label>
+            </view>
+            <view class="weui_cellb">
+                <picker mode="selector" bindchange="bindDeliveryModeChange" range="{{deliveryModeObjArray}}" range-key="deliveryTypeName">
+                <view class="picker">
+                    {{deliveryModePlaceholder}}{{deliveryModeObjArray[deliveryModeIndex]['deliveryTypeName']}}
+                    <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+                </view>
+                </picker>
+            </view>
+        </view>
+
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">最后提货日</label>
+            </view>
+             <view class="weui_cellb">
+                <picker mode="date" bindchange="lastPaymentDateBind" value="{{lastPaymentDateValue}}">
+                <view class="picker">
+                    {{lastPaymentDateValue}}
+                    <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+                </view>
+                </picker>
+            </view>
+        </view>
+
+        <view style="margin-top:10px;">
+            <checkbox-group bindchange="checkboxChange">
+                <block wx:for-item="itemBean" wx:for="{{itemDetail.list}}">
+                    <view class="list">
+                        <view class="a"><checkbox value="{{itemBean.detailID}}" checked="checked"></checkbox></view>
+                        <view class="listc" id="{{itemBean.detailID}}" bindtap="toChangeBatch">
+                            <view class="b">{{itemBean.batchID}}</view>
+                            <view class="c">{{itemBean.amount}} 吨</view>
+                            <view class="d">￥{{itemBean.price}} </view>
+                            <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+                        </view>
+                    </view>
+                </block>
+            </checkbox-group>
+        </view>
+</view>
+<view class="sl">
+    合计数量<text>{{amountSum}}</text> 吨
+</view>
+<view class="je">
+    合计金额<text>￥{{priceSum}}</text>
+</view>
+
+<view class="weui_btn_area">
+    <button class="but_green" id="{{itemDetail.orderID}}" bindtap="confirmOrder">确认提交</button>
+</view>

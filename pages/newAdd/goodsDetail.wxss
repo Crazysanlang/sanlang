@@ -1,0 +1,248 @@
+page {
+   background-color: #efefef; 
+}
+view{
+     background-color: #fff; 
+}
+/* 顶部大图 */
+.goodsPic{
+  width: 100%;
+  height: 434rpx;
+  overflow: hidden;
+}
+.goodsPic image{
+  width: 100%;
+}
+
+
+
+/* 商品交易属性 */
+.deal{
+  /* padding: 0 5%; */
+  height: 194rpx;
+  background-color: #fff;
+}
+.deal .goodsName{
+  font-size: 36rpx;
+  color: #000;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+.deal .Pl ,.deal .WW{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deal .Pl .price{
+  font-size: 26rpx;
+  color: #ff7f00;
+}
+.deal .Pl .price text{
+  font-size: 48rpx;
+}
+.deal .WW{
+  margin-top: 5px;
+}
+.deal .WW .number{
+  display:flex;
+align-items:center;
+
+}
+.deal .WW .number text{
+  font-size: 36rpx;
+  color: #000;
+}
+.deal .WW view:first-child{
+  align-self:center;
+}
+.deal .Pl .lookPerson{
+  align-self: center;
+}
+.lookPerson image{
+  width: 33rpx;
+  height: 21rpx;
+}
+
+
+/* 商家信息 */
+.merchant{
+  padding:16rpx 5%;
+  height: 102rpx;
+  margin: 16rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.merchant  .headIco{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.merchant  .headIco image{
+  height: 100rpx;
+  width: 100rpx;
+}
+.merchant  .merchantR{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 100rpx;
+}
+.merchant  .merchantR .address,.merchant  .merchantR .phone{
+  display: flex;
+  flex-flow:row wrap;
+  align-content: space-between;
+  height: 100rpx;
+  width: 50%;  
+}
+.merchant  .merchantR .phone{
+  flex-direction: row-reverse;
+}
+.merchant  .merchantR .address>view{
+   width: 100%; 
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;  
+}
+.merchant  .merchantR .phone>view:first-child{
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1px solid #999;
+  background-color: #f5f5f5;
+  font-size: 24rpx;
+  color: #000;
+  border-radius: 3px;
+}
+
+
+/* 检验报告 */
+.test{
+  height: 106rpx;
+  padding: 22rpx 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.test .testL{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  width:80%; 
+}
+.test .testL .ZJ{
+  width: 100%;
+  font-size: 32rpx;
+  color: #333;
+}
+.test .testL .RZ{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.test .testL .RZ icon{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.test .testR view{
+  margin-top: 3px;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1px solid #999;
+  background-color: #f5f5f5;
+  font-size: 24rpx;
+  color: #000;
+  border-radius: 3px;
+}
+
+
+/* 产品详情 */
+.goodsDetail{
+  margin-top: 16rpx;
+  padding-bottom: 92rpx;
+}
+.goodsDetail .detailTit{
+  height: 74rpx;
+  line-height: 74rpx;
+  background-color: #fafafa;
+}
+.goodsDetail .detailTit text{
+  font-size: 32rpx;
+  color: #000;
+  background-color: #fff;
+  display: inline-block;
+  border-top: 2px solid #ff7f00;
+  padding: 0 5%;
+}
+.detaillist{
+  padding: 0 5%;
+  margin: 14px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.detaillist view:first-child{
+  width: 60%;
+}
+.detaillistDif{
+  padding: 0 5%;
+  margin: 14px 0;
+}
+
+
+/* 底部操作按钮 */
+.bottomBtn{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  z-index: 5;
+}
+.bottomBtn .ZX{
+  position: relative;
+  border-right: 1px solid #ddd;
+}
+.bottomBtn .ZX contact-button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+}
+.bottomBtn .ZX,.bottomBtn .SC{
+  width: 127rpx;
+  border-top: 1px solid #ddd;
+}
+.bottomBtn .ZX image,.bottomBtn .SC image{
+  width: 34rpx;
+  height: 34rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.bottomBtn .ZX text,.bottomBtn .SC text{
+  font-size: 26rpx;
+  color: #333;
+}
+.bottomBtn .SC .shoucang-sel{
+  color: #f25a5d;
+}
+.bottomBtn .addCart{
+  width: 248rpx;
+  background-color: #14bab4;
+  color: #fff;
+  font-size: 36rpx;
+}
+.bottomBtn .buy{
+  width: 248rpx;
+  background-color: #f25a5d;
+  color: #fff;
+  font-size: 36rpx;
+}

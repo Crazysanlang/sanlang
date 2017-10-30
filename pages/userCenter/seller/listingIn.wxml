@@ -1,0 +1,67 @@
+<view class="zc_content">
+
+    <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">批号</label>
+        </view>
+        <view class="weui_cellb">
+        <input class="weui_input" type="number" placeholder="请输入批号" bindinput="bindBatchID" maxlength="11" />
+        </view>
+    </view>
+
+    <view class="phxqlist" hidden="{{phxqlist1_view}}">
+        <view class="c">暂无此批号数据</view>
+    </view>
+    
+    <view class="phxqlist" hidden="{{phxqlist2_view}}" style="border-bottom:1px solid #ddd;margin-top:5px;padding-bottom:8px;">
+        <view class="a">
+            <text>{{cottonBatchBean.primaryColorName}}</text>
+            <text>{{cottonBatchBean.cottonTypeName}}</text>
+            <text>马值:{{cottonBatchBean.mikeAvg}}</text>
+            <text>强力:{{cottonBatchBean.strongAvg}}</text>
+            <text>长度:{{cottonBatchBean.lengthAvg}}</text>
+        </view>
+        <view class="b">
+            <text>原仓库:{{cottonBatchBean.depotName}}</text>
+        </view>
+    </view>
+    
+     <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">价格(元/吨)</label>
+        </view>
+        <view class="weui_cellb">
+        <input class="weui_input" type="number" placeholder="请输挂牌价格" bindinput="bindPrice" />
+        </view>
+    </view>
+
+    <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">结算方式</label>
+        </view>
+        <view class="weui_cellb">
+            <picker mode="selector" bindchange="amountTypeChange" value="{{amountTypeIndex}}" range="{{amountTypeObjArray}}" range-key="name">
+            <view class="picker">
+            {{amountTypePlaceholder}}{{amountTypeObjArray[amountTypeIndex]['name']}}
+            <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+            </view>
+        </picker>
+        </view>
+    </view>
+
+    <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">仓库</label>
+        </view>
+        <view class="weui_cellb" bindtap="selectDepotPage">
+            <view class="picker">
+                {{corpName}}
+                <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui_btn_area">
+        <button class="but_green" bindtap="makeListing" disabled="{{makeListingDisabled}}">确认挂牌</button>
+    </view>
+</view>

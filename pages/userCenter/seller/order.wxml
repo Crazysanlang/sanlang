@@ -1,0 +1,63 @@
+<view class="tab_area">
+  <navigator data-status="0" bindtap="orderStatus" class="{{class_tab_hover_0}}" open-type="switchTab" hover-class="other-navigator-hover">全部</navigator>
+  <navigator data-status="1" bindtap="orderStatus" class="{{class_tab_hover_1}}" open-type="switchTab" hover-class="other-navigator-hover">待确认</navigator>
+  <navigator data-status="2" bindtap="orderStatus" class="{{class_tab_hover_2}}" open-type="switchTab" hover-class="other-navigator-hover">待收款</navigator>
+  <navigator data-status="3" bindtap="orderStatus" class="{{class_tab_hover_3}}" open-type="switchTab" hover-class="other-navigator-hover">待发货</navigator>
+  <navigator data-status="4" bindtap="orderStatus" class="{{class_tab_hover_4}}" open-type="switchTab" hover-class="other-navigator-hover">待开票</navigator>
+  <navigator data-status="5" bindtap="orderStatus" class="{{class_tab_hover_5}}" open-type="switchTab" hover-class="other-navigator-hover">已完成</navigator>
+</view>
+<block wx:if="{{items.length > 0}}">
+  <view class="jjcontent">
+    <block wx:key="item" wx:for="{{items}}">
+      <view class="jjlist" id="{{item.orderID}}" data-status="{{item.status}}" bindtap="toOrderNavigate">
+        <view class="t">
+          <view class="l">
+            <text class="txta">订单编号:{{item.orderID}}</text>
+          </view>
+          <view class="r">
+            <block wx:if="{{item.status == 0}}">待确认</block>
+            <block wx:if="{{item.status == 1}}">执行中</block>
+            <block wx:if="{{item.status == 2}}">已关闭</block>
+            <block wx:if="{{item.status == 3}}">已关闭</block>
+            <block wx:if="{{item.status == 4}}">已完成</block>
+            <block wx:if="{{item.status == 5}}">已完成</block>
+            <block wx:if="{{item.status == 6}}">已完成</block>
+            <block wx:if="{{item.status == 7}}">已完成</block>
+            <block wx:if="{{item.status == 8}}">已完成</block>
+            <block wx:if="{{item.status == 9}}">已作废</block>
+          </view>
+        </view>
+        <view class="b">
+          <view class="m">
+            <view class="aa">批次</view>
+            <view class="ab">颜色级</view>
+            <view class="ac">数量(吨)</view>
+            <view class="ad">单价(元/吨)</view>
+          </view>
+          <block wx:for-item="itemBean" wx:for="{{item.list}}">
+            <view class="n">
+              <view class="aa">{{itemBean.batchID}}</view>
+              <view class="ab">{{itemBean.primaryColorName}}</view>
+              <view class="ac">{{itemBean.amount}}</view>
+              <view class="ad">{{itemBean.price}}</view>
+            </view>
+          </block>
+          <view class="f">
+            <view class="fl">{{item.orderDate}} {{item.orderTime}}</view>
+            <view class="fr">合计：
+              <text>￥{{item.moneySum}}</text>
+            </view>
+          </view>
+          <view class="yjt">
+            <image src="../../../images/other/yjt.png" />
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无订单数据</view>
+  </block>
+</block>

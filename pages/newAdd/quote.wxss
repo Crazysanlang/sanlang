@@ -1,0 +1,205 @@
+.tc_modal {
+}
+button{
+  background-color: #fff;
+}
+.close_img {
+  position: absolute;
+  right: 5px;
+  top: -15px;
+}
+
+.ljcj_a {
+  display: flex;
+  margin: 0 5%;
+  margin-top: 20px;
+}
+
+.ljcj_a .down {
+  flex: 1;
+  /* height: 70rpx; */
+  /* background-color: #4a90e2; */
+  /* position: relative; */
+}
+
+.ljcj_a .down.button-hover {
+  background-color: #3a87e0;
+}
+
+.ljcj_a .down image {
+  width:40px;
+  height:40px;
+  position:absolute;
+  left:6%;
+  top:8%;
+}
+
+.ljcj_a .c {
+  flex: 6;
+}
+
+.ljcj_input {
+  border-bottom: 1px solid #ddd;
+  height: 84rpx;
+  font-size: 52rpx;
+  text-align: center;
+}
+
+.ljcj_a .up {
+  flex: 1;
+  /* height: 70rpx; */
+  /* background-color: #4a90e2; */
+   position: relative; 
+}
+
+.ljcj_a .up.button-hover {
+  background-color: #3a87e0;
+}
+
+.ljcj_a .up image {
+  width:40px;
+  height:40px;
+  position:absolute;
+  left:0%;
+  top:20%;
+  margin-top:-9px;
+}
+
+.ljcj_b {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.ljcj_c {
+  display: flex;
+  margin: 10px 5% 30px;
+  height: 81rpx;
+}
+
+.ljcj_c .l {
+  flex: 1;
+  font-size: 18px;
+  text-align: center;
+  line-height: 81rpx;
+}
+
+.ljcj_c .r {
+  flex: 6;
+}
+
+.ljcj_c .r input {
+  font-size: 16px;
+  height: 81rpx;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  width: 100%;
+}
+
+.ljcj_c .z {
+  color: #ff9700;
+  line-height: 81rpx;
+  flex: 1;
+  text-align: center;
+}
+
+.ljcj_d {
+  margin: 0 5%;
+}
+
+.wycj_a {
+  display: flex;
+  padding: 10px 5%;
+  background-color: #f7f7f7;
+}
+
+.wycj_a .n {
+  flex: 1;
+  font-size: 12px;
+  color: #666;
+}
+
+.wycj_a .n text {
+  font-size: 16px;
+}
+
+.wycj_a .f {
+  flex: 1;
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  border-left: 1px solid #ddd;
+}
+
+.wycj_a .f text {
+  font-size: 16px;
+}
+
+button {
+  padding: 0;
+}
+
+
+
+
+
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+.layerBox{
+  width: 588rpx;
+  height: 345rpx;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;  
+  position: fixed;  
+  top: 0;  
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;  
+  z-index: 1001;  
+  background-color: #fff;
+}
+.layerBox view:first-child{
+  
+  margin-top: 50rpx;
+  margin-bottom: 26rpx;
+  
+}
+.layerBox view.inquiry{
+  font-size: 34rpx;
+  color: #000;
+  font-weight: bold;
+}
+.layerBox text{
+  font-size: 34rpx;
+  color: #f25a5d;
+  font-weight: bold;
+}
+.btn{
+  display: flex;
+  margin-top: 60rpx;
+}
+.btn button{
+  width: 150rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  color:#fff;
+}
+.btn .btn-ok{
+  background-color: #f25a5d;
+}
+.btn .btn-close{
+  background-color: #c7c7c7;
+}

@@ -1,0 +1,58 @@
+<view class="bdcg" hidden="true">
+  <view class="a">
+    <icon type="success" size="18" color="#ffffff" />
+  </view>
+  <view class="b">
+    <text class="txta">账号已注册成功，请完成企业认证</text>
+  </view>
+</view>
+<view class="zc_content">
+  
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">企业全称</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入企业全称" bindinput="bind_corpName_input" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">企业性质</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="selector" bindchange="bindPickerChange" value="{{memberTypeName}}" range="{{memberTypeArray}}">
+        <view class="picker">
+          {{memberTypePlaceholder}}{{memberTypeArray[memberType]}}
+          <image src="../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell" style="height:115px;">
+    <view class="weui_cella">
+      <label class="weui_label">营业执照</label>
+    </view>
+    <view class="weui_cellb">
+      <view class="pz" bindtap="choosePicLicense">
+        <block wx:if="{{tempFilePath == ''}}">
+          <image src="../../images/other/pz.png" class="imgc"></image>
+          <text>未上传</text>
+        </block>
+        <block wx:else>
+          <image src="{{tempFilePath}}" style="width:99%;height:99%;"></image>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="applyMember">确认</button>
+  </view>
+
+  <block wx:if="{{skipAuthFlag}}">
+    <view class="weui_cells_tips">下次再认证，请直接
+      <text bindtap="skipAuth">跳过</text>
+    </view>
+  </block>
+
+</view>

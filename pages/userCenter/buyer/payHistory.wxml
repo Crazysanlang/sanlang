@@ -1,0 +1,41 @@
+<view class="tab_area">
+  <navigator url="/pages/userCenter/buyer/pay" class="" open-type="redirect" hover-class="other-navigator-hover">未付款</navigator>
+  <navigator url="/pages/userCenter/buyer/payHistory" class="tab_hover" open-type="redirect" hover-class="other-navigator-hover">付款记录</navigator>
+</view>
+<block wx:if="{{items.length > 0}}">
+  <scroll-view style="height:{{windowHeight-56}}px" scroll-y="true">
+    <block wx:key="item" wx:for="{{items}}">
+      <view class="wdlist" id="{{item.paymentID}}" bindtap="toPayDetail">
+        <view class="l">
+          <view class="m">{{item.sellMemberName}}</view>
+          <view class="n">{{item.payDate}}</view>
+        </view>
+        <view class="r">
+          <view class="m">{{item.payMoneyFmt}}</view>
+          <view class="n">
+            <block wx:if="{{item.status == 0}}">
+              <text class="a">未确认</text>
+            </block>
+            <block wx:if="{{item.status == 1}}">
+              <text class="b">已确认</text>
+            </block>
+            <block wx:if="{{item.status == 9}}">
+              <text class="c">已作废</text>
+            </block>
+          </view>
+        </view>
+        <view class="yjt">
+          <image src="../../../images/other/yjt.png" />
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{moreFlag}}">
+      <view class="moreList" bindtap="moreList">点击查看更多</view>
+    </block>
+  </scroll-view>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无付款信息</view>
+  </block>
+</block>

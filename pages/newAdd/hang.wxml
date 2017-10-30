@@ -1,0 +1,76 @@
+<view class="step">
+<!-- 完成状态添加类名finish 未完成添加Notfinish -->
+  <view class='stepNum finish'>
+    <view>1</view>
+    <view>基础信息</view>
+  </view>
+  <view class='stepNum Notfinish'>
+    <view>2</view>
+    <view>附加信息</view>
+  </view>
+  <view class='stepNum Notfinish'>
+    <view>3</view>
+    <view>挂牌完成</view>
+  </view>
+  <!-- 一二步骤之间的进度条高亮在line0 之后添加类line1 -->
+  <view class='line0 '></view>
+  <!-- 二三步骤之间的进度条高亮在line0 之后添加类line3 -->
+  <view class='line2 '></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>品种</view>
+  <view class='rightBar'>
+    <picker mode="selector" range-key="name" value="{{breedIndex}}" range="{{breedArray}}" bindchange="breedChange">
+      <view class="picker">{{breedPlaceholder}}{{breedArray[breedIndex]['name']}}
+         <image src="/images/other/record-right.png"></image> 
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>等级</view>
+  <view class='rightBar'>
+    <picker mode="selector" range-key="name" value="{{gradeIndex}}" range="{{gradeArray}}" bindchange="gradeChange">
+      <view class="picker">{{gradePlaceholder}}{{gradeArray[gradeIndex]['name']}}
+         <image src="/images/other/record-right.png"></image> 
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>商品名称</view>
+  <view class='rightBar'><input type="text"></input></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>价格</view>
+  <view class='rightBar'><input type="number"></input><text>元/吨</text></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>重量</view>
+  <view class='rightBar'><input type="number"></input><text>吨</text></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>挂牌有效期</view>
+  <view class='rightBar'>
+    <picker mode="selector" range-key="name" value="{{indateIndex}}" range="{{indateArray}}" bindchange="indateChange"> 
+      <view class="picker">{{indatePlaceholder}}{{indateArray[indateIndex]['name']}}
+      </view>
+    </picker>
+    <text>天</text>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>存储库</view>
+  <view class='rightBar'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      {{region[0]}}{{region[1]}}{{region[2]}}
+       <image src="/images/other/dingwei.png"></image>  
+    </view>
+  </picker>
+  </view>
+</view>
+
+<view class='btn'>
+  <button>下一步</button>
+</view>

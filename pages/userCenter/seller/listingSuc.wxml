@@ -1,0 +1,12 @@
+<view class="bdcg">
+    <view class="bdcg_a">
+        <view class="a"><icon type="success" size="60" color="#14bab4"/></view>
+        <view class="b">
+            <text class="txta">恭喜，挂牌成功</text>
+            <text class="txtb">您可以继续挂牌，或查看挂牌详情</text>
+        </view>
+    </view>
+    <view class="bdcg_b">
+        <button class="but_green" bindtap="goBack">关闭</button>
+    </view>
+</view>

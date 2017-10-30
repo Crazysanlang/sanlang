@@ -1,0 +1,29 @@
+<view class="zc_content">
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">原密码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="password" maxlength="16" placeholder="请输入6-16位字母或数字" bindinput="pwdBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">新密码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="password" maxlength="16" placeholder="6-16位字母或数字" bindinput="newPwdBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">密码确认</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="password" maxlength="16" placeholder="请再输入一次新密码" bindinput="newPwd1Bind" />
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="modifyPassword">确认修改</button>
+  </view>
+</view>

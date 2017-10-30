@@ -1,0 +1,69 @@
+page{
+  background-color: #efefef;
+}
+view{
+  background-color: #fff;
+}
+.recordList{
+   margin: 16rpx 0; 
+   padding-bottom: 6px;
+}
+.top{
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5%;
+  border-bottom:   1px solid #ddd; 
+  display: flex;
+  justify-content: space-between;
+}
+.top .number text{
+  color: #ff7f00;
+}
+.listCont{
+  padding: 0 5%;
+}
+.name{
+  font-size: 32rpx;
+  color: #333;
+  height: 30px;
+  line-height: 30px;
+}
+.contTop,.attribute{
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.attribute view{
+  align-self: flex-end;
+}
+.attribute text.a{
+   font-size: 10px; 
+   margin-right: 3px;
+}
+.price,.weight{
+  font-size: 12px;
+}
+.price text{
+  font-size: 36rpx;
+  color: #ff7f00;
+}
+.contBot view{
+  width:100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;  
+}
+.contBot view image{
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.weight text{
+  font-size: 34rpx;
+  color: #333;
+}
+.apart{
+  margin: 0 3px;
+}

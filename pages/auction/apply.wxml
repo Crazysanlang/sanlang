@@ -1,0 +1,73 @@
+<view class="list">
+  <view bindtap="changeTable" id="1" class="{{tab_hover1}}">申请</view>
+  <view bindtap="changeTable" id="2" class="{{tab_hover2}}">流程</view>
+</view>
+
+<!--申请-->
+<view class="hczy" style="margin-top:10px" hidden="{{tab_view1}}">
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">目标棉花捆号</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" value="{{baleCode}}" disabled="true" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">申请人姓名</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入申请人姓名" bindinput="nameBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">手机号</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" maxlength="11" placeholder="请输入联系人手机号" bindinput="mobileBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">价格(元/吨)</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" maxlength="15" placeholder="请输入最高接受价格" bindinput="moneyBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_labeimagel">是否要融资</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="selector" bindchange="bindNeedLoanChange" range="{{needLoanObjArray}}" range-key="name">
+        <view class="picker">
+          {{needLoanPlaceholder}}{{needLoanObjArray[needLoanIndex]['name']}}
+        </view>
+      </picker>
+      <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="applyCottonSale">提交申请</button>
+  </view>
+</view>
+
+<!--流程-->
+<view class="wdcj_sjz" hidden="{{tab_view2}}">
+  <view class="tit">代理拍储操作流程:</view>
+  <text>
+    1、签订代拍储框架协议,10%保证金,代理费30元/吨(含交易市场10元手续费)
+  </text>
+  <text>
+    2、确定需代拍棉花的捆号、最高接受价格
+  </text>
+  <text>
+    3、支付保证金(10%)
+  </text>
+  <text>
+    4、棉联代拍,成功则10%的保证金作为货款,剩余货款3日支付完毕或选择由棉联垫付(20元/吨手续费+万分之2日息),失败则退还保证金。
+  </text>
+</view>

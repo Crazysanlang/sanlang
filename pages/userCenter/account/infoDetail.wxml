@@ -1,0 +1,6 @@
+<view class="box">
+  <view class="con">
+    <text>{{messageItem.content}}</text>
+  </view>
+  <view class="time">{{messageItem.msgDate}}</view>
+</view>

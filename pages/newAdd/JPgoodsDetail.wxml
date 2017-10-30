@@ -1,0 +1,184 @@
+
+<!-- 顶部大图 -->
+<view class='goodsPic'>
+  <image src='/images/other/goodsPic.png'></image>
+  <view class='countDown redStatus'>
+    <!-- <text>距竞拍开始还剩</text>   -->
+    <text>距竞拍结束还剩</text>   
+    <text>03:58</text> 
+     <!-- <text class='overTxt'>竞拍已结束</text>  -->
+  </view>
+</view>
+<!-- 商品交易属性 -->
+<view class='deal pd5'>
+  <view class='goodsName'>玉米干粮 毛货 玉米粒</view>
+  <view class='Pl'>
+    <view class='price'><text>1500</text>元/吨</view>
+    <view class='lookPerson'><image src='/images/other/look.png'></image> 383人查看</view>
+  </view>
+  <view class='WW'>
+    <view>交易总重6000吨</view>
+    <view class='number'>可售数量：<text>5000</text>吨</view>
+  </view>
+</view>
+
+
+<!-- 商家信息 -->
+<view class='merchant'>
+  <view class='headIco'><image src='/images/other/headIco.png'></image></view>
+  <view class='merchantR'>
+    <view class='address'>
+      <view>江西玉山国家储备粮库</view>
+      <view>玉山县六都乡六都村</view>
+    </view>
+    <view class='phone'>
+      <view>预约看粮</view>
+      <view>电话：0791-5378956</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 检验报告 -->
+<view class='test'>
+  <view class='testL'>
+    <view class='ZJ'> <image src='/images/other/jian.png' style='width:39rpx;height:39rpx;vertical-align:middle;'></image> 中国质检</view>
+    <view class='RZ'>
+      <view><icon type='success' size='16'></icon>实名认证</view>
+      <view><icon type='success' size='16'></icon>企业认证</view>
+      <view><icon type='success' size='16'></icon>实名认证</view>
+    </view>
+  </view>
+  <view class='testR'>
+    <view>查看报告</view>
+  </view>
+</view>
+
+<!-- 出价记录 -->
+<!--出价记录-->
+<view class="record">
+  <view class="recordTop">
+    <view class="rtL">
+      <image src="/images/other/record.png"></image>
+      <text>出价记录</text><text>18条</text>
+    </view>
+    <view class="rtR">
+      <image src="/images/other/record-right.png"></image>
+    </view>
+  </view>
+  <!--出价记录列表-->
+  <view class='recordListContBox'>
+    <view class="recordList listOne">
+      <view class="phoneIco">
+            <image src="/images/other/listOne.png"></image>
+            <!-- <image src="/images/other/listOther.png"></image > -->
+      </view>
+      <view class="offerUser">我</view>
+      <view class="userStatu">
+        <text>领先</text>
+        <text class="recordDate">09.13</text>
+        <text>11:24</text>
+      </view>
+      <view class="nowPrice">￥3000</view>
+    </view>
+    <view class="recordList"> 
+      <view class="phoneIco">
+             <image src="/images/other/listOther.png"></image > 
+      </view>
+      <view class="offerUser">我</view>
+      <view class="userStatu">
+        <text>领先</text>
+        <text class="recordDate">09.13</text>
+        <text>11:24</text>
+      </view>
+      <view class="nowPrice">￥3000</view>
+    </view>
+    <view class="recordList">
+      <view class="phoneIco">
+             <image src="/images/other/listOther.png"></image > 
+      </view>
+      <view class="offerUser">我</view>   
+      <view class="userStatu">
+        <text>领先</text>
+        <text class="recordDate">09.13</text>
+        <text>11:24</text>
+      </view>
+      <view class="nowPrice">￥3000</view>
+    </view> 
+    <view class="recordList">
+      <view class="phoneIco">
+             <image src="/images/other/listOther.png"></image > 
+      </view>
+      <view class="offerUser">我</view>   
+      <view class="userStatu">
+        <text>领先</text>
+        <text class="recordDate">09.13</text>
+        <text>11:24</text>
+      </view>
+      <view class="nowPrice">￥3000</view>
+    </view> 
+    <view class="recordList">
+      <view class="phoneIco">
+             <image src="/images/other/listOther.png"></image > 
+      </view>
+      <view class="offerUser">我</view>   
+      <view class="userStatu">
+        <text>领先</text>
+        <text class="recordDate">09.13</text>
+        <text>11:24</text>
+      </view>
+      <view class="nowPrice">￥3000</view>
+    </view> 
+    <view class="recordList">
+      <view class="phoneIco">
+             <image src="/images/other/listOther.png"></image > 
+      </view>
+      <view class="offerUser">我</view>   
+      <view class="userStatu">
+        <text>领先</text>
+        <text class="recordDate">09.13</text>
+        <text>11:24</text>
+      </view>
+      <view class="nowPrice">￥3000</view>
+    </view> 
+  </view>
+</view>
+
+
+
+
+<!-- 产品详情 -->
+<view class='goodsDetail'>
+  <view class='detailTit'>
+    <text>产品详情</text>
+  </view>
+  <view class='detaillist'>
+    <view>品种：玉米</view>
+    <view>品牌：稻花香</view>
+  </view>
+  <view class='detaillist'>
+    <view>价格：￥1730元/吨</view>
+    <view>挂单量：5000吨</view>
+  </view>
+  <view class='detaillist'>
+    <view>等级：一等</view>
+    <view>年份：2016</view>
+  </view>
+  <view class='detaillist'>
+    <view>价格类型：车（船）板交货价</view>
+    <view>包装类型：散装</view>
+  </view>
+  <view class='detaillistDif'>
+    <view>产地：江西玉山县六都乡六都村</view>
+  </view>
+  <view class='detaillistDif'>
+    <view>交货地：江西玉山县六都乡六都村</view>
+  </view>
+</view>
+
+
+<!-- 底部 -->
+
+<view class='JPbottomBtn'>
+  立即出价
+</view>

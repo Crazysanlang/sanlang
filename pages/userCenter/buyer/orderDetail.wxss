@@ -1,0 +1,69 @@
+
+.wdjj_a{display:flex;padding-top:10px;border-bottom:1px solid #dddddd;padding-bottom:10px;position:relative}
+.wdjj_a .a{padding-left:5%;}
+.wdjj_a .b{padding-left:15px;}
+.wdjj_a text{display: block}
+.wdjj_a .txta{font-size:16px;color:#FF8000;padding-top:5px;margin:0;line-height:18px;height:18px;}
+.wdjj_a .txtb{font-size:12px;padding-top:5px;color:#999}
+.wdjj_a .yjt{position:absolute;right:5%;top:30px;}
+.wdjj_a .yjt image{width:5px;height:10px;}
+.jjlist{background-color:#ffffff;border-bottom:1px solid #dddddd;}
+.jjlist .b{position:relative;}
+.jjlist .b .m{display:flex;margin:0 5% 0 0;line-height:30px;font-size:12px;border-bottom:1px solid #eeeeee;}
+.jjlist .b .m view{text-align:center;color:#666666}
+.jjlist .b .m .aa{flex:3;}
+.jjlist .b .m .ab{flex:3}
+.jjlist .b .m .ac{flex:2}
+.jjlist .b .m .ad{flex:2;text-align:right}
+.jjlist .b .n{display:flex;margin:0 5% 0 0;line-height:30px;}
+.jjlist .b .n view{text-align:center;}
+.jjlist .b .n .aa{flex:3;text-align:left;padding-left:5%;color:#14bab4;text-decoration:underline}
+.jjlist .b .n .ab{flex:3}
+.jjlist .b .n .ac{flex:2}
+.jjlist .b .n .ad{flex:2;text-align:right}
+.jjlist .b .f{display:flex;margin:5px 5% 0 5%;line-height:30px;}
+.jjlist .b .fl{flex:1;color:#999999;font-size:12px;}
+.jjlist .b .fr{flex:1;text-align:right;color:#999999;font-size:12px;}
+.jjlist .b .fr text{color:#ff0000;font-size:16px;}
+
+.btn_jj{padding-bottom:30px;}
+.wdcj_sjz{padding-bottom:15px;width:97%;padding-bottom:30px;}
+.sjz_list{display:flex;margin-left:5%;border-left:1px solid #14bab4;padding-bottom:15px;position:relative;left:6px;width:95%;line-height:14px;font-size:12px;}
+.bordern{border:0;padding:0;border:0;position:relative;left:7px;width:95%;}
+.sjz_list .a{flex:2;color:#999999;}
+.sjz_list .b{flex:7;color:#999999;}
+.sjz_list .b text{display:block}
+.sjz_list .b text text{padding-left:10px;display:inline}
+.sjz_list .c{flex:5;color:#999999;text-align:right;padding-right:5%;}
+.sjz_list .d{}
+.sjz_list .d text{border-radius: 6px;width:7px;height:7px;border:3px solid #14bab4;display:block;position:relative;left:-7px;background-color:#ffffff;}
+.sjz_b{padding:0;border:0;position:relative;left:7px;}
+.sjz_c{padding:0;border:0;position:relative;left:7px;}
+.sjz_c .a{flex:15}
+.sjz_c .d text{border:3px solid #dddddd}
+.tit_jj{font-size:14px;color:#4a4a4a;padding-left:5%;padding-top:5px;height:30px;}
+
+.batchxq{padding:0 5% 0 5%;border-bottom:1px solid #eeeeee;}
+.batchxq .dx{display:flex;height:25px;}
+.batchxq .dx view{text-align:center;margin-right:20px;}
+.batchxq .dx .mx{color:#666666;height:20px;font-size:12px;}
+.batchxq .dx .nx{font-size:12px;padding-left:5px;}
+.jjlist .b .g{text-align:right;margin:0 5% 10px 0;color:#999999;}
+
+.sjz_list:last-child{border:0;left:7px;}
+.rzje{display:flex;padding:0 5%;position:relative;line-height:40px;border-top:1px solid #eeeeee;}
+.rzje .a{font-size:14px;flex:1;}
+.rzje .b{color:#ff0000;text-align:right;padding-right:15px;}
+.rzje .yjt{position:absolute;right:5%;top:0px;}
+.rzje .yjt image{width:5px;height:10px;}
+
+.list{display:flex;line-height:30px;border-bottom:1px solid #eeeeee;}
+.list text{display:block;flex:1}
+.list .txtb{text-align:right;}
+.yjt image{width:4px;height:8px;}
+.list .yjt{padding-right:5%;}
+.dbsx{margin:10px 0;border-bottom:3px solid #eeeeee;}
+.list .txta{padding-left:5%;}
+.list {line-height:50px;}
+.list .txtb{color:#999999;}
+.list .txtc{text-align:right;padding-right:15px;color:#FF8000}

@@ -1,0 +1,45 @@
+<view class="zc_content">
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">仓库</label>
+    </view>
+    <view class="weui_cellb">
+        <view class="picker" bindtap="selectDepotPage">
+          {{depotName}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">结算方式</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="selector" bindchange="amountTypeChange" value="{{amountTypeIndex}}" range="{{amountTypeObjArray}}" range-key="name">
+        <view class="picker">
+          {{amountTypeObjArray[amountTypeIndex]['name']}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">重量(吨)</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" value="{{amountValue}}" bindinput="amountValueBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">单价(元/吨)</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" value="{{priceValue}}" bindinput="priceValueBind" />
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="toOrderAn">确认修改</button>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!-- 顶部筛选条件 -->
+<view class="filtrate">
+  <view class="nav">
+    <view class="navTable {{shownavindex == 1? 'active' : ''}}" bindtap="bindnavTable" data-nav="1">
+      <view class="navTxt">类型</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 2? 'active' : ''}}" bindtap="bindnavTable" data-nav="2">
+      <view class="navTxt">交货地</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 3? 'active' : ''}}" bindtap="bindnavTable" data-nav="3">
+      <view class="navTxt">品种</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 4? 'active' : ''}}" bindtap="bindnavTable" data-nav="4">
+      <view class="navTxt">状态</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 5? 'active' : ''}}" bindtap="bindnavTable" data-nav="5">
+      <view class="navTxt">更多</view>
+      <view class="arrows"></view>
+    </view>
+  </view>
+<!-- 筛选内容 -->
+  <!-- 类型 -->
+  <view class='navCont {{shownavindex == 1? "showCont" : "hideCont"}}'>类型</view>
+  <!--交货地 -->
+  <view class='navCont {{shownavindex == 2 ? "showCont" : "hideCont"}}'>交货地</view>
+  <!--品种 -->
+  <view class='navCont {{shownavindex == 3 ? "showCont" : "hideCont"}}'>品种</view>
+  <!--状态 -->
+  <view class='navCont {{shownavindex == 4 ? "showCont" : "hideCont"}}'>状态</view>
+  <!--更多 -->
+  <view class='navCont {{shownavindex == 5 ? "showCont" : "hideCont"}}'>更多</view>
+  <view class='shade {{isShow ? "showShade" : ""}}' bindtap='hideAll'></view>
+</view>

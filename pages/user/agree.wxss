@@ -1,0 +1,4 @@
+.tit{text-align:center;font-size:16px;height:30px;}
+.cont{padding:10px 10px;}
+.nr{font-size:12px;line-height:16px;text-indent:2em }
+.nr view{margin-bottom:15px;color:#666666}

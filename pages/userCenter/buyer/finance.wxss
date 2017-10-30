@@ -1,0 +1,15 @@
+page{background-color:#f7f7f7;}
+.list{background-color:#ffffff;margin-top:15px;padding:10px 0;position:relative}
+.list .tit{display:flex;font-size:12px;line-height:25px;border-bottom:1px solid #eeeeee;padding:0 20px;}
+.list .nr{display:flex;padding:0 20px;}
+.list .tit .a{flex:1;color:#999999}
+.list .tit .b{color:#ff7700}
+.list .nr .a{flex:1}
+.list .nr .b{text-align:right;}
+.list .nr .c{position:absolute;top:60%;right:5px;}
+.list .nr .a .m{font-size:16px;padding-top:5px;line-height:20px;}
+.list .nr .a .n{font-size:10px;color:#999999;}
+.list .nr .b .m{font-size:10px;color:#999999;padding-top:5px;line-height:20px;}
+.list .nr .b .m text{font-size:14px;color:#ff0000;}
+.list .nr .b .n{font-size:10px;color:#999999;}
+.list .nr .c image{width:5px;height:10px;}

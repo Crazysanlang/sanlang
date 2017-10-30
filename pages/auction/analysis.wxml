@@ -1,0 +1,134 @@
+<scroll-view scroll-y="true" style="height:{{itemDetail.status == 0 ? windowHeight-1 + 'px;' : ''}}">
+
+  <!-- one -->
+  <view class="batchxq">
+    <view class="a">
+      <text class="txta">捆号:{{itemDetail.baleCode}}</text>
+      <text class="txtb">轮出日期:{{itemDetail.turnDate}}</text>
+      <block wx:if="{{itemDetail.part == 0}}">
+        <text class="txtc">第一节</text>
+      </block>
+      <block wx:if="{{itemDetail.part == 1}}">
+        <text class="txtc">第二节</text>
+      </block>
+    </view>
+    <view class="b">
+      <text class="txta">{{itemDetail.cottonTypeName}}</text>
+      <text class="txtb">{{itemDetail.colorLevelName}}</text>
+    </view>
+    <view class="d">
+      <view>
+        <text class="m">长度</text>
+        <text class="n">{{itemDetail.lengthAvg}}</text>
+      </view>
+      <view>
+        <text class="m">强力</text>
+        <text class="n">{{itemDetail.strongAvg}}</text>
+      </view>
+      <view>
+        <text class="m">马值</text>
+        <text class="n">{{itemDetail.mikeAvg}}</text>
+      </view>
+      <view>
+        <text class="m">含杂率</text>
+        <text class="n">{{itemDetail.impurity}}%</text>
+      </view>
+      <view>
+        <text class="m">回潮率</text>
+        <text class="n">{{itemDetail.moisture}}%</text>
+      </view>
+    </view>
+    <view class="e">仓库:{{itemDetail.depotName}}</view>
+  </view>
+
+  <!-- two -->
+  <view class="price">
+    <view class="vl">
+      <text class="txta">当前价格(元/吨)</text>
+      <text class="txtb"></text>
+    </view>
+    <view class="vr">
+      <view class="txta">
+        <text>{{itemDetail.price}}</text>
+      </view>
+      <view class="txtb">
+        <text class="m">{{itemDetail.packnum}} 包</text>
+        <view class="n">
+          公重
+          <text>{{itemDetail.pubWeight}}</text> 吨</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 批 -->
+  <view class="shpc">所含批次
+    <text>共{{items.length}}批</text>
+  </view>
+  <view style="">
+    <block wx:if="{{items.length > 0}}">
+      <block wx:key="item" wx:for="{{items}}">
+        <view class="lista" id="{{item.batchID}}" bindtap="cottonDetail">
+          <view class="vl">
+            <view class="a">
+              <text class="ha">{{item.batchID}}</text>
+              <text class="hb">{{item.primaryColorName}}</text>
+              <text class="hc">{{item.cottonTypeName}}</text>
+              <block wx:if="{{item.listingType == 1}}">
+                <text class="hd">自营</text>
+              </block>
+            </view>
+            <view class="b">
+              <view class="cqm">
+                <text class="m">长度</text>
+                <text class="n">{{item.lengthAvg}}</text>
+              </view>
+              <view class="sg">|</view>
+              <view class="cqm">
+                <text class="m">强力</text>
+                <text class="n">{{item.strongAvg}}</text>
+              </view>
+              <view class="sg">|</view>
+              <view class="cqm">
+                <text class="m">马值</text>
+                <text class="n">{{item.mikeAvg}}</text>
+              </view>
+            </view>
+            <view class="c">
+              <image src="../../images/other/ck.png"></image>
+              <text class="n">{{item.depotName}}</text>
+            </view>
+          </view>
+
+          <!--
+          <view class="vr">
+            <view class="a">{{item.listingDate}}</view>
+            <view class="b">{{item.price}}</view>
+            <view class="c">元/吨</view>
+            <view class="d">
+              <text>
+                <block wx:if="{{item.amountType == 0}}">公重</block>
+                <block wx:if="{{item.amountType == 1}}">毛重</block>
+                <block wx:if="{{item.amountType == 2}}">净重</block>
+              </text>{{item.amount}}</view>
+          </view>-->
+
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <block wx:if="{{!firstDataFlag}}">
+        <view class="zwsj">暂无数据</view>
+      </block>
+    </block>
+  </view>
+</scroll-view>
+
+<!--购买 -->
+<block wx:if="{{itemDetail.status == 0}}">
+  <view class="bottom">
+    <view class="a"></view>
+    <view class="c">
+      <button class="but_orange" bindtap="toApply">申请拍储</button>
+    </view>
+  </view>
+</block>

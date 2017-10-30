@@ -1,0 +1,90 @@
+
+<view class="zc_content">
+
+    <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">批号</label>
+        </view>
+        <view class="weui_cellb">
+            <input class="weui_input" type="number" value="{{itemDetail.batchID}}" disabled="true" />
+        </view>
+    </view>
+    
+    <view class="phxqlist">
+        <view class="a">
+            <text>{{itemDetail.primaryColorName}}</text>
+            <text>{{itemDetail.cottonTypeName}}</text>
+            <text>马值:{{itemDetail.mikeAvg}}</text>
+            <text>强力:{{itemDetail.strongAvg}}</text>
+            <text>长度:{{itemDetail.lengthAvg}}</text>
+        </view>
+        <view class="b">
+            <text>原仓库:{{itemDetail.depotName}}</text>
+        </view>
+    </view>
+    
+     <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">价格(元/吨)</label>
+        </view>
+        <view class="weui_cellb">
+            <input class="weui_input" type="number" placeholder="请输挂牌价格" value="{{itemDetail.price}}" disabled="{{itemDetail.status != 0}}" bindinput="bindPrice" />
+        </view>
+    </view>
+
+    <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">结算方式</label>
+        </view>
+        <view class="weui_cellb">
+        <picker mode="selector" disabled="{{itemDetail.status != 0}}"  bindchange="amountTypeChange" value="{{amountTypeIndex}}" range="{{amountTypeObjArray}}" range-key="name">
+            <view class="picker">
+                {{amountTypeObjArray[amountTypeIndex]['name']}}
+                <block wx:if="{{itemDetail.status == 0}}">
+                    <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+                </block>
+            </view>
+        </picker>
+        </view>
+    </view>
+
+    <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">仓库</label>
+        </view>
+        <view class="weui_cellb" bindtap="selectDepotPage" id="{{itemDetail.status}}">
+            <view class="picker">
+                {{corpName}}
+                <block wx:if="{{itemDetail.status == 0}}">
+                    <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+                </block>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui_cell">
+        <view class="weui_cella">
+        <label class="weui_label">状态</label>
+        </view>
+        <view class="weui_cellb">
+            <view class="zs">
+                <block wx:if="{{itemDetail.status == 0}}">在售</block>
+                <block wx:if="{{itemDetail.status == 1}}">已锁定</block>
+                <block wx:if="{{itemDetail.status == 2}}">已售出</block>
+                <block wx:if="{{itemDetail.status == 8}}">已过期</block>
+                <block wx:if="{{itemDetail.status == 9}}">已撤销</block>
+            </view>
+        </view>
+    </view>
+
+    <block wx:if="{{itemDetail.status == 0}}">
+        <view class="bottom">
+            <view>
+                <button class="but_green" id="{{itemDetail.batchID}}" bindtap="updateListing">确认修改</button>
+            </view>
+            <view>
+                <button class="but_orange" bindtap="revokeListing">撤销</button>
+            </view>
+        </view>
+    </block>
+</view>

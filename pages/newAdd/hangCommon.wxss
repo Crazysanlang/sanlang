@@ -1,0 +1,198 @@
+/* 步骤 */
+.step{
+  height: 150rpx;
+  padding-top: 40rpx;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.step .stepNum{
+  text-align: center;
+}
+.step .line0{
+  width:32%;
+  height:1px;
+  background-color:#D4D4D4;
+  top:35px;
+  left:20%;
+  position:absolute;
+  z-index:-1;
+}
+.step .line1{
+  background-color: #14bab4;
+}
+.step .line2{
+  width:32%;
+  height:1px;
+  background-color:#D4D4D4;
+  top:35px;
+  right:20%;
+  position:absolute;
+  z-index:-1;
+}
+.step .line3{
+  background-color: #14bab4;
+}
+.step .stepNum view:first-child{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;  
+  margin: 0 auto;
+  border-radius:50%;
+  color: #fff;
+}
+.step .stepNum view:last-child{
+  margin-top: 10px;
+}
+.step .finish view:first-child{
+  background-color: #14bab4;
+}
+.step .finish view:last-child{
+  color: #14bab4;
+}
+.step .Notfinish view:first-child{  
+  background-color: #D4D4D4;
+}
+.step .Notfinish view:last-child{  
+  color: #D4D4D4;
+}
+
+
+/* 内容 */
+.bar{
+  height:90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #ddd;
+  padding: 0 50rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.uploadBar{
+  height: 170px;
+  line-height: 170px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 50rpx;
+  display: flex;
+  justify-content:flex-start;
+}
+.uploadBar .rightBar{
+  padding-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap wrap;
+  width: 80%;
+}
+.uploadBar .rightBar .upload image{
+  width:34px;
+  height:27px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+.uploadBar .rightBar .upload{
+  border:1px solid #ddd;
+  background-color:#f7f7f7;
+  width:95px;
+  height:80px;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 28px;
+}
+.uploadBar .rightBar .pic{
+  width:94px;
+  height:127px;
+  overflow: hidden;
+}
+.uploadBar .rightBar .pic image{
+  width:94px;
+  height:127px;
+}
+.uploadBar .rightBar .upload view{
+  color: #D4D4D4;
+}
+.bar .leftBar,.uploadBar .leftBar{
+  font-size: 28rpx;
+  color:#666;
+  width: 28%;
+}
+.bar .rightBar{
+  width: 65%;
+}
+.bar .rightBar input{
+  height:90rpx;
+}
+.bar .rightBar image{
+  width: 13px;
+  height: 20px;
+  float: right;
+  margin-top: 15px;
+}
+.bar .rightBar{
+  display: flex;
+  justify-content: space-between
+}
+.bar .rightBar picker{
+  width: 100%;
+}
+.bar .rightBar .picker{
+  display: flex;
+  justify-content: space-between
+}
+
+
+
+.addSuccess{
+  padding: 0 50rpx;
+  padding-top:50rpx; 
+  display: flex;
+  justify-content: flex-start;
+}
+.addSuccess .successL{
+  width:30%;
+  height:100rpx;
+  text-align:right;
+  padding-right:10px;
+}
+.addSuccess .successR{
+  display: flex;
+  height: 100rpx;
+  flex-flow: row wrap;
+  align-content: space-between; 
+}
+.addSuccess .successR>view {
+  width: 100%;
+}
+.addSuccess .successR>view:first-child{
+  font-size: 40rpx;
+  color: #666;
+}
+.addSuccess .successR>view:last-child{
+  font-size: 28rpx;
+  color: #999;
+}
+
+
+
+
+
+.btn{
+  margin-top: 22rpx;
+}
+.btn button{
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+  background-color: #14bab4;
+  border-radius: 7rpx;
+  margin: 0 50rpx;
+}
+
+.skip{
+  margin-top: 10px;
+  font-size: 30rpx;
+  color: #ff7f00;
+  text-decoration: underline;
+  text-align: center;
+}
+

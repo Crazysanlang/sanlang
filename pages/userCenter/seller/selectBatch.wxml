@@ -1,0 +1,31 @@
+
+<block wx:if="{{items.length > 0}}">
+    <view class="list lista">
+        <view class="a"><checkbox checked="{{checkAllFlag}}" bindtap="checkBoxAll"></checkbox></view>
+        <view class="b">批号</view>
+        <view class="c">重量(吨)</view>
+        <view class="d">金额(元/吨)</view>
+    </view>
+
+    <checkbox-group bindchange="checkboxChange">
+        <block wx:key="item" wx:for="{{items}}">
+            <view class="list">
+                <view class="a"><checkbox value="{{item.detailID}}" checked="{{item.checkFlag}}"></checkbox></view>
+                <view class="b">{{item.batchID}}</view>
+                <view class="c">{{item.amount}}</view>
+                <view class="d">{{item.price}}</view>
+            </view>
+        </block>
+    </checkbox-group>
+
+    <view class="sl">
+        发货数量<text>{{amountSum}}</text> 吨
+    </view>
+    <view class="je">
+        发货金额<text>￥{{moneySum}}</text>
+    </view>
+
+    <view class="weui_btn_area">
+        <button class="but_green" bindtap="toSendIn">确认</button>
+    </view>
+</block>

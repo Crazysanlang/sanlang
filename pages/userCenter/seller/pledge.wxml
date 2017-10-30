@@ -1,0 +1,39 @@
+
+<block wx:if="{{items.length > 0}}">
+  <block wx:key="item" wx:for="{{items}}">
+    <view class="list" id="{{item.loanID}}" bindtap="toPledgeDetail">
+        <view class="tit">
+            <text class="a">质押单号：{{item.billCode}}</text>
+            <text class="b">
+                <block wx:if="{{item.status == 0}}">申请中</block>
+                <block wx:if="{{item.status == 1}}">计息中</block>
+                <block wx:if="{{item.status == 2}}">已结束</block>
+            </text>
+        </view>
+        <view class="nr">
+            <view class="a">
+                <view class="m">{{item.loanMoneyFmt}}</view>
+                <view class="n">融资金额</view>
+            </view>
+            <view class="b">
+                <view class="m">已计息 <text>+{{item.interestFmt}}</text></view>
+                <view class="n">最后还款日 {{item.expiryDate}}</view>
+            </view>
+            <view class="c">
+            <image src="../../../images/other/yjt.png"></image> 
+            </view>
+        </view>
+        <view class="nrb">
+            <view class="zywlist">
+                <text class="a">批号:{{item.batchID}}</text>
+                <text class="b">{{item.loanAmount}} 吨</text>
+            </view>
+        </view>
+    </view>
+</block>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无质押信息</view>
+  </block>
+</block>

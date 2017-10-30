@@ -1,0 +1,39 @@
+
+<!--搜索-->
+<view class="search">
+  <view class="l">
+    <view class="inputbg" bindtap="">
+      <image src="../../images/other/search.png" class="a"></image>
+      <input type="text" placeholder="批号/捆号/加工厂/所在仓库" value="{{searchName}}" focus="true" bindinput="searchList" />
+    </view>
+  </view>
+</view>
+
+<!--搜索历史-->
+<scroll-view scroll-y="true" style="height:{{windowHeight-65}}px" class="scrollbox">
+
+    <block wx:if="{{items.length > 0}}">
+
+        <block wx:key="item" wx:for="{{items}}">
+            <view class="list" id="{{item.id}}" data-name="{{item.name}}" data-status="{{item.status}}" bindtap="toDetail">
+                <view class="bt">{{item.name}}</view>
+                <view class="nr">
+                    <block wx:if="{{item.status==0}}">批号</block>
+                    <block wx:if="{{item.status==1}}">仓库</block>
+                    <block wx:if="{{item.status==2}}">加工厂</block>
+                    <block wx:if="{{item.status==3}}">捆号</block>
+                </view>
+            </view>
+        </block>
+    </block>
+    <block wx:else>
+        <block wx:if="{{!firstHistoryFlag}}">
+            <view class="zwls">暂无任何搜索历史</view>
+        </block>
+        <block wx:if="{{!firstDataFlag}}">
+            <view class="zwls">暂无任何搜索结果</view>
+        </block>
+    </block>
+    
+</scroll-view>
+

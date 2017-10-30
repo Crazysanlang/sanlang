@@ -1,0 +1,13 @@
+page{background:#F7F7F7;}
+.contenta{background-color:#ffffff;margin-top:15px;}
+.bottom{display:flex;}
+.bottom view{flex:1;padding:0 5%}
+.list{display:flex;}
+.list view{flex:1;border-bottom:1px solid #eeeeee;line-height:30px;}
+.list .l{padding-left:5%;color:#999999}
+.list .r{text-align:right;padding-right:5%;}
+.list .r text{color:#999999;}
+.list .r image{width:80px;height:89px;}
+.bottom{margin-top:25px;}
+.list .r .txta{color:#ff8000}
+.list .r .txtb{color:#14bab4}

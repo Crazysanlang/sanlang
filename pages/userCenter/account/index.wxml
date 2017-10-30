@@ -1,0 +1,35 @@
+<view class="melist">
+
+    <block wx:if="{{!isMember}}">
+        <view class="melistblock" bindtap="toAuth">
+            <view class="a" style="color:red;">企业认证</view>
+            <view class="b"><image src="../../../images/other/yjt.png"  /></view>
+        </view>
+    </block>
+
+    <view class="melistblock" bindtap="toUserInfo">
+        <view class="a">个人信息</view>
+        <view class="b"><image src="../../../images/other/yjt.png"  /></view>
+    </view>
+
+    <block wx:if="{{isMember}}">
+        <view class="melistblock" bindtap="toCompanyInfo">
+            <view class="a">公司信息</view>
+            <view class="b"><image src="../../../images/other/yjt.png"  /></view>
+        </view>
+
+        <view class="melistblock" bindtap="toTicketInfo">
+            <view class="a">开票信息</view>
+            <view class="b"><image src="../../../images/other/yjt.png"  /></view>
+        </view>
+    </block>
+
+    <view class="melistblock" bindtap="toEditPwd">
+        <view class="a">修改密码</view>
+        <view class="b"><image src="../../../images/other/yjt.png"  /></view>
+    </view>
+</view>
+
+<view class="tcdl">
+    <button class="but_orange" bindtap="logout">退出登录</button>
+</view>

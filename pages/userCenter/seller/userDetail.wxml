@@ -1,0 +1,44 @@
+<view class="contenta">
+  <block wx:if="{{contactsItem.buyUserName != ''}}">
+    <view class="list">
+      <view class="l">姓名</view>
+      <view class="r">{{contactsItem.buyUserName}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.buyUserMobile != ''}}">
+    <view class="list">
+      <view class="l">手机号</view>
+      <view class="r" bindtap="makePhoneCall">{{contactsItem.buyUserMobile}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.buyMemberName != ''}}">
+    <view class="list">
+      <view class="l">单位名称</view>
+      <view class="r">{{contactsItem.buyMemberName}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.buyMemberTaxCert != ''}}">
+    <view class="list">
+      <view class="l">纳税人号</view>
+      <view class="r">{{contactsItem.buyMemberTaxCert}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.buyUserEmail != ''}}">
+    <view class="list">
+      <view class="l">邮箱</view>
+      <view class="r">{{contactsItem.buyUserEmail}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.buyMemberBank != ''}}">
+    <view class="list">
+      <view class="l">开户行</view>
+      <view class="r">{{contactsItem.buyMemberBank}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.buyMemberBankAccount != ''}}">
+    <view class="list">
+      <view class="l">银行账号</view>
+      <view class="r">{{contactsItem.buyMemberBankAccount}}</view>
+    </view>
+  </block>
+</view>

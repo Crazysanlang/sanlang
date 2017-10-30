@@ -1,0 +1,84 @@
+<view class="jjxq">
+    <view class="jjxq_a">
+        <view class="a">
+        <text>2017早籼稻谷</text></view>
+        <view class="b">3000</view>
+        <view class="c">基准价(元/吨)</view>
+    </view>
+    <view class="jjxq_b">
+        <view class="jjxq_b_list">
+            <view class="txta">品种</view>
+            <view class="txtb">稻谷</view>
+        </view>
+        <view class="jjxq_b_list">
+            <view class="txta">数量</view>
+            <view class="txtb">5000 吨</view>
+        </view>
+        <view class="jjxq_b_list">
+            <view class="txta">品牌</view>
+            <view class="txtb">稻花香</view>
+        </view>
+        <view class="jjxq_b_list">
+            <view class="txta">起止时间</view>
+            <view class="txtb">14:00 ~ 16:00</view>
+        </view>
+    </view>
+    <view class="jjxq_c">
+        <view class="tit">
+            <text class="a">出价记录</text>
+            <text class="b"></text>
+        </view>
+        <scroll-view scroll-y="true" style="height:230px;" scroll-top="0">
+            <view class="jjxq_c_list listOne">
+              <view class="status">①</view>
+              <view class="b">1888吨<text></text> </view>
+              <view class="c">18800</view>
+              <view class="a">18:30:20</view>
+              <view class="d">江西收粮</view>
+            </view>
+            <view class="jjxq_c_list listOne">
+                <view class="status listOther">②</view>
+                <view class="b">1888吨<text></text></view>
+                <view class="c">18700</view>
+                <view class="a">18:10:10</view>
+                <view class="d">上海收粮</view>
+            </view>
+            <view class="jjxq_c_list listOther">
+                <view class="status">③</view>
+                <view class="b">1888吨<text></text></view>
+                <view class="c">18700</view>
+                <view class="a">18:20:10</view>
+                <view class="d">河南收粮</view>
+            </view>
+            <view class="jjxq_c_list listOthers">
+                <view class="status">③</view>
+                <view class="b">1888吨<text></text></view>
+                <view class="c">1870</view>
+                <view class="a">18:20:10</view>
+                <view class="d">江苏收粮</view>
+            </view>
+            <view class="jjxq_c_list out">
+                <view class="status"><text>出局</text> </view>
+                <view class="b">100吨</view>
+                <view class="c">1900</view>
+                <view class="a">18:19:10</view>
+                <view class="d">江西粮食批发</view>
+            </view>
+            <!-- <view class="zwsj">暂无出价</view> -->
+        </scroll-view>
+    </view>
+    <view class="jjxq_d">
+        <view class="tim">
+            <!-- 还剩<text class='text-wks'>03:58:22</text>开始   -->
+           还剩<text class="text-jj">03:58:22</text>结束 
+           <!-- <text>竞价已结束</text>  -->
+        </view>
+        <view class="wycj_btn">
+           <!-- <button class="but_green">未开始</button>  -->
+           <button class="but_red">立即出价</button> 
+           <!-- <button class="but_red">查看出价</button>  -->
+            <!-- <button class="btn_yjs" disabled="true">已结束</button>   -->
+        </view>
+    </view>
+</view>
+

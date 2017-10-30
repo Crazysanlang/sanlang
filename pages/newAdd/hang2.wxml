@@ -1,0 +1,54 @@
+
+<view class="step">
+<!-- 完成状态添加类名finish 未完成添加Notfinish -->
+  <view class='stepNum finish'>
+    <view>1</view>
+    <view>基础信息</view>
+  </view>
+  <view class='stepNum finish'>
+    <view>2</view>
+    <view>附加信息</view>
+  </view>
+  <view class='stepNum Notfinish'>
+    <view>3</view>
+    <view>挂牌完成</view>
+  </view>
+  <!-- 一二步骤之间的进度条高亮在line0 之后添加类line1 -->
+  <view class='line0 line1'></view>
+  <!-- 二三步骤之间的进度条高亮在line0 之后添加类line3 -->
+  <view class='line2 '></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>生产年份</view>
+  <view class='rightBar'>
+    <picker mode="selector" range-key="name" value="{{yearIndex}}" range="{{yearArray}}" bindchange="yearChange">
+      <view class="picker">{{yearPlaceholder}}{{yearArray[yearIndex]['name']}}
+         <image src="/images/other/record-right.png"></image> 
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>含水率</view>
+  <view class='rightBar'><input type="number"></input><text>%</text></view>
+</view>
+<view class='bar'>
+  <view class='leftBar'>含杂率</view>
+  <view class='rightBar'><input type="number"></input><text>%</text></view>
+</view>
+<view>
+  <view class='uploadBar'>
+  <view class='leftBar'>质检报告</view>
+  <view class='rightBar'>
+    <view class='pic'> <image src='/images/other/zhengshu.png'></image>  </view>
+    <view class='upload'>
+      <image src="/images/other/pz.png"></image>
+      <view>点击上传</view>
+    </view>
+  </view>
+</view>
+</view>
+<view class='btn'>
+  <button>下一步</button>
+</view>
+<view class='skip'>跳过</view>

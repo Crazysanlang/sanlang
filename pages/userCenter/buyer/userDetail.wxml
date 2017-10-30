@@ -1,0 +1,44 @@
+<view class="contenta">
+  <block wx:if="{{contactsItem.sellUserName != ''}}">
+    <view class="list">
+      <view class="l">姓名</view>
+      <view class="r">{{contactsItem.sellUserName}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.sellUserMobile != ''}}">
+    <view class="list">
+      <view class="l">手机号</view>
+      <view class="r" bindtap="makePhoneCall">{{contactsItem.sellUserMobile}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.sellMemberName != ''}}">
+    <view class="list">
+      <view class="l">单位名称</view>
+      <view class="r">{{contactsItem.sellMemberName}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.sellMemberTaxCert != ''}}">
+    <view class="list">
+      <view class="l">纳税人号</view>
+      <view class="r">{{contactsItem.sellMemberTaxCert}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.sellUserEmail != ''}}">
+    <view class="list">
+      <view class="l">邮箱</view>
+      <view class="r">{{contactsItem.sellUserEmail}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.sellMemberBank != ''}}">
+    <view class="list">
+      <view class="l">开户行</view>
+      <view class="r">{{contactsItem.sellMemberBank}}</view>
+    </view>
+  </block>
+  <block wx:if="{{contactsItem.sellMemberBankAccount != ''}}">
+    <view class="list">
+      <view class="l">银行账号</view>
+      <view class="r">{{contactsItem.sellMemberBankAccount}}</view>
+    </view>
+  </block>
+</view>

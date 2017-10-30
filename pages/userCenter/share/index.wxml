@@ -1,0 +1,71 @@
+
+<view class="meblock" bindtap="makePhoneCall">
+    <view class="r" style="flex:3;">
+        <text class="m" style="font-size:16px;margin:left:10px;">{{memberItem == null ? '-' : memberItem.corpNameFull }}</text>
+        <text class="n" style="margin:left:10px;margin-top:5px;">{{name}} {{mobile}}</text>
+    </view>
+    <block wx:if="{{totalRow > 0}}">
+      <view class="r">
+          <text class="m" style="font-size:16px;margin:left:10px;"></text>
+          <text class="n" style="margin:left:10px;margin-top:5px;float:right;">共 {{totalRow}} 批</text>
+      </view>
+    </block>
+</view>
+
+<block wx:if="{{items.length > 0}}">
+  <scroll-view scroll-y="true" style="height:{{windowHeight-82}}px;">
+    <block wx:key="item" wx:for="{{items}}">
+      <view class="lista" id="{{item.batchID}}" bindtap="cottonDetail">
+        <view class="vl">
+          <view class="a">
+            <text class="ha">{{item.batchID}}</text>
+            <text class="hb">{{item.primaryColorName}}</text>
+            <text class="hc">{{item.cottonTypeName}}</text>
+            <block wx:if="{{item.listingType == 1}}">
+              <text class="hd">自营</text>
+            </block>
+          </view>
+          <view class="b">
+            <view class="cqm">
+              <text class="m">长度</text>
+              <text class="n">{{item.lengthAvg}}</text>
+            </view>
+            <view class="sg">|</view>
+            <view class="cqm">
+              <text class="m">强力</text>
+              <text class="n">{{item.strongAvg}}</text>
+            </view>
+            <view class="sg">|</view>
+            <view class="cqm">
+              <text class="m">马值</text>
+              <text class="n">{{item.mikeAvg}}</text>
+            </view>
+          </view>
+          <view class="c">
+            <image src="/images/other/ck.png"></image>
+            <text class="n">{{item.depotName}}</text>
+          </view>
+        </view>
+        <view class="vr">
+          <view class="a">{{item.listingDate}}</view>
+          <view class="b">{{item.price}}</view>
+          <view class="c">元/吨</view>
+          <view class="d">
+            <text>
+              <block wx:if="{{item.amountType == 0}}">公重</block>
+              <block wx:if="{{item.amountType == 1}}">毛重</block>
+              <block wx:if="{{item.amountType == 2}}">净重</block>
+            </text>{{item.amount}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{moreFlag}}">
+      <view class="moreList" bindtap="moreList">点击查看更多</view>
+    </block>
+  </scroll-view>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无资源单</view>
+  </block>
+</block>

@@ -1,0 +1,38 @@
+<view class="zc_content">
+  <view class="weui_cell">
+    <view class="">
+      <label class="weui_label">手机号</label>
+    </view>
+    <view class="" style="width:100%;">
+      <input class="weui_input" type="number" maxlength="11" style="width:70%;z-index:1;" placeholder="请输入手机号" bindinput="bind_mobile_input" focus="true" disabled="{{mobileDisabled}}" />
+      <button class="em-on" disabled="{{sendMsgBtnDisabled}}" bindtap="bindSendMessage" style="z-index：5;">{{sendMsgTxt}}</button>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">验证码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" maxlength="6" placeholder="请输入验证码" bindinput="bind_code_input" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">新密码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="password" maxlength="16" placeholder="6-16位字母或数字" bindinput="bind_pwd_input" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">密码确认</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="password" maxlength="16" placeholder="请再输入一遍新密码" bindinput="bind_pwd1_input" />
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="resetPassword" disabled="{{btnDisabled}}" loading="{{btnLoading}}">确认</button>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<view class="tab_area">
+  <navigator url="/pages/userCenter/seller/send" class="tab_hover" open-type="redirect" hover-class="other-navigator-hover">未发货</navigator>
+  <navigator url="/pages/userCenter/seller/sendHistory" class="" open-type="redirect" hover-class="other-navigator-hover">发货记录</navigator>
+</view>
+
+<block wx:if="{{items.length > 0}}">
+  <scroll-view style="height:{{windowHeight}}px" scroll-y="true">
+    <block wx:key="item" wx:for="{{items}}">
+      <view class="wdlist" id="{{item.orderID}}" bindtap="toSendIn">
+        <view class="l">
+          <view class="m">{{item.buyMemberName}}</view>
+          <view class="n">订单号:{{item.orderID}}</view>
+        </view>
+        <view class="r">
+          <view class="m">￥{{item.needDeliveryAmount}}吨</view>
+          <view class="n">
+            <text>最晚发货: {{item.lastPaymentDate}}</text>
+          </view>
+        </view>
+        <view class="yjt">
+          <image src="../../../images/other/yjt.png" />
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无发货信息</view>
+  </block>
+</block>

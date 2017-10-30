@@ -1,0 +1,22 @@
+.sjz_list{display:flex;margin-left:5%;border-left:1px solid #14bab4;min-height:60px;position:relative;left:6px;line-height:14px;font-size:12px;}
+.sjz_list .a{flex:3;padding-bottom:30px;}
+.sjz_list .c{text-align:right;padding-right:5%;}
+.sjz_list .d{}
+.sjz_list .d text{border-radius:100%;width:30px;height:30px;display:block;position:relative;left:-16px;background-color:#14bab4;color:#ffffff;text-align:center;line-height:30px;font-size:16px;top:-5px;}
+page{background-color:#ffffff;}
+.sjz_list:last-child{border:0;left:7px;}
+.sjz_list .a .tit{display:flex;}
+.sjz_list .a .tit .hn{border:1px solid #14bab4;color:#14bab4;padding:5px 20px;border-radius:3px;font-size:14px;display:block;margin-right:5%;}
+.listb{color:#999999;font-size:12px;}
+.sjz_list .a .tit .hm text{font-size:12px;color:#999999;padding-left:12px;}
+.all text{color:#ff8000}
+.all{color:#999999;padding-top:10px;}
+.sjz_list .a .tit .hm{flex:1;font-size:16px;}
+.htcontent{padding-top:20px;}
+.pz{border:1px solid #dddddd;background-color:#F7F7F7;width:95px;height:80px;position:relative;top:15px;float:left;margin-right:15px;margin-top:15px;}
+.pz .imgc{width:34px;height:27px;position:relative;top:18px;left:30px;}
+.pz text{display: block;text-align:center;position:relative;top:25px;color:#999999;}
+.tjadd{clear:both;padding-top:20px;}
+.tjadd button{margin-top:20px;width:150px;float:left;height:40px;font-size:14px;line-height:40px;border-radius:5px;}
+.inputlj{margin-top:30px;}
+.inputlj textarea{border:1px solid #dddddd;color:#999999;font-size:12px;line-height:15px;padding:5px 10px;min-height:50px;height:auto;border-radius:2px;width:85%;}

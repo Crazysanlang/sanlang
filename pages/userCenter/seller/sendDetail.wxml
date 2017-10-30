@@ -1,0 +1,87 @@
+<view class="contenta">
+    <view class="list">
+        <view class="l">提货仓库</view>
+        <view class="r">{{itemDetail.depotName}}</view>
+    </view>
+     <view class="list">
+        <view class="l">仓库地址</view>
+        <view class="r">{{itemDetail.depotAddress}}</view>
+    </view>
+     <view class="list">
+        <view class="l">仓库电话</view>
+        <view class="r">{{itemDetail.depotPhone}}</view>
+    </view>
+     <view class="list" style="border-top:2px solid #eeeeee;">
+        <view class="l">提货单位</view>
+        <view class="r">{{itemDetail.buyMemberName}}</view>
+    </view>
+     <view class="list">
+        <view class="l">联系人</view>
+        <view class="r">{{itemDetail.buyUserName}}</view>
+    </view>
+    <view class="list">
+        <view class="l">联系电话</view>
+        <view class="r">{{itemDetail.buyUserMobile}}</view>
+    </view>
+    
+    <block wx:if="{{itemDetail.deliveryType == 0 }}">
+        <view class="list" style="border-top:2px solid #eeeeee;">
+            <view class="l">姓名</view>
+            <view class="r">{{itemDetail.driverName}}</view>
+        </view>
+        <view class="list">
+            <view class="l">身份证号</view>
+            <view class="r">{{itemDetail.driverIdNumber}}</view>
+        </view>
+        <view class="list">
+            <view class="l">手机号</view>
+            <view class="r">{{itemDetail.driverPhone}}</view>
+        </view>
+        <view class="list">
+            <view class="l">车号</view>
+            <view class="r">{{itemDetail.truckNumber}}</view>
+        </view>
+    </block>
+
+     <view class="list">
+        <view class="l">状态</view>
+        <view class="r">
+            <block wx:if="{{itemDetail.status == 0}}"><text class="a">待确认</text></block>
+            <block wx:if="{{itemDetail.status == 1}}"><text class="b">已确认</text></block>
+            <block wx:if="{{itemDetail.status == 2}}"><text class="c">已作废</text></block>
+        </view>
+    </view>
+</view>
+
+<view class="jjlist">
+    <view class="b">
+        <view class="m">
+            <view class="aa">批次</view>
+            <view class="ab">颜色级</view>
+            <view class="ac">数量(吨)</view>
+            <view class="ad">单价(元/吨)</view>
+        </view>
+
+        <block wx:for-item="itemBean" wx:for="{{itemDetail.list}}">
+            <view class="n">
+                <view class="aa">{{itemBean.batchID}}</view>
+                <view class="ab">{{itemBean.primaryColorName}}</view>
+                <view class="ac">{{itemBean.amount}}</view>
+                <view class="ad">{{itemBean.price}}</view>
+            </view>
+        </block>
+        <!-- 批号要素-->
+        <view class="f">
+            <view class="fr">合计：<text>￥{{itemDetail.moneySum}}</text></view>
+        </view>
+    </view>
+</view>
+
+ <!--如果对方已确认则以下两个按钮不要-->
+<block wx:if="{{itemDetail.status == 0}}">
+    <view class="bottom">
+        <view>
+            <button class="but_orange" bindtap="revokeDelivery">删除</button>
+        </view>
+    </view>
+</block>

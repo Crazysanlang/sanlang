@@ -1,0 +1,395 @@
+
+<!-- one -->
+<view class="batchxq">
+  <view class="a">
+    <text class="txta">{{itemDetail.primaryColorName}}</text>
+    <block wx:if="{{itemDetail.isInspect == 1}}">
+      <text class="txte gongjian">已公检</text>
+    </block>
+    <block wx:if="{{itemDetail.listingType == 1}}">
+      <text class="txtf ziyin">自营</text>
+    </block>
+  </view>
+  <view class="b">
+    <text class="txta">{{itemDetail.cottonTypeName}}</text>
+    <block wx:if="{{itemDetail.packType != 0}}">
+      <text class="txtb">
+        <block wx:if="{{itemDetail.packType == 1}}">机采棉</block>
+        <block wx:if="{{itemDetail.packType == 2}}">手摘棉</block>
+      </text>
+    </block>
+    <text class="txtc">捆号:{{itemDetail.baleCode == '' ? '-' : itemDetail.baleCode }}</text>
+  </view>
+  <view class="c">
+    <text>加工企业：{{itemDetail.factoryName}}</text>
+  </view>
+  <view class="d">
+    <view>
+      <text class="m">长度</text>
+      <text class="n">{{itemDetail.lengthAvg}}</text>
+    </view>
+    <view>
+      <text class="m">强力</text>
+      <text class="n">{{itemDetail.strongAvg}}</text>
+    </view>
+    <view>
+      <text class="m">马值</text>
+      <text class="n">{{itemDetail.mikeAvg}}</text>
+    </view>
+    <view>
+      <text class="m">含杂率</text>
+      <text class="n">{{itemDetail.impurity}}%</text>
+    </view>
+    <view>
+      <text class="m">回潮率</text>
+      <text class="n">{{itemDetail.moisture}}</text>
+    </view>
+  </view>
+  <block wx:if="{{itemDetail.origins != '' || itemDetail.depotName != '' }}">
+    <view class="e">
+      <text class="txta" style="width:25%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;float:left">
+        <block wx:if="{{itemDetail.origins != '' }}">产地:{{itemDetail.origins}}</block>
+      </text>
+      <text class="txtb {{iphoneflag? 'phone5':''}}" style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:75%;float:left">
+        <block wx:if="{{itemDetail.depotName != '' }}">仓库:{{itemDetail.depotName}}</block>
+      </text>
+    </view>
+  </block>
+  <button class="createPic" bindtap="saveImageToPhotos" loading="{{sitp_loading}}" disabled="{{sitp_disabled}}">生成图片</button>
+</view>
+
+<!-- two -->
+<block wx:if="{{itemDetail.price > 0}}">
+  <view class="price">
+    <view class="vl">
+      <text class="txta">价格(元/吨)</text>
+      <text class="txtb">{{itemDetail.listingDate}}</text>
+    </view>
+    <view class="vr">
+      <view class="txta">
+        <block wx:if="{{itemDetail.indexCode !=''}}">{{itemDetail.indexCode}}</block><text><block wx:if="{{itemDetail.price > 0 && itemDetail.indexCode != ''}}">+</block>{{itemDetail.price}}</text>
+      </view>
+      <view class="txtb">
+        <text class="m">{{itemDetail.packnum}} 包</text>
+          <view class="n">
+          <block wx:if="{{itemDetail.amountType == 0}}">公重</block>
+          <block wx:if="{{itemDetail.amountType == 1}}">毛重</block>
+          <block wx:if="{{itemDetail.amountType == 2}}">净重</block>
+          <text>{{itemDetail.amount}}</text> 吨</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!-- three -->
+<view class="tab">
+  <view class="{{cpxqlista_hover}}" data-index="1" bindtap="detailView">产品详情</view>
+  <view class="{{cpxqlistb_hover}}" data-index="2" bindtap="detailView">质量详情</view>
+</view>
+
+<!--产品详情 -->
+<view class="cpxqlista" hidden="{{cpxqlista_hidden}}">
+
+  <!--重量 -->
+  <view class="cpbox">
+    <view class="vili">
+      <text class="txta">合计包数</text>
+      <text class="txtb">{{itemDetail.packnum}}包</text>
+    </view>
+    <view class="vili">
+      <text class="txta">质量标识</text>
+      <text class="txtb">-</text>
+    </view>
+    <view class="vili">
+      <text class="txta">合计毛重</text>
+      <text class="txtb">{{itemDetail.grossWeight}}</text>
+    </view>
+    <view class="vili">
+      <text class="txta">平均回潮</text>
+      <text class="txtb">{{itemDetail.moisture}}%</text>
+    </view>
+    <view class="vili">
+      <text class="txta">合计皮重</text>
+      <text class="txtb">{{itemDetail.tareWeight}}kg</text>
+    </view>
+    <view class="vili">
+      <text class="txta">平均含杂</text>
+      <text class="txtb">{{itemDetail.impurity}}%</text>
+    </view>
+    <view class="vili">
+      <text class="txta">合计净重</text>
+      <text class="txtb">{{itemDetail.netWeight}}</text>
+    </view>
+    <view class="vili">
+      <text class="txta">合计公重</text>
+      <text class="txtb">{{itemDetail.pubWeight}}</text>
+    </view>
+  </view>
+
+  <!--颜色级 -->
+  <view class="viul">
+    主体颜色级:
+    <text>{{itemDetail.primaryColorName}}</text>
+  </view>
+  <view class="cpbox">
+    <block wx:if="{{itemDetail.colorBM01 > 0}}">
+      <view class="vili">
+        <text class="txta">白棉1级</text>
+        <text class="txtb">{{itemDetail.colorBM01}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.colorBM02 > 0}}">
+      <view class="vili">
+        <text class="txta">白棉2级</text>
+        <text class="txtb">{{itemDetail.colorBM02}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.colorBM03 > 0}}">
+      <view class="vili">
+        <text class="txta">白棉3级</text>
+        <text class="txtb">{{itemDetail.colorBM03}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.colorBM04 > 0}}">
+      <view class="vili">
+        <text class="txta">白棉4级</text>
+        <text class="txtb">{{itemDetail.colorBM04}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.colorBM05 > 0}}">
+      <view class="vili">
+        <text class="txta">白棉4级</text>
+        <text class="txtb">{{itemDetail.colorBM05}}%</text>
+      </view>
+    </block>
+  </view>
+
+  <!--长度级 -->
+  <view class="viul">
+    主体长度级:
+    <text>{{itemDetail.primaryLength}}</text>
+  </view>
+  <view class="cpbox">
+    <block wx:if="{{itemDetail.length25 > 0}}">
+      <view class="vili">
+        <text class="txta">25mm</text>
+        <text class="txtb">{{itemDetail.length25}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.length26 > 0}}">
+      <view class="vili">
+        <text class="txta">26mm</text>
+        <text class="txtb">{{itemDetail.length26}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.length27 > 0}}">
+      <view class="vili">
+        <text class="txta">27mm</text>
+        <text class="txtb">{{itemDetail.length27}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.length28 > 0}}">
+      <view class="vili">
+        <text class="txta">28mm</text>
+        <text class="txtb">{{itemDetail.length28}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.length29 > 0}}">
+      <view class="vili">
+        <text class="txta">29mm</text>
+        <text class="txtb">{{itemDetail.length29}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.length30 > 0}}">
+      <view class="vili">
+        <text class="txta">30mm</text>
+        <text class="txtb">{{itemDetail.length30}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.length31 > 0}}">
+      <view class="vili">
+        <text class="txta">31mm</text>
+        <text class="txtb">{{itemDetail.length31}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.length32 > 0}}">
+      <view class="vili">
+        <text class="txta">32mm</text>
+        <text class="txtb">{{itemDetail.length32}}%</text>
+      </view>
+    </block>
+  </view>
+
+  <!--马值 -->
+  <view class="viul">
+    马克隆主体级:
+    <text>{{itemDetail.primaryMike}}</text>
+  </view>
+  <view class="cpbox">
+    <block wx:if="{{itemDetail.mikeC1 > 0}}">
+      <view class="vili">
+        <text class="txta">C1</text>
+        <text class="txtb">{{itemDetail.mikeC1}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.mikeB1 > 0}}">
+      <view class="vili">
+        <text class="txta">B1</text>
+        <text class="txtb">{{itemDetail.mikeB1}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.mikeA > 0}}">
+      <view class="vili">
+        <text class="txta">A</text>
+        <text class="txtb">{{itemDetail.mikeA}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.mikeB2 > 0}}">
+      <view class="vili">
+        <text class="txta">B2</text>
+        <text class="txtb">{{itemDetail.mikeB2}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.mikeC2 > 0}}">
+      <view class="vili">
+        <text class="txta">C2</text>
+        <text class="txtb">{{itemDetail.mikeC2}}%</text>
+      </view>
+    </block>
+  </view>
+
+  <!--长度整齐度 -->
+  <view class="viul">
+    长度整齐度
+  </view>
+  <view class="cpbox">
+    <block wx:if="{{itemDetail.neatMin > 0}}">
+      <view class="vili">
+        <text class="txta">最小值</text>
+        <text class="txtb">{{itemDetail.neatMin}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.neatMax > 0}}">
+      <view class="vili">
+        <text class="txta">最大值</text>
+        <text class="txtb">{{itemDetail.neatMax}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.neatAvg > 0}}">
+      <view class="vili">
+        <text class="txta">平均值</text>
+        <text class="txtb">{{itemDetail.neatAvg}}%</text>
+      </view>
+    </block>
+  </view>
+
+  <!--断裂比强度 -->
+  <view class="viul">
+    断裂比强度
+  </view>
+  <view class="cpbox">
+    <block wx:if="{{itemDetail.strongMin > 0}}">
+      <view class="vili">
+        <text class="txta">最小值</text>
+        <text class="txtb">{{itemDetail.strongMin}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.strongMax > 0}}">
+      <view class="vili">
+        <text class="txta">最大值</text>
+        <text class="txtb">{{itemDetail.strongMax}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.strongAvg > 0}}">
+      <view class="vili">
+        <text class="txta">平均值</text>
+        <text class="txtb">{{itemDetail.strongAvg}}%</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- Rd(%) +b -->
+  <view class="cpbox">
+    <block wx:if="{{itemDetail.rdAvg > 0}}">
+      <view class="vili">
+        <text class="txta">平均值(Rd)</text>
+        <text class="txtb">{{itemDetail.rdAvg}}%</text>
+      </view>
+    </block>
+    <block wx:if="{{itemDetail.plusbAvg > 0}}">
+      <view class="vili">
+        <text class="txta">平均值(+b)</text>
+        <text class="txtb">{{itemDetail.plusbAvg}}%</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!--质量详情 -->
+<view class="cpxqlistb" hidden="{{cpxqlistb_hidden}}">
+  <scroll-view scroll-x="true">
+    <view class="zlmxlist">
+      <text>序号</text>
+      <text>颜色级</text>
+      <text>长度级</text>
+      <text>轧工质量</text>
+      <text>马克隆值</text>
+      <text>
+        <text>马克隆</text>档次</text>
+      <text>
+        <text>马克隆</text>值级</text>
+      <text>Rd(%)</text>
+      <text>+b</text>
+      <text>长度(mm)</text>
+      <text>
+        <text>长度整齐</text>度(%)</text>
+      <text>
+        <text>断裂比</text>强度</text>
+    </view>
+    <block wx:if="{{cottonPackItemsLength > 0}}">
+      <block wx:key="item" wx:for="{{cottonPackItems}}">
+        <view class="zlmxlist">
+          <text>{{index+1}}</text>
+          <text>{{item.colorLevel}}</text>
+          <text>{{item.lengthLevel}}毫米</text>
+          <text>{{item.quality}}</text>
+          <text>{{item.mikeValue}}</text>
+          <text>{{item.mikeGrade}}</text>
+          <text>{{item.mikeLevel}}</text>
+          <text>{{item.rd}}</text>
+          <text>{{item.plusb}}</text>
+          <text>{{item.lengthValue}}</text>
+          <text>{{item.neatValue}}</text>
+          <text>{{item.strongValue}}</text>
+        </view>
+      </block>
+      <view class="blank"></view>
+    </block>
+    <block wx:else>
+      <block wx:if="{{!cottonPackFirstDataFlag}}">
+        <view class="zwsj">暂无数据</view>
+      </block>
+    </block>
+  </scroll-view>
+</view>
+
+<!--购买 -->
+<block wx:if="{{bottomFlag}}">
+  <view class="bottom">
+    <view class="a"></view>
+    <view class="b">
+      <button class="but_green" id="{{itemDetail.listingID}}" bindtap="addCartItem">加入购物车</button>
+    </view>
+    <view class="c">
+      <button class="but_orange" id="{{itemDetail.listingID}}" bindtap="toConfirm">立即购买</button>
+    </view>
+  </view>
+
+  <!--shopping -->
+  <view class="shopping" bindtap="toShopping">
+    <block wx:if="{{cartCount > 0}}">
+      <text>{{cartCount }}</text>
+    </block>
+    <image src="../../images/other/gwc.png"></image>
+  </view>
+</block>

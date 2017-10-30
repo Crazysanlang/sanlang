@@ -1,0 +1,27 @@
+<view class="zc_content">
+<view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">手机号</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" maxlength="11" placeholder="请输入手机号" bindinput="bind_mobile_input" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">登录密码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="password" maxlength="16" placeholder="6-16位字母或数字" bindinput="bind_pwd_input" />
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="login" disabled="{{btnDisabled}}">登录</button>
+  </view>
+  <view class="weui_cells_tips">
+    还未注册账号，请先<text bindtap="toReg">注册</text>
+  </view>
+  <view class="weui_cells_tips">
+    <text bindtap="toFindPwd">忘记密码</text>
+  </view>
+</view>

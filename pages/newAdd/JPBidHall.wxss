@@ -1,0 +1,193 @@
+.jjxq {
+  background-image: url('../../images/other/jjxq_bga.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+.jjxq_a {
+  text-align: center;
+}
+
+.jjxq_a .a {
+  color: #666;
+  padding-top: 5px;
+  height: 18px;
+  font-size: 12px;
+}
+
+.jjxq_a text {
+  color: #333;
+}
+
+.jjxq_a .b {
+  color: #f25a5d;
+  font-size: 40px;
+  height: 50px;
+}
+
+.jjxq_a .c {
+  color: #999;
+  font-size: 12px;
+  padding-top: 0;
+}
+
+.jjxq_b {
+  margin: 0 auto;
+  margin-top: 40px;
+  border-bottom: 3px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.jjxq_b .txta {
+  flex: 2;
+  padding-left: 10%;
+}
+
+.jjxq_b .txtb {
+  flex: 5;
+}
+
+.jjxq_c {
+  background-color: #f7f7f7;
+  padding-bottom: 120px;
+}
+
+.jjxq_b_list {
+  display: flex;
+  height: 25px;
+  font-size: 16px;
+  color: #666;
+}
+.jjxq_c_list.listOne view{
+  color: #f00;
+}
+.jjxq_c_list.listOther view{
+  color: #f7a528;
+}
+.jjxq_c_list.out view{
+  color:#999;
+  font-size: 24rpx;
+}
+/* 序号 */
+.jjxq_c_list .status{
+  flex: 2;
+  font-size: 30rpx;
+  text-align: center; 
+}
+.jjxq_c_list .status text{
+  flex: 2;
+  font-size: 24rpx;
+  font-weight: normal;
+}
+.jjxq_c .tit {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.jjxq_c .tit .a {
+  float: left;
+  color: #4a4a4a;
+  font-size: 16px;
+  padding-left: 6%;
+}
+
+.jjxq_c .tit .b {
+  float: right;
+  padding-right: 5%;
+  font-size: 12px;
+  color: #4a90e2;
+}
+
+.jjxq_c_list {
+  display: flex;
+  color: #666;
+  height: 30px;
+  line-height: 30px;
+   padding-left:20rpx; 
+}
+.jjxq_c_list view{
+  text-align: left;
+  font-size: 26rpx;
+}
+.jjxq_c_list.listOne view{
+  color: #f00;
+}
+.jjxq_c_list.listOther view{
+  color: #f7a528;
+}
+.jjxq_c_list.out view{
+  color:#999;
+  font-size: 24rpx;
+}
+/* 序号 */
+.jjxq_c_list .status{
+  flex: 2;
+  font-size: 30rpx;
+  text-align: center; 
+}
+.jjxq_c_list .status text{
+  flex: 2;
+  font-size: 24rpx;
+  font-weight: normal;
+}
+/* a是时间 */
+.jjxq_c_list .a {
+  flex: 3 ;
+  text-align: center;
+}
+/* b是吨数 */
+
+.jjxq_c_list .b {
+  flex: 3;
+  text-align: center;  
+}
+/* c是价格 */
+.jjxq_c_list .c {
+  flex: 3;
+  text-align: center;
+}
+/* d是用户 */
+.jjxq_c_list .d {
+  flex: 5;
+  padding-left: 24rpx;
+  text-align: left; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.jjxq_d {
+  text-align: center;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  border-top: 3px solid #ddd;
+}
+
+.jjxq_d .tim {
+  color: #999;
+  padding: 15px 0;
+}
+
+.jjxq_d .tim text {
+  /* color: #4a90e2; */
+  font-size: 40rpx;
+  padding: 0 10px;
+}
+.jjxq_d .tim .text-wks{
+   color: #14bab4; 
+}
+.jjxq_d .tim .text-jj{
+   color: #f25a5d; 
+}
+.wycj_btn {
+  margin: 0 10%;
+}
+
+page {
+  background-color: #fff;
+}

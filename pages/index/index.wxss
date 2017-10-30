@@ -1,0 +1,263 @@
+page {
+  background-color: #f2f2f2;
+}
+
+.lista {
+  /* height: 100px; */
+  background: #fff;
+  margin-top: 10px;
+  position: relative;
+  padding: 0 30rpx;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+
+.lista image {
+  width: 35px;
+  height: 30px;
+}
+.lista .cqm image{
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+.lista .zy {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.lista .vl {
+  /* flex: 2; */
+  width:75%;
+}
+
+.lista .vl .a {
+  height: 30px;
+  padding-top: 10px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.lista .vl .a .ha {
+  font-size: 14px;
+  color: #14bab4;
+}
+
+.lista .vl .a .hb {
+  font-size: 12px;
+  padding-left: 12px;
+  padding-right: 6px;
+}
+
+.lista .vl .a .hc {
+  color: #6a6a6a;
+  font-size: 12px;
+  padding-right: 6px;
+}
+
+.lista .vl .a .hd {
+  color: #ff7f00;
+  font-size: 10px;
+  border: 1px solid #ff7f00;
+  border-radius: 3px;
+  padding: 0 2px;
+  height: 10px;
+  line-height: 10px;
+}
+
+.lista .vl .b {
+  display: flex;
+  height: 30px;
+}
+
+.lista .vl .b .cqm {
+  /* height: 14px; */
+}
+
+.lista .vl .b .cqm .m {
+  color: #9a9a9a;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.lista .vl .b .cqm:first-child .m {
+  padding-left: 0;
+}
+
+.lista .vl .b .cqm .n {
+  font-size: 16px;
+  padding-right: 5px;
+}
+
+.lista .vl .b .sg {
+  color: #ddd;
+  padding-top: 2px;
+}
+
+.lista .vl .c {
+  color: #9a9a9a;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.lista .vl .c .m {
+}
+
+.lista .vl .c .n {
+}
+
+.lista .vl .c image {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  padding-right: 3px;
+}
+
+.lista .vr {
+  text-align: right;
+  width: 23%;
+}
+
+.lista .vr .a {
+  font-size: 12px;
+  color: #a2a2a2;
+  padding-top: 13px;
+  height: 26px;
+}
+
+.lista .vr .b {
+  color: #ff7f00;
+  font-size: 38rpx;
+  height: 26px;
+  line-height: 26px;
+}
+ .lista .vr .b text{
+  font-size: 12px;
+} 
+.lista .vr .c {
+  font-size: 10px;
+  color: #9a9a9a;
+  height: 14px;
+}
+
+.lista .vr .d {
+  font-size: 14px;
+  margin-top:20px; 
+}
+
+.lista .vr .d text {
+  font-size: 12px;
+  color: #9a9a9a;
+  padding-right: 5px;
+}
+
+.search {
+  display: flex;
+  padding: 10px 10px;
+  height: 30px;
+}
+
+.search .l {
+  flex: 2;
+}
+
+.search .l .inputbg {
+  border: 1px solid #ebebeb;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 28px;
+}
+
+.search .l .inputbg image {
+  width: 16px;
+  height: 16px;
+  float: left;
+  position: relative;
+  top: 6px;
+  left: 7px;
+}
+
+.search .l text {
+  font-size: 12px;
+  line-height: 28px;
+  color: #999;
+  padding-left: 15px;
+}
+
+.search .r {
+  padding-left: 10px;
+}
+
+.search .r image {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 4px;
+  opacity: 0.6;
+}
+
+.nav_dh {
+  display: flex;
+  background: #fff;
+  padding: 12px 0;
+}
+
+.nav_dh view {
+  flex: 1;
+  text-align: center;
+}
+
+.nav_dh image {
+  width: 25px;
+  height: 25px;
+}
+
+.nav_dh text {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.auction {
+  background: #fff;
+  margin: 5px 5px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.auction swiper {
+  height: 90px;
+}
+
+.auction image {
+  width: 100%;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.tit_bt {
+  display: flex;
+  padding: 0 5%;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 13px;
+}
+
+.tit_bt .l {
+  flex: 1;
+  font-size: 12px;
+}
+
+.tit_bt .r {
+  flex: 3;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}

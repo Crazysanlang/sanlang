@@ -1,0 +1,42 @@
+<view class="zc_content">
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">姓名</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" maxlength="30" placeholder="请输入姓名" bindinput="bind_name_input" focus="true" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="">
+      <label class="weui_label">手机号</label>
+    </view>
+    <view class="" style="width:100%">
+      <input class="weui_input" style="width:70%;z-index:0;" type="number" maxlength="11" placeholder="请输入手机号" bindinput="bind_mobile_input" disabled="{{mobileDisabled}}" />
+      <button class="em-on" disabled="{{sendMsgBtnDisabled}}" bindtap="bindSendMessage" style="z-index:5;">{{sendMsgTxt}}</button>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">验证码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" maxlength="6" placeholder="请输入验证码" bindinput="bind_code_input" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">登录密码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="password" maxlength="16" placeholder="6-16位字母或数字" bindinput="bind_pwd_input" />
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="bindRegTap" disabled="{{btnDisabled}}" loading="{{btnLoading}}">确认</button>
+  </view>
+  <view class="weui_cells_tips">
+    点击"下一步"即
+    <text bindtap="openDocument">同意《用户服务协议》</text>
+  </view>
+</view>

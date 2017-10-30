@@ -1,0 +1,87 @@
+<view class="hczy">
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">手机号</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" value="{{userInfo.mobile}}" disabled="true" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">用户名</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入您的用户名" value="{{userInfo.userName}}" bindinput="userNameBind" />
+    </view>
+  </view>
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">姓名</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入您的姓名" value="{{userInfo.name}}" bindinput="nameBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">性别</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="selector" bindchange="sexChange" value="{{sexIndex}}" range="{{sexObjArray}}" range-key="name">
+        <view class="picker">
+          {{sexPlaceholder}}{{sexObjArray[sexIndex]['name']}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">生日</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="date" bindchange="bindBirthdayChange">
+        <view class="picker">
+          {{birthdayPlaceholder}}{{userInfo.birthday}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">身份证号</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="idcard" placeholder="请输入身份证号" value="{{userInfo.idCode}}" bindinput="idCodeBind" maxlength="18" />
+    </view>
+  </view>
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">微信</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入微信号" value="{{userInfo.wechat}}" bindinput="wechatBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">QQ</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" placeholder="请输入QQ号" value="{{userInfo.qq}}" bindinput="qqBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">联系地址</label>
+    </view>
+    <view class="weui_cellb" style="height:60px;">
+      <textarea style="padding:10px 20px 10px 0;width:auto;height:40px" placeholder="请输入公司地址" value="{{userInfo.address}}" bindinput="addressBind"></textarea>
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="updateUser">确认修改</button>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+page{background:#e9eaec;height:100%}
+.bdcg{padding:40rpx 5%}
+.bdcg_a{display: flex;}
+.bdcg_a .a{flex:1;}
+.bdcg_a .b{flex:3;padding-top:10px;}
+.txta{display: block;font-size:20px;height:35px;color: #14bab4;}
+.txtb{font-size:14px;line-height:20px}
+.bdcg_b{padding-top:120rpx;}
+.txtb text{color:#999999;display:block;padding-top:10px;}

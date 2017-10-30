@@ -1,0 +1,12 @@
+.melist{background-color:#ffffff;margin-bottom:15px;margin:15px 10px 10px 10px;border-radius:5px;}
+.melistblock{display:flex;padding:0 5%;line-height:40px;border-bottom:1px solid #eeeeee;}
+.melistblock .a{font-size:16px;flex: 1}
+.melistblock .b{float:right;flex: 1}
+.melistblock image{width:5px;height:10px;float:right;padding-top:16px;}
+.wdl_a{width:80%;margin:0 auto;opacity: 0.8;padding-top:50px;}
+.wdl_a .but_c{background-color:#ffffff;color:#4A90E2;}
+
+.melist .tit{font-size:14px;padding-left:5%;color:#9a9a9a;height:30px;line-height:30px;border-bottom:1px solid #dddddd;}
+page{background-color:#f2f2f2;}
+.tcdl{padding:15px 10px;}
+.tcdl button{font-size:14px;}

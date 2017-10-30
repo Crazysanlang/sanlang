@@ -1,0 +1,31 @@
+.meblock{background-color:#ffffff;display:flex;padding:10px 5%;margin:10px 0;height:57px;}
+.meblock .l{}
+.meblock .l image{width:55px;height:55px;border-radius:5px}
+.meblock .r{padding-left:15px;flex:1;}
+.meblock .r text{display:block}
+.meblock .r .m{font-size:16px;height:23px;padding-top:5px;}
+.meblock .r .n{font-size:12px;}
+.meydla{width:100px;margin:0 auto;padding-top:20px;}
+.meydla image{width:100px;height:100px;border-radius: 50px;}
+.meydlb{padding-top:10px;color:#ffffff;text-align:center;font-size:16px;}
+.meydlc{padding-top:5px;color:#ffffff;font-size:12px;text-align:center}
+page{background-color:#f2f2f2;}
+.melist{background-color:#ffffff;margin-bottom:15px;}
+.melist .melistblock{display:flex;padding:0 5%;line-height:40px;border-bottom:1px solid #eeeeee;}
+.melist .melistblock .a{font-size:16px;flex: 1}
+.melist .melistblock .b{float:right;flex: 1}
+.melist .melistblock image{width:8px;height:16px;float:right;padding-top:12px;}
+.wdl_a{width:80%;margin:0 auto;opacity: 0.8;padding-top:50px;}
+.wdl_a .but_c{background-color:#ffffff;color:#4A90E2;}
+
+.melista .tit,.melist .tit{font-size:14px;padding-left:5%;height:40px;line-height:40px;border-bottom:1px solid #eeeeee;}
+.melista{background-color:#ffffff;margin-bottom:5px;}
+.melista .list{display:flex}
+.melista .melistblock{text-align:center;flex:1;padding:20px 0;position:relative}
+.melista .melistblock image{width:30px;height:30px;}
+.melista .melistblock .a{font-size:12px;line-height:25px;color:#666666;}
+.tit{display:flex}
+.tit .a{flex:1}
+.tit .b{text-align:right;font-size:12px;line-height:22px;border:1px solid #14bab4;border-radius:3px;width:40px;text-align:center;height:22px;color:#14bab4;position:relative;right:5%;top:8px;}
+.redpoint{position:absolute;width:12px;height:12px;border-radius:6px;background-color:#ff0000;left:50%;top:50%;font-size:9px;margin-top:-30px;margin-left:8px;color:#ffffff;text-align:center;line-height:12px;}
+.meblock .b image{width:5px;height:10px;position:relative;top:21px;}

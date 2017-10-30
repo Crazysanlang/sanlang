@@ -1,0 +1,120 @@
+<include src="../contact/index"/>
+<block wx:if="{{isLoginFlag}}">
+   <view class="meblock" bindtap="toAccount">
+        <view class="l">
+            <image src="{{userInfoData.avatarUrl}}" />
+        </view>
+        <view class="r">
+            <text class="m">{{userInfoData.nickName}}</text>
+            <text class="n">{{corpNameFull}}</text>
+        </view>
+         <view class="b"><image src="../../images/other/yjt.png"  /></view>
+    </view>
+</block>
+<block wx:else>
+    <view class="meblock" bindtap="toLogin">
+        <view class="r">
+            <text class="m">您还未登录</text>
+            <text class="n">点击登录</text>
+        </view>
+         <view class="b"><image src="../../images/other/yjt.png"  /></view>
+    </view>
+</block>
+
+<view class="melista">
+    <view class="tit">采购管理</view>
+    <view class="list">
+        <view class="melistblock" bindtap="toShopping">
+            <image src="../../images/other/buy_1.png"></image>
+            <view class="a">购物车</view>
+        </view>
+        <view class="melistblock" bindtap="toOrderList">
+            <image src="../../images/other/buy_2.png"></image>
+            <view class="a">订单</view>
+        </view>
+        <view class="melistblock" bindtap="toPay">
+            <block wx:if="{{buyPaymentCount > 0}}">
+                <view class="redpoint">{{buyPaymentCount}}</view>
+            </block>
+            <image src="../../images/other/buy_3.png"></image>
+            <view class="a">付款</view>
+        </view>
+        <view class="melistblock" bindtap="toRecipient">
+            <block wx:if="{{buyDeliveryCount > 0}}">
+                <view class="redpoint">{{buyDeliveryCount}}</view>
+            </block>
+            <image src="../../images/other/buy_4.png"></image>
+            <view class="a">收货</view>
+        </view>
+        <view class="melistblock" bindtap="toInvoice">
+            <block wx:if="{{buyInvoiceCount > 0}}">
+                <view class="redpoint">{{buyInvoiceCount}}</view>
+            </block>
+            <image src="../../images/other/buy_5.png"></image>
+            <view class="a">发票</view>
+        </view>
+    </view>
+</view>
+
+<view class="melista">
+    <view class="tit">
+        <view class="a">销售管理</view>
+        <view class="b"  bindtap="toListingIn">挂牌</view>
+    </view>
+    <view class="list">
+        <view class="melistblock" bindtap="toListing">
+            <image src="../../images/other/sell_1.png"></image>
+            <view class="a">挂牌单</view>
+        </view>
+        <view class="melistblock" bindtap="toOrderList2">
+            <block wx:if="{{sellConfirmCount > 0}}">
+                <view class="redpoint">{{sellConfirmCount}}</view>
+            </block>
+            <image src="../../images/other/buy_2.png"></image>
+            <view class="a">订单</view>
+        </view>
+        <view class="melistblock" bindtap="toCheques">
+            <block wx:if="{{sellPaymentCount > 0}}">
+                <view class="redpoint">{{sellPaymentCount}}</view>
+            </block>
+            <image src="../../images/other/sell_3.png"></image>
+            <view class="a">收款</view>
+        </view>
+        <view class="melistblock" bindtap="toSend">
+            <block wx:if="{{sellDeliveryCount > 0}}">
+                <view class="redpoint">{{sellDeliveryCount}}</view>
+            </block>
+            <image src="../../images/other/sell_4.png"></image>
+            <view class="a">发货</view>
+        </view>
+        <view class="melistblock" bindtap="toBilling">
+            <block wx:if="{{sellInvoiceCount > 0}}">
+                <view class="redpoint">{{sellInvoiceCount}}</view>
+            </block>
+            <image src="../../images/other/buy_5.png"></image>
+            <view class="a">开票</view>
+        </view>
+    </view>
+</view>
+<view class="melist">
+    <view class="melistblock" bindtap="toShare">
+        <view class="a">我的资源单</view>
+        <view class="b"><image src="../../images/other/yjt.png"  /></view>
+    </view>
+    <view class="melistblock" bindtap="toFinance">
+        <view class="a">我的融资</view>
+        <view class="b"><image src="../../images/other/yjt.png"  /></view>
+    </view>
+    <view class="melistblock" bindtap="toPledge">
+        <view class="a">我的质押</view>
+        <view class="b"><image src="../../images/other/yjt.png"  /></view>
+    </view>
+    <view class="melistblock" bindtap="toBid">
+        <view class="a">出价记录</view>
+        <view class="b"><image src="../../images/other/yjt.png"  /></view>
+    </view>
+    <view class="melistblock" bindtap="toInfo">
+        <view class="a">站内信息</view>
+        <view class="b"><image src="../../images/other/yjt.png"  /></view>
+    </view>
+</view>

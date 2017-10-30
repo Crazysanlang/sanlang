@@ -1,0 +1,59 @@
+
+<view class="tab_area">
+  <navigator data-status="0" bindtap="bindStatus" class="{{class_tab_hover_0}}" open-type="switchTab" hover-class="other-navigator-hover">全部</navigator>
+  <navigator data-status="1" bindtap="bindStatus" class="{{class_tab_hover_1}}" open-type="switchTab" hover-class="other-navigator-hover">在售</navigator>
+  <navigator data-status="2" bindtap="bindStatus" class="{{class_tab_hover_2}}" open-type="switchTab" hover-class="other-navigator-hover">已售</navigator>
+  <navigator data-status="8" bindtap="bindStatus" class="{{class_tab_hover_8}}" open-type="switchTab" hover-class="other-navigator-hover">已过期</navigator>
+  <!--<navigator data-status="9" bindtap="bindStatus" class="{{class_tab_hover_9}}" open-type="switchTab" hover-class="other-navigator-hover">已取消</navigator>-->
+</view>
+
+<block wx:if="{{items.length > 0}}">
+<scroll-view class="wxSortPickerViewList" scroll-y="true" style="height:{{windowHeight-56}}px">
+    <block wx:key="item" wx:for="{{items}}">
+        <view class="jjlist" id="{{item.listingID}}" bindtap="toListingDetail"><!-- <view class="jjlist ygqlist"> -->
+            <view class="t">
+                <view class="l">
+                    <text class="txta">{{item.batchID}}</text>
+                </view>
+                <view class="r">
+                    <block wx:if="{{item.status == 0}}"><text class="zs">在售</text></block>
+                    <block wx:if="{{item.status == 1}}"><text class="ys">已锁定</text></block>
+                    <block wx:if="{{item.status == 2}}"><text class="ys">已售</text></block>
+                    <block wx:if="{{item.status == 8}}"><text class="ygq">已过期</text></block>
+                    <block wx:if="{{item.status == 9}}"><text class="ygq">已取消</text></block>
+                </view>
+            </view>
+            <view class="b">
+                <view class="m">
+                    <view class="aa">长度 | 强力 | 马值</view>
+                    <view class="ab">颜色级</view>
+                    <view class="ac">数量(吨)</view>
+                    <view class="ad">单价(元/吨)</view>
+                </view>
+                
+                <view class="n">
+                    <view class="aa">{{item.lengthAvg}} | {{item.strongAvg}} | {{item.mikeAvg}}</view>
+                    <view class="ab">{{item.primaryColorName}}</view>
+                    <view class="ac">{{item.amount}}</view>
+                    <view class="ad">{{item.price}}</view>
+                </view>
+
+                <view class="f">
+                    <view class="fl">{{item.listingDate}} <text>{{item.validDay}}天</text></view>
+                    <view class="fr">合计：<text>￥{{item.moneySum}}</text></view>
+                </view>
+                <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+            </view>
+        </view>
+    </block>
+
+    <block wx:if="{{moreFlag}}">
+        <view class="moreList" bindtap="moreList">点击查看更多</view>
+    </block>
+</scroll-view>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无订单数据</view>
+  </block>
+</block>

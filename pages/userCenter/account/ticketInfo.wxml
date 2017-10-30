@@ -1,0 +1,52 @@
+
+<view class="hczy">
+        <view class="weui_cell" style="margin-top:10px;">
+            <view class="weui_cella">
+                <label class="weui_label">纳税人号</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" type="text" placeholder="请输入纳税人号" value="{{taxCertValue}}" bindinput="taxCertBind" />
+            </view>
+        </view>
+
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">公司电话</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" type="number" placeholder="请输入公司电话" value="{{phoneValue}}" bindinput="phoneBind" />
+            </view>
+        </view>
+
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">开户银行</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" type="text"  placeholder="请输入开户银行" value="{{openBankValue}}" bindinput="openBankBind" />
+            </view>
+        </view>
+
+        <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">银行账号</label>
+            </view>
+            <view class="weui_cellb">
+                <input class="weui_input" type="number" placeholder="请输入银行账号" value="{{bankAccountValue}}" bindinput="bankAccountBind" />
+            </view>
+        </view>
+
+         <view class="weui_cell">
+            <view class="weui_cella">
+                <label class="weui_label">地址</label>
+            </view>
+            <view class="weui_cellb" style="height:60px;">
+            <textarea style="padding:10px 20px 10px 0;width:auto;height:40px" placeholder="请输入地址" value="{{addressValue}}" bindinput="addressBind"></textarea>
+        </view>
+</view>
+ 
+<view class="weui_btn_area">
+    <button class="but_green" bindtap="updateMember">确认修改</button>
+</view>
+
+</view>

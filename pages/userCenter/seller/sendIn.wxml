@@ -1,0 +1,144 @@
+<view class="list">
+  <view class="{{hover_zy}}" id="1" bindtap="changeTab">货权转移</view>
+  <view class="{{hover_zt}}" id="2" bindtap="changeTab">自提</view>
+</view>
+<view class="hczy">
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">发货单号</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入发货单号" bindinput="deliveryCodeBind" />
+    </view>
+  </view>
+  <view class="weui_cell" >
+    <view class="weui_cella">
+      <label class="weui_label">提货日期</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="date" bindchange="deliveryDateBind" value="{{deliveryDateValue}}">
+        <view class="picker">
+          {{deliveryDateValue}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">提货仓库</label>
+    </view>
+    <view class="weui_cellb" bindtap="selectDepotPage">
+      <view class="picker">
+        {{corpName}}
+        <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+      </view>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">仓库地址</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入仓库地址" bindinput="corpAddressBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">仓库电话</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" placeholder="请输入仓库电话" bindinput="corpPhoneBind" maxlength="11" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">仓库联系人</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入仓库联系人" bindinput="depotLinkmanBind" />
+    </view>
+  </view>
+
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">提货单位</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" value="{{itemDetail.buyMemberName}}" disabled="true" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">联系人</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" value="{{itemDetail.buyUserName}}" disabled="true" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">联系人电话</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" value="{{itemDetail.buyUserMobile}}" disabled="true" />
+    </view>
+  </view>
+  <block wx:if="{{ztFlag}}">
+    <view class="weui_cell" style="margin-top:10px;">
+      <view class="weui_cella">
+        <label class="weui_label">提货人姓名</label>
+      </view>
+      <view class="weui_cellb">
+        <input class="weui_input" type="text" placeholder="请输入提货人姓名" bindinput="driverNameBind" />
+      </view>
+    </view>
+    <view class="weui_cell">
+      <view class="weui_cella">
+        <label class="weui_label">身份证号</label>
+      </view>
+      <view class="weui_cellb">
+        <input class="weui_input" type="idcard" placeholder="请输入提货人身份证号" bindinput="driverIdNumberBind" maxlength="18" />
+      </view>
+    </view>
+    <view class="weui_cell">
+      <view class="weui_cella">
+        <label class="weui_label">手机号</label>
+      </view>
+      <view class="weui_cellb">
+        <input class="weui_input" type="number" placeholder="请输入提货人手机号" bindinput="driverPhoneBind" maxlength="11" />
+      </view>
+    </view>
+    <view class="weui_cell">
+      <view class="weui_cella">
+        <label class="weui_label">车号</label>
+      </view>
+      <view class="weui_cellb">
+        <input class="weui_input" type="text" placeholder="请输入提货人车号" bindinput="truckNumberBind" />
+      </view>
+    </view>
+  </block>
+  <view class="weui_cell" style="margin-top:10px;">
+    <view class="weui_cella">
+      <label class="weui_label">提货批次</label>
+    </view>
+    <view class="weui_cellb" bindtap="toSelectBatch">
+      <view class="picker">
+        <view class="listb">
+          <block wx:for-item="itemBean" wx:for="{{itemDetail.list}}">
+            <block wx:if="{{itemBean.checkFlag}}">
+              <view>
+                <text>{{itemBean.batchID}}</text>
+                <text>{{itemBean.amount}} 吨</text>
+              </view>
+            </block>
+          </block>
+        </view>
+        <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="weui_btn_area">
+  <button class="but_green" bindtap="makeDelivery">确认提交</button>
+</view>

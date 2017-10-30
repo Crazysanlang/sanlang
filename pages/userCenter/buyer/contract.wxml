@@ -1,0 +1,43 @@
+<view class="htcontent">
+  <view class="sjz_list">
+    <view class="d">
+      <text>1</text>
+    </view>
+    <view class="a">
+      <view class="tit">
+        <view class="hm">系统生成电子合同</view>
+        <view class="hn" bindtap="openDocument">预览</view>
+      </view>
+      <block wx:if="{{pic != ''}}">
+        <view class="listb">如需打印，请复制下面地址至电脑端浏览器中打开</view>
+        <view class="inputlj">
+          <textarea type="text" value="{{url}}" bindinput="urlBind"></textarea>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="sjz_list">
+    <view class="d">
+      <text>2</text>
+    </view>
+    <view class="a">
+      <view class="tit">
+        <view class="hm">上传双方盖章合同</view>
+      </view>
+      <view class="listb">
+        <block wx:key="item" wx:for="{{imageItem}}">
+          <view class="pz" id="{{index}}" data-value="{{item.value}}" bindtap="chooseAction">
+            <image src="{{item.path}}" style="width:99%;height:99%;"></image>
+          </view>
+        </block>
+        <view class="pz" bindtap="choosePicLicense">
+          <image src="../../../images/other/pz.png" class="imgc"></image>
+          <text>未上传</text>
+        </view>
+        <view class="tjadd">
+          <button class="but_green" bindtap="updateOrderContract">确认上传</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

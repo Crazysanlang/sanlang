@@ -1,0 +1,91 @@
+
+  <block wx:if="{{items.length > 0}}">
+    <scroll-view  scroll-y="true" style="height:{{windowHeight-2}}px;">
+    <view class="classname">
+      <block wx:key="item" wx:for="{{items}}">
+        <view class="titgwc">
+          <label>
+            <icon type="{{item.checkType}}" size="20" color="#14bab4" bindtap="bindCheckbox" data-memberid="{{item.memberID}}" data-index="true"></icon>
+          </label>
+          <block wx:if="{{item.listingType == 1}}">
+            <text>棉联自营</text>
+          </block>
+          <block wx:else>
+            <text class="gf">供方:{{item.memberID}}</text>
+          </block>
+        </view>
+        <block wx:for-item="itemBean" wx:for="{{item.list}}">
+          <view class="lista xz">
+            <view class="opatcc" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{itemBean.batchID}}" style="{{itemBean.txtStyle}}" bindtap="toMessageDetail" id="{{itemBean.batchID}}"></view>
+            <view style="{{itemBean.txtStyle}}" class="inner">
+              <view class="checkbok">
+                <label>
+                  <icon type="{{itemBean.checkType}}" size="20" color="#14bab4" bindtap="bindCheckbox" data-memberid="{{itemBean.memberID}}" data-index="false" data-listingid="{{itemBean.listingID}}"></icon>
+                </label>
+              </view>
+              <view class="vl">
+                <view class="a">
+                  <text class="ha">{{itemBean.batchID}}</text>
+                  <text class="hb">{{itemBean.primaryColorName}}</text>
+                  <text class="hc">{{itemBean.cottonTypeName}}</text>
+                </view>
+                <view class="b">
+                  <view class="cqm">
+                    <text class="m">长度</text>
+                    <text class="n">{{itemBean.lengthAvg}}</text>
+                  </view>
+                  <view class="sg">|</view>
+                  <view class="cqm">
+                    <text class="m">强度</text>
+                    <text class="n">{{itemBean.strongAvg}}</text>
+                  </view>
+                  <view class="sg">|</view>
+                  <view class="cqm">
+                    <text class="m">马值</text>
+                    <text class="n">{{itemBean.mikeAvg}}</text>
+                  </view>
+                </view>
+                <view class="c">
+                  <image src="../../images/other/ck.png"></image>
+                  <text class="n">{{itemBean.depotName}}</text>
+                </view>
+              </view>
+              <view class="vr">
+                <view class="a">{{itemBean.listingDate}}</view>
+                <view class="b"><text wx:if="{{itemBean.indexCode !=''}}">{{itemBean.indexCode}}</text><block wx:if="{{itemBean.price>0&&itemBean.indexCode !=''}}">+</block>{{itemBean.price}}</view>
+                <view class="c">元/吨</view>
+                <view class="d">
+                  <text>
+                    <block wx:if="{{itemBean.amountType == 0}}">公重</block>
+                    <block wx:if="{{itemBean.amountType == 1}}">毛重</block>
+                    <block wx:if="{{itemBean.amountType == 2}}">净重</block>
+                  </text>{{itemBean.amount}}</view>
+              </view>
+            </view>
+            <view data-index="{{itemBean.batchID}}" id="{{itemBean.listingID}}" bindtap="delItem" class="del">删除</view>
+          </view>
+        </block>
+      </block>
+      </view>
+      </scroll-view>
+    </block>
+  <block wx:else>
+    <block wx:if="{{!firstDataFlag}}">
+      <view class="zwsj">暂无数据</view>
+    </block>
+  </block>
+
+
+<!--bottom -->
+<view class="bottom">
+  <view class="a">
+    <view class="m">已选 {{amountSum}} 件批次</view>
+    <view class="n">
+      合计:
+      <text>{{moneySum}}</text>
+    </view>
+  </view>
+  <view class="b">
+    <button class="but_green" bindtap="toConfirm" disabled="{{makeOrderDisabled}}" loading="{{makeOrderLoading}}">提交订单</button>
+  </view>
+</view>

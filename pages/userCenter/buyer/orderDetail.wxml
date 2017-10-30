@@ -1,0 +1,150 @@
+
+<view class="wdjj_a" id="{{itemDetail.orderID}}" data-status="{{itemDetail.status}}" bindtap="toOrderManagerment">
+    <view class="a">
+        <block wx:if="{{itemDetail.status == 0 || itemDetail.status == 1}}"><icon type="waiting" size="50" color="#14bab4"/></block>
+        <block wx:if="{{itemDetail.status == 2 || itemDetail.status == 3}}"><icon type="clear" size="50" /></block>
+        <block wx:if="{{itemDetail.status == 4 || itemDetail.status == 5 || itemDetail.status == 6 || itemDetail.status == 7 || itemDetail.status == 8}}"><icon type="success" size="50" color="#14bab4"/></block>
+        <block wx:if="{{itemDetail.status == 9}}"><icon type="clear" size="50" /></block>
+    </view>
+    <view class="b">
+        <text class="txta">
+            <block wx:if="{{itemDetail.status == 0}}">待确认</block>
+            <block wx:if="{{itemDetail.status == 1}}">执行中</block>
+            <block wx:if="{{itemDetail.status == 2}}">已关闭</block>
+            <block wx:if="{{itemDetail.status == 3}}">已关闭</block>
+            <block wx:if="{{itemDetail.status == 4}}">已完成</block>
+            <block wx:if="{{itemDetail.status == 5}}">已完成</block>
+            <block wx:if="{{itemDetail.status == 6}}">已完成</block>
+            <block wx:if="{{itemDetail.status == 7}}">已完成</block>
+            <block wx:if="{{itemDetail.status == 8}}">已完成</block>
+            <block wx:if="{{itemDetail.status == 9}}">已作废</block>
+        </text>
+        <text class="txtb">
+            <block wx:if="{{itemDetail.status == 0}}">订单编号:{{itemDetail.orderID}}</block>
+            <block wx:if="{{itemDetail.status == 1}}"><block wx:if="{{itemDetail.needPayment > 0 || itemDetail.needDeliveryConfirmed > 0 || itemDetail.needInvoiceConfirmed > 0}}">请<block wx:if="{{itemDetail.needPayment > 0}}">“完成付款”</block><block wx:if="{{itemDetail.needDeliveryConfirmed > 0}}">“确认收货”</block><block wx:if="{{itemDetail.needInvoiceConfirmed > 0}}">“确认收票”</block></block><block wx:else>等待卖家确认</block></block>
+        </text>
+        <block wx:if="{{itemDetail.status != 2 && itemDetail.status != 3}}">
+            <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+        </block>
+    </view>
+</view>
+
+<block wx:if="{{itemDetail.status == 1}}">
+    <view class="dbsx">
+        <view class="list" data-pic="{{itemDetail.pictureContract}}" bindtap="toContract">
+            <text class="txta">订单合同</text>
+            <text class="txtb"></text>
+            <text class="txtc">查看</text>
+            <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+        </view>
+
+        <block wx:if="{{itemDetail.needPayment > 0}}">
+            <view class="list" data-money="{{itemDetail.needPayment}}" bindtap="toPayIn">
+                <text class="txta">未付货款: </text>
+                <text class="txtb">￥{{itemDetail.needPaymentFmt}}</text>
+                <text class="txtc">付款</text>
+                <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+            </view>
+        </block>
+
+        <block wx:if="{{itemDetail.needDeliveryConfirmed > 0}}">
+            <view class="list" bindtap="toRecipient" >
+                <text class="txta">未确认收货</text>
+                <text class="txtb">{{itemDetail.needDeliveryConfirmed}} 吨</text>
+                <text class="txtc">确认</text>
+                <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+            </view>
+        </block>
+
+        <block wx:if="{{itemDetail.needInvoiceConfirmed > 0}}">
+            <view class="list" bindtap="toInvoice">
+                <text class="txta">未确认收票</text>
+                <text class="txtb">￥{{itemDetail.needInvoiceConfirmedFmt}}</text>
+                <text class="txtc">确认</text>
+                <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+            </view>
+        </block>
+    </view>
+</block>
+
+<view class="wdjj_b" style="padding-bottom:10px;">
+    <view class="jjlist">
+        <view class="b">
+            <view class="m">
+                <view class="aa">批次</view>
+                <view class="ab">颜色级</view>
+                <view class="ac">数量(吨)</view>
+                <view class="ad">单价(元/吨)</view>
+            </view>
+
+            <block wx:for-item="itemBean" wx:for="{{itemDetail.list}}">
+                <view class="n" id="{{itemBean.batchID}}" bindtap="toBatchDetail">
+                    <view class="aa">{{itemBean.batchID}}</view>
+                    <view class="ab">{{itemBean.primaryColorName}}</view>
+                    <view class="ac">{{itemBean.amount}}</view>
+                    <view class="ad">{{itemBean.price}}</view>
+                </view>
+                <!-- 批号要素-->
+                <view class="batchxq">
+                    <view class="dx">
+                        <view>
+                        <text class="mx">长度</text>
+                        <text class="nx">{{itemBean.lengthAvg}}</text>
+                        </view>
+                        <view>
+                        <text class="mx">强力</text>
+                        <text class="nx">{{itemBean.strongAvg}}</text>
+                        </view>
+                        <view>
+                        <text class="mx">马值</text>
+                        <text class="nx">{{itemBean.mikeAvg}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+
+            <view class="f">
+                <view class="fr">合计：<text>￥{{itemDetail.moneySum}}</text></view>
+            </view>
+            <view class="g" bindtap="tap">{{itemDetail.deliveryName}}</view>
+        </view>
+
+        <block wx:if="{{itemDetail.needLoan == 1}}">
+            <view class="rzje">
+                <text class="a">融资金额</text>
+                <text class="b">￥{{itemDetail.loanMoneyFormat }}</text>
+                <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+            </view>
+        </block>
+
+        <block wx:if="{{itemDetail.status != 0}}">
+            <view class="rzje">
+                <text class="a" bindtap="toContacts">联系卖家</text>
+                <view class="yjt"><image src="../../../images/other/yjt.png"  /></view>
+            </view>
+        </block>
+    </view>
+</view>
+<view class="wdjj_c">
+    <view class="wdcj_sjz">
+        <view class="tit_jj" style="height:35px;">订单执行过程</view>
+        <block wx:key="item" wx:for="{{itemsList}}">
+            <view class="sjz_list">
+                <view class="d"><text></text></view>
+                <view class="a">{{item.procDate}}</view>
+                <view class="b">
+                    <block wx:if="{{item.type == 3}}">{{item.amount}} 吨</block>
+                    <block wx:else>{{item.money}} 元</block>
+                </view>
+                <view class="c">
+                    <block wx:if="{{item.type == 0}}">订单创建</block>
+                    <block wx:if="{{item.type == 1}}">订单确认</block>
+                    <block wx:if="{{item.type == 2}}">买家支付</block>
+                    <block wx:if="{{item.type == 3}}">卖家发货</block>
+                    <block wx:if="{{item.type == 4}}">卖家开票</block>
+                    <block wx:if="{{item.type == 9}}">订单关闭</block>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

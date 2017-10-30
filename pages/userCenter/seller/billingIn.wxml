@@ -1,0 +1,70 @@
+<view class="zc_content">
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">开票日期</label>
+    </view>
+    <view class="weui_cellb">
+      <picker mode="date" bindchange="invoiceDateBind" value="{{invoiceDateValue}}">
+        <view class="picker">
+          {{invoiceDateValue}}
+          <image src="../../../images/other/yjt.png" class="imgyjt"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">开票号码</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="text" placeholder="请输入开票号码" bindinput="invoiceCodeBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">附票张数</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="number" placeholder="请输入附票张数" bindinput="attachDocsBind" />
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">金额(元)</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="digit" placeholder="请输入发票上的金额" value="{{moneyValue}}" bindinput="moneyBind" />
+      <view class="allin" bindtap="moneyAllBind">全部</view>
+    </view>
+  </view>
+  <view class="weui_cell">
+    <view class="weui_cella">
+      <label class="weui_label">数量(吨)</label>
+    </view>
+    <view class="weui_cellb">
+      <input class="weui_input" type="digit" placeholder="请输入发票上的数量" value="{{amountValue}}" bindinput="amountBind" />
+      <view class="allin" bindtap="amountAllBind">全部</view>
+    </view>
+  </view>
+  <view class="weui_cell" style="height:115px;">
+    <view class="weui_cella">
+      <label class="weui_label">
+        <view>凭证(选填)</view>
+      </label>
+    </view>
+    <view class="weui_cellb">
+      <view class="pz" bindtap="choosePicLicense">
+        <block wx:if="{{pictureProof == ''}}">
+          <image src="../../../images/other/pz.png" class="imgc"></image>
+          <text>未上传</text>
+        </block>
+        <block wx:else>
+          <image src="{{tempFilePath}}" style="width:99%;height:99%;"></image>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="weui_btn_area">
+    <button class="but_green" bindtap="makeOrderInvoice">确认提交</button>
+  </view>
+</view>

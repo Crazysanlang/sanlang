@@ -1,0 +1,193 @@
+page{background-color:#f2f2f2;}
+.batchxq{padding:20px 5% 0 5%;background-color:#ffffff;position:relative}
+.batchxq .a{height:25px;}
+.batchxq .a .txta{font-size:14px;}
+.batchxq .a .txtb,.batchxq .a .txtd{font-size:12px;color:#666666;padding-left:5px;}
+.batchxq .a .txtc{color:#FF7F00;font-size:10px;border:1px solid #FF7F00;border-radius:3px;padding:2px 2px;height:10px;line-height:10px;margin-left:10px;position:relative;top:0;float:right;}
+.batchxq .a .txte{margin-left:10px;}
+.batchxq .a .txtf{margin-left:10px;}
+.batchxq .b{color:#666666;height:25px;}
+.batchxq .b .txta{font-size:12px;}
+.batchxq .b .txtb{font-size:12px;padding-left:10px;}
+.batchxq .b .txtc{font-size:12px;padding-left:15px;}
+.batchxq .c{height:30px;}
+.batchxq .c text{color:#a2a2a2;font-size:12px;}
+.batchxq .d{display:flex;height:50px;}
+.batchxq .d view{flex:1;text-align:center;border-right:1px solid #eee;height:38px;}
+.batchxq .d view:last-child{border:0;}
+.batchxq .d .m{display:block;color:#666666;height:20px;}
+.batchxq .d .n{display:block;font-size:18px;}
+.batchxq .e{font-size:12px;color:#a2a2a2;height:30px;line-height:30px;border-top:1px solid #eee;}
+.batchxq .e .txta{}
+.batchxq .e .txtb{float:right;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+
+.price{background-color:#ffffff;margin-top:5px;display:flex;padding:10px 5% 10px 5%;}
+.price .vl{flex:1;font-size:12px;}
+.price .vl .txta{display:block;color:#666666;padding-top:10px;height:20px;font-size:14px;}
+.price .vl .txtb{color:#FF8000}
+.price .vr{text-align:right;}
+.price .vr .txta{color:#FF8000;font-size:12px;height:30px;}
+.price .vr .txta text{font-size:25px;}
+.price .vr .txtb{display:flex;color:#999999;}
+.price .vr .txtb .m{font-size:14px;}
+.price .vr .txtb .n{padding-left:10px;}
+.price .vr .txtb .n text{color:#4a4a4a;}
+
+.shpc{padding-left:5%;line-height:30px;font-size:14px;padding-top:10px;}
+.shpc text{font-size:12px;color:#999999;padding-left:10px;}
+.bottom{height:50px;position:fixed;bottom:0;width:100%;background-color:#ffffff;display:flex;border-top:1px solid #eee;}
+.bottom .a{flex:2}
+.bottom .a .sc,.bottom .a .ysc{width:30px;padding:0 10px;border-right:1px solid #eeeeee;height:50px;}
+.bottom .a image{width:20px;height:20px;padding:5px 0 0 5px;}
+.bottom .a text{display:block;font-size:12px;color:#666666;text-align:center;line-height:16px;}
+.bottom .b{}
+.bottom .c{}
+.bottom .b button,.bottom .c button{border-radius:0;width:120px;height:50px;line-height:50px;}
+.bottom .a .ysc text{color:#14bab4;}
+.cpxqlistb{padding:10px 15px;background-color:#ffffff;}
+.zlmxlist{display:flex;width:750px;padding:2px 0;line-height:16px;text-align:center;border-bottom:1px solid #eeeeee;}
+.zlmxlist text text{display:block;}
+.zlmxlist text{font-size:12px;color:#6a6a6a;display:block;flex:1}
+.zlmxlist text:nth-child(2){flex:1.5;}
+
+.lista {
+  height: 100px;
+  background: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.lista image {
+  width: 35px;
+  height: 30px;
+}
+
+.lista .zy {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.lista .vl {
+  flex: 2;
+}
+
+.lista .vl .a {
+  height: 30px;
+  padding-top: 15px;
+}
+
+.lista .vl .a .ha {
+  font-size: 14px;
+  color: #14bab4;
+}
+
+.lista .vl .a .hb {
+  font-size: 12px;
+  padding-left: 12px;
+  padding-right: 6px;
+}
+
+.lista .vl .a .hc {
+  color: #6a6a6a;
+  font-size: 12px;
+  padding-right: 6px;
+}
+@media only screen and (max-width:370px){
+    .lista .vl .a .hc{display:none}
+}
+.lista .vl .a .hd {
+  color: #ff7f00;
+  font-size: 10px;
+  border: 1px solid #ff7f00;
+  border-radius: 3px;
+  padding: 0 2px;
+  height: 10px;
+  line-height: 10px;
+}
+
+.lista .vl .b {
+  display: flex;
+  height: 30px;
+}
+
+.lista .vl .b .cqm {
+  height: 14px;
+}
+
+.lista .vl .b .cqm .m {
+  color: #9a9a9a;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.lista .vl .b .cqm:first-child .m {
+  padding-left: 0;
+}
+
+.lista .vl .b .cqm .n {
+  font-size: 16px;
+  padding-right: 5px;
+}
+
+.lista .vl .b .sg {
+  color: #ddd;
+  padding-top: 2px;
+}
+
+.lista .vl .c {
+  color: #9a9a9a;
+  font-size: 12px;
+}
+
+.lista .vl .c .m {
+}
+
+.lista .vl .c .n {
+}
+
+.lista .vl .c image {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  padding-right: 3px;
+}
+
+.lista .vr {
+  text-align: right;
+  float: right;
+}
+
+.lista .vr .a {
+  font-size: 12px;
+  color: #a2a2a2;
+  padding-top: 17px;
+  height: 15px;
+}
+
+.lista .vr .b {
+  color: #ff7f00;
+  font-size: 24px;
+  height: 26px;
+}
+
+.lista .vr .c {
+  font-size: 10px;
+  color: #9a9a9a;
+  height: 14px;
+}
+
+.lista .vr .d {
+  font-size: 14px;
+}
+
+.lista .vr .d text {
+  font-size: 10px;
+  color: #9a9a9a;
+  padding-right: 5px;
+}

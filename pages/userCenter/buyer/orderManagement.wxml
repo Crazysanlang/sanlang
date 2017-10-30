@@ -1,0 +1,258 @@
+<view class="wdjj_c">
+    <view class="wdcj_sjz">
+
+        <block wx:if="{{itemsList0.length > 0}}">
+            <view class="sjz_list hover">
+                <block wx:key="item" wx:for="{{itemsList0}}">
+                    <view class="d"><view class="cg"><icon type="success" size="30" color="#14bab4" /></view></view>
+                    <view class="a">
+                        <view class="tit">
+                        <view class="hm">提交订单</view>
+                        </view>
+                        <view class="listb">{{item.procDate}}</view>
+                    </view>
+                </block>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="sjz_list hover">
+                <view class="d"><view class="cg"><icon type="clear" size="30" /></view></view>
+                <view class="a">
+                    <view class="tit">
+                    <view class="hm">订单关闭</view>
+                    </view>
+                    <view class="listb"></view>
+                </view>
+            </view>
+        </block>
+
+        <block wx:if="{{itemsList1.length > 0}}">
+            <block wx:key="item" wx:for="{{itemsList0}}">
+                <view class="sjz_list hover">
+                    <view class="d">
+                        <view class="cg">
+                            <block wx:if="{{item.status == 1}}">
+                                <icon type="success" size="30" color="#14bab4"></icon>
+                            </block>
+                            <block wx:else>
+                                <icon type="success" size="30" color="#14bab4"></icon>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="a">
+                        <view class="tit">
+                            <view class="hm">卖家确认</view>
+                            <view class="hn">
+                                <block wx:if="{{item.status == 1}}">
+                                    <text class="txtb" data-pic="{{itemDetail.pictureContract}}" bindtap="toContract">查看合同</text>
+                                </block>
+                                <block wx:else>
+                                    <text class="txta">待确认</text> 
+                                </block>
+                            </view>
+                        </view>
+                        <view class="listb">{{item.procDate}}</view>
+                    </view>
+                </view>
+            </block>
+        </block>
+        <block wx:else>
+            <view class="sjz_list hover">
+                <view class="d">
+                    <view class="cg">
+                        <icon type="waiting" size="30" color="#14bab4"></icon>
+                    </view>
+                </view>
+                <view class="a">
+                    <view class="tit">
+                        <view class="hm">卖家确认</view>
+                        <view class="hn">
+                            <text class="txta">待确认</text> 
+                        </view>
+                    </view>
+                    <view class="listb"></view>
+                </view>
+            </view>
+        </block>
+        
+        <block wx:if="{{itemDetail.status == 1 || itemDetail.status == 5 || itemDetail.status == 6 || itemDetail.status == 7 || itemDetail.status == 8}}">
+
+            <block wx:if="{{itemsList2.length > 0}}">
+                <view class="sjz_list hover">
+                    <view class="d">
+                        <view class="cg">
+                            <icon type="success" size="30" color="#14bab4"></icon>
+                        </view>
+                    </view>
+                    <view class="a">
+                        <view class="tit">
+                            <view class="hm">买家支付</view>
+                        </view>
+                        <block wx:key="item" wx:for="{{itemsList2}}">
+                            <view class="list">
+                                <text class="txta">{{item.procDate}}</text>
+                                <text class="txtb">￥{{item.money}}</text>
+                                <text class="txtc">
+                                    <block wx:if="{{item.status == 0}}">待确认</block>
+                                    <block wx:if="{{item.status == 1}}">已确认</block>
+                                    <block wx:if="{{item.status == 2}}">已取消</block>
+                                    <block wx:if="{{item.status == 9}}">已作废</block>
+                                </text>
+                            </view>
+                        </block>
+                        <block wx:if="{{itemDetail.needPayment > 0}}">
+                            <view class="all">未付货款: <text>￥{{itemDetail.needPaymentFmt}}</text>元</view>
+                        </block>
+                        <block wx:else>
+                            <view class="all">付款已完成</view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="sjz_list hover">
+                    <view class="d">
+                        <view class="cg">
+                            <icon type="waiting" size="30" color="#14bab4"></icon>
+                        </view>
+                    </view>
+                    <view class="a">
+                        <view class="tit">
+                            <view class="hm">买家支付</view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+
+
+            <block wx:if="{{itemsList3.length > 0}}">
+                <view class="sjz_list hover">
+                    <view class="d">
+                        <view class="cg">
+                            <icon type="success" size="30" color="#14bab4"></icon>
+                        </view>
+                    </view>
+                    <view class="a">
+                        <view class="tit">
+                            <view class="hm">卖家发货</view>
+                        </view>
+                        <block wx:key="item" wx:for="{{itemsList3}}">
+                            <view class="list">
+                                <text class="txta">{{item.procDate}}</text>
+                                <text class="txtb">{{item.amount}} 吨</text>
+                                <text class="txtc">
+                                    <block wx:if="{{item.status == 0}}">待确认</block>
+                                    <block wx:if="{{item.status == 1}}">已确认</block>
+                                    <block wx:if="{{item.status == 2}}">已取消</block>
+                                    <block wx:if="{{item.status == 9}}">已作废</block>
+                                </text>
+                            </view>
+                        </block>
+                        <block wx:if="{{itemDetail.needDeliveryAmount > 0}}">
+                            <view class="all">剩余数量: <text>{{itemDetail.needDeliveryAmount}}</text>吨</view>
+                        </block>
+                        <block wx:else>
+                            <view class="all">发货已完成</view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="sjz_list hover">
+                    <view class="d">
+                        <view class="cg">
+                            <icon type="waiting" size="30" color="#14bab4"></icon>
+                        </view>
+                    </view>
+                    <view class="a">
+                        <view class="tit">
+                            <view class="hm">卖家发货</view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+
+            <block wx:if="{{itemsList4.length > 0}}">
+                <view class="sjz_list">
+                    <view class="d">
+                        <view class="cg">
+                            <icon type="success" size="30" color="#14bab4"></icon>
+                        </view>
+                    </view>
+                    <view class="a">
+                        <view class="tit">
+                            <view class="hm">卖家开票</view>
+                        </view>
+                        <block wx:key="item" wx:for="{{itemsList4}}">
+                            <view class="list">
+                                <text class="txta">{{item.procDate}}</text>
+                                <text class="txtb">￥{{item.money}}</text>
+                                <text class="txtc">
+                                    <block wx:if="{{item.status == 0}}">待确认</block>
+                                    <block wx:if="{{item.status == 1}}">已确认</block>
+                                    <block wx:if="{{item.status == 2}}">已取消</block>
+                                    <block wx:if="{{item.status == 9}}">已作废</block>
+                                </text>
+                            </view>
+                        </block>
+                        <block wx:if="{{itemDetail.needInvoiceMoney > 0}}">
+                            <view class="all">剩余额度: <text>￥{{itemDetail.needInvoiceMoneyFmt}}</text></view>
+                        </block>
+                        <block wx:else>
+                            <view class="all">开票已完成</view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="sjz_list hover">
+                    <view class="d">
+                        <view class="cg">
+                            <icon type="waiting" size="30" color="#14bab4"></icon>
+                        </view>
+                    </view>
+                    <view class="a">
+                        <view class="tit">
+                            <view class="hm">卖家开票</view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </block>
+        <block wx:else>
+            <view class="sjz_list hover">
+                <view class="d">
+                    <text>3</text>
+                </view>
+                <view class="a">
+                    <view class="tit">
+                        <view class="hm">买家支付</view>
+                    </view>
+                </view>
+            </view>
+            <view class="sjz_list hover">
+                <view class="d">
+                    <text>4</text>
+                </view>
+                <view class="a">
+                    <view class="tit">
+                        <view class="hm">卖家发货</view>
+                    </view>
+                </view>
+            </view>
+            <view class="sjz_list">
+                <view class="d">
+                    <text>5</text>
+                </view>
+                <view class="a">
+                    <view class="tit">
+                        <view class="hm">卖家开票</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+
+        
+    </view>
+</view>

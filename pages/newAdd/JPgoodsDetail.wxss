@@ -1,0 +1,344 @@
+page {
+   background-color: #efefef; 
+}
+view{
+     background-color: #fff; 
+}
+/* 顶部大图 */
+.goodsPic{
+  width: 100%;
+  height: 434rpx;
+  overflow: hidden;
+  position: relative;
+}
+.goodsPic image{
+  width: 100%;
+}
+.goodsPic .countDown{
+  height: 90rpx;
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  color:#14bab4;
+  text-align: center;
+  line-height: 45rpx;
+  font-size: 24rpx;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+}
+.goodsPic .countDown text{
+  color: #333;
+  display: inline-block;
+}
+.goodsPic .countDown text:last-child{
+  font-size: 40rpx;
+}
+.goodsPic .greenStatus{
+  border:2px solid  #14bab4;
+}
+.goodsPic .redStatus{
+  border:2px solid  #f25a5d;
+}
+.goodsPic .grayStatus{
+  border:2px solid  #999;
+  line-height: 90rpx;
+}
+.goodsPic .greenStatus text:last-child{
+  color: #14bab4;
+}
+.goodsPic .redStatus text:last-child{
+  color: #f25a5d;
+}
+.goodsPic .grayStatus text.overTxt{
+  color: #999;
+}
+
+
+
+/* 商品交易属性 */
+.deal{
+  /* padding: 0 5%; */
+  height: 194rpx;
+  background-color: #fff;
+}
+.deal .goodsName{
+  font-size: 36rpx;
+  color: #000;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+.deal .Pl ,.deal .WW{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deal .Pl .price{
+  font-size: 26rpx;
+   /* color: #ff7f00;  */
+   color: #14bab4; 
+  /* color: #f25a5d; */
+}
+.deal .Pl .price text{
+  font-size: 48rpx;
+}
+.deal .WW{
+  margin-top: 5px;
+}
+.deal .WW .number{
+  display:flex;
+  align-items:center;
+}
+.deal .WW .number text{
+  font-size: 36rpx;
+  color: #000;
+}
+.deal .WW view:first-child{
+  align-self:center;
+}
+.deal .Pl .lookPerson{
+  align-self: center;
+}
+.lookPerson image{
+  width: 33rpx;
+  height: 21rpx;
+}
+
+
+/* 商家信息 */
+.merchant{
+  padding:16rpx 5%;
+  height: 102rpx;
+  margin: 16rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.merchant  .headIco{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.merchant  .headIco image{
+  height: 100rpx;
+  width: 100rpx;
+}
+.merchant  .merchantR{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 100rpx;
+}
+.merchant  .merchantR .address,.merchant  .merchantR .phone{
+  display: flex;
+  flex-flow:row wrap;
+  align-content: space-between;
+  height: 100rpx;
+  width: 50%;  
+}
+.merchant  .merchantR .phone{
+  flex-direction: row-reverse;
+}
+.merchant  .merchantR .address>view{
+   width: 100%; 
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;  
+}
+.merchant  .merchantR .phone>view:first-child{
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1px solid #999;
+  background-color: #f5f5f5;
+  font-size: 24rpx;
+  color: #000;
+  border-radius: 3px;
+}
+
+
+/* 检验报告 */
+.test{
+  height: 106rpx;
+  padding: 22rpx 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.test .testL{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  width:80%; 
+}
+.test .testL .ZJ{
+  width: 100%;
+  font-size: 32rpx;
+  color: #333;
+}
+.test .testL .RZ{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.test .testL .RZ icon{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.test .testR view{
+  margin-top: 3px;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1px solid #999;
+  background-color: #f5f5f5;
+  font-size: 24rpx;
+  color: #000;
+  border-radius: 3px;
+}
+
+
+/*出价记录*/
+.record{
+    background-color: #ebebeb;
+    margin-top: 16rpx;
+}
+.record .recordTop{
+    height: 100rpx;
+    line-height: 100rpx;
+    padding:0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.record .recordTop text{
+    display: inline-block;
+    font-size: 32rpx;
+    color: #000;
+    line-height: 100rpx;
+}
+.record .rtL text{
+    margin-left: 36rpx;
+    margin-right: 76rpx;
+
+}
+.record .rtL image{
+    width: 41rpx;
+    height: 41rpx;
+    vertical-align: middle;
+    margin-top: -10rpx;
+}
+.record .rtR image{
+    width: 18rpx;
+    height: 31rpx;
+    vertical-align: middle;
+}
+.recordListContBox{
+  margin-top: 3px;  
+  height: 260rpx;
+  overflow-y: auto;
+  /* background-color: #efefef; */
+}
+.recordListContBox .apartView{
+  width: 100%;
+  height: 3px;
+  background-color: #efefef;
+}
+
+.recordList{
+    display: flex;
+    height: 84rpx;
+    line-height: 84rpx;
+    padding:0 5%;
+    border-bottom: 3px solid #efefef;
+}
+.recordList>view{
+    flex:1;
+}
+.recordList .userStatu{
+    flex:5;
+    margin-left: 20rpx;
+}
+.recordList .phoneIco image{
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}
+.recordList view,.recordList view text{
+    font-size: 28rpx;
+    color: #000;
+}
+.recordList .recordDate{
+    margin:0 26rpx;
+}
+.recordList .offerUser{
+    text-align: left;
+}
+.recordList .nowPrice{
+    text-align: left;
+}
+/*领先状态样式*/
+.lead view,.lead view text{
+    color: #f25a5d;
+}
+
+
+
+
+
+
+
+
+
+
+/* 产品详情 */
+.goodsDetail{
+  margin-top: 16rpx;
+  padding-bottom: 92rpx;
+}
+.goodsDetail .detailTit{
+  height: 74rpx;
+  line-height: 74rpx;
+  background-color: #fafafa;
+}
+.goodsDetail .detailTit text{
+  font-size: 32rpx;
+  color: #000;
+  background-color: #fff;
+  display: inline-block;
+   /* border-top: 2px solid #ff7f00;  */
+   border-top: 2px solid #14bab4; 
+   /* border-top: 2px solid #f25a5d;  */
+  padding: 0 5%;
+}
+.detaillist{
+  padding: 0 5%;
+  margin: 14px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.detaillist view:first-child{
+  width: 60%;
+}
+.detaillistDif{
+  padding: 0 5%;
+  margin: 14px 0;
+}
+
+
+/* 底部操作按钮 */
+
+.JPbottomBtn{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  color: #fff;
+  background-color: #f25a5d;
+  font-size:20px;
+}

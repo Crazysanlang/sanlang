@@ -1,0 +1,12 @@
+<view class="bdcg">
+    <view class="bdcg_a">
+        <view class="a"><icon type="success" size="60" color="#14bab4"/></view>
+        <view class="b">
+            <text class="txta">恭喜，已提交成功</text>
+            <text class="txtb">待您的营业执照审核通过，即可在棉联平台买卖棉花</text>
+        </view>
+    </view>
+    <view class="bdcg_b">
+        <button class="but_green" bindtap="toShop">去商城</button>
+    </view>
+</view>

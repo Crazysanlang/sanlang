@@ -1,0 +1,36 @@
+
+<view class="search">
+  <view class="l">
+    <view class="inputbg" bindtap="toLoginBtn">
+      <image src="../../images/other/search.png" class="a"></image>
+      <input type="text" placeholder="仓库名称关键词" bindinput="bindCorpName" />
+    </view>
+  </view>
+</view>
+
+<block wx:if="{{depotItems.length > 0}}">
+  <scroll-view scroll-y style="height: {{windowHeight-50}}px" scroll-into-view="{{alpha}}">
+    <view class="alphabet">
+      <view class="alphabet-list">
+        <view wx:for="{{depotItems}}" wx:key="unique" id="{{item.alphabet}}" class="section-item">
+          <view class="section-item-header">
+            {{item.alphabet}}
+          </view>
+          <view wx:for="{{item.datas}}" wx:key="unique" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells">
+            <view id="{{cell.depotID}}" data-name="{{cell.corpName}}" bindtap="selectDepot" class="section-item-cell {{cellIndex != (item.datas.length-1) ? 'border-bottom':''}}">
+              <text>{{cell.corpName}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view data-id="selector" catchtouchstart="handlerAlphaTap" catchtouchmove="handlerMove" class="alphanet-selector">
+    <view data-ap="{{item.alphabet}}" wx:for="{{depotItems}}" wx:key="unique" class="selector-one">
+      {{item.alphabet}}
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="zwsj">暂无数据</view>
+</block>

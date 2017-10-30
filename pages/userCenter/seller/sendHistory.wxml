@@ -1,0 +1,41 @@
+<view class="tab_area">
+  <navigator url="/pages/userCenter/seller/send" class="" open-type="redirect" hover-class="other-navigator-hover">未发货</navigator>
+  <navigator url="/pages/userCenter/seller/sendHistory" class="tab_hover" open-type="redirect" hover-class="other-navigator-hover">发货记录</navigator>
+</view>
+<block wx:if="{{items.length > 0}}">
+  <scroll-view style="height:{{windowHeight-56}}px" scroll-y="true">
+    <block wx:key="item" wx:for="{{items}}">
+      <view class="wdlist" id="{{item.deliveryID}}" bindtap="toSendDetail">
+        <view class="l">
+          <view class="m">{{item.buyMemberName}}</view>
+          <view class="n">{{item.deliveryDate}}</view>
+        </view>
+        <view class="r">
+          <view class="m"> {{item.deliveryAmount}}
+            <text>吨</text>
+          </view>
+          <block wx:if="{{item.status == 0}}">
+            <view class="n"><text class="a">待确认</text></view>
+          </block>
+          <block wx:if="{{item.status == 1}}">
+            <view class="n"><text class="b">已确认</text></view>
+          </block>
+          <block wx:if="{{item.status == 9}}">
+            <view class="n"><text class="c">已作废</text></view>
+          </block>
+        </view>
+        <view class="yjt">
+          <image src="../../../images/other/yjt.png" />
+        </view>
+      </view>
+      <block wx:if="{{moreFlag}}">
+        <view class="moreList" bindtap="moreList">点击查看更多</view>
+      </block>
+    </block>
+  </scroll-view>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无发货信息</view>
+  </block>
+</block>

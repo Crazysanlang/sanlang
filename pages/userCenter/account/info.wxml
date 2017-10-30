@@ -1,0 +1,28 @@
+<view class="tab_area">
+  <navigator data-type="0" bindtap="messageTypeBind" class="{{class_tab_hover_0}}" open-type="switchTab" hover-class="other-navigator-hover">全部</navigator>
+  <navigator data-type="1" bindtap="messageTypeBind" class="{{class_tab_hover_1}}" open-type="switchTab" hover-class="other-navigator-hover">系统消息</navigator>
+  <navigator data-type="2" bindtap="messageTypeBind" class="{{class_tab_hover_2}}" open-type="switchTab" hover-class="other-navigator-hover">交易通知</navigator>
+</view>
+
+<block wx:if="{{items.length > 0}}">
+  <scroll-view class="item-box" scroll-y="true" style="height:{{windowHeight-56}}px;">
+    <view class="items">
+      <view wx:for="{{items}}" wx:key="{{index}}" class="item">
+        <view class="opatcc" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" bindtap="toMessageDetail" id="{{item.listID}}"></view>
+        <view style="{{item.txtStyle}}" class="inner txt">
+          <view class="bt {{item.isRead == 1 ? 'on' : ''}}">{{item.content}}</view>
+          <view class="nr">
+            <text>{{item.msgType == 1 ? '系统消息' : '交易通知'}}</text>
+            <text>{{item.msgDate}}</text>
+          </view>
+        </view>
+        <view data-index="{{index}}" id="{{item.listID}}" bindtap="delItem" class="inner del">删除</view>
+      </view>
+    </view>
+  </scroll-view>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无消息数据</view>
+  </block>
+</block>

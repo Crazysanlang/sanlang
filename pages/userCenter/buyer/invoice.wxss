@@ -1,0 +1,14 @@
+page{background-color:#f7f7f7;}
+.wdlist{display:flex;padding:15px 5%;background-color:#ffffff;margin-bottom:5px;}
+.wdlist .l{flex:1}
+.wdlist .l .m{font-size:14px;height:25px;}
+.wdlist .l .n{font-size:12px;color:#999999;}
+.wdlist .r .m{font-size:16px;height:25px;}
+.wdlist .r .n{font-size:12px;}
+.wdlist .r .n text{color:#999999;}
+.wdlist .r .n .a{color:#ff8000}
+.wdlist .r .n .b{color:#14bab4}
+.wdlist .r .n .c{color:#999999;}
+.wdlist .r{text-align:right;}
+.yjt image{width:4px;height:8px;}
+.yjt {position:relative;top:12px;padding-left:10px;}

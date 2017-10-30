@@ -1,0 +1,336 @@
+page {
+  background-color: #f2f2f2;
+}
+
+.batchxq {
+  padding: 20px 5% 0 5%;
+  background-color: #fff;
+  position: relative;
+}
+.batchxq .createPic{
+  position: absolute;
+  padding: 0;
+  top: 20rpx;
+  right: 0;
+  width: 80px;
+  height: 30px;
+  border-radius:0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #14bab4;
+  color: #fff;
+  font-size: 14px;
+  line-height: 30px;
+}
+.batchxq .a {
+  height: 30px;
+}
+
+.batchxq .a .txta, .batchxq .a .txtc {
+  font-size: 18px;
+}
+
+.batchxq .a .txtb, .batchxq .a .txtd {
+  font-size: 12px;
+  color: #666;
+  padding-left: 5px;
+}
+
+.batchxq .a .txtc {
+  padding-left: 10px;
+}
+
+.batchxq .a .txte {
+  margin-left: 10px;
+}
+
+.batchxq .a .txtf {
+  margin-left: 10px;
+}
+
+.batchxq .b {
+  color: #666;
+  height: 20px;
+}
+
+.batchxq .b .txta {
+  font-size: 14px;
+}
+
+.batchxq .b .txtb {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.batchxq .b .txtc {
+  font-size: 12px;
+  padding-left: 15px;
+}
+
+.batchxq .c {
+  height: 30px;
+}
+
+.batchxq .c text {
+  color: #a2a2a2;
+  font-size: 12px;
+}
+
+.batchxq .d {
+  display: flex;
+  height: 50px;
+}
+
+.batchxq .d view {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #eee;
+  height: 38px;
+}
+
+.batchxq .d view:last-child {
+  border: 0;
+}
+
+.batchxq .d .m {
+  display: block;
+  color: #666;
+  height: 20px;
+}
+
+.batchxq .d .n {
+  display: block;
+  font-size: 18px;
+}
+
+.batchxq .e {
+  font-size: 12px;
+  color: #a2a2a2;
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #eee;
+}
+
+.batchxq .e .txtb {
+  float: right;
+  text-align: right;
+}
+.batchxq .e .phone5{
+  width:230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  background-color: #fff;
+  margin-top: 5px;
+  display: flex;
+  padding: 10px 5% 10px 5%;
+}
+
+.price .vl {
+  flex: 1;
+  font-size: 12px;
+}
+
+.price .vl .txta {
+  display: block;
+  color: #666;
+  padding-top: 10px;
+  height: 20px;
+  font-size: 14px;
+}
+
+.price .vl .txtb {
+  color: #ff8000;
+  height:20px;
+  line-height:20px;
+
+}
+
+.price .vr {
+  text-align: right;
+}
+
+.price .vr .txta {
+  color: #ff8000;
+  font-size: 16px;
+  height: 32px;
+}
+
+.price .vr .txta text {
+  font-size: 25px;
+}
+
+.price .vr .txtb {
+  display: flex;
+  color: #999;
+  text-align: right;
+}
+
+.price .vr .txtb .m {
+  font-size: 14px;
+}
+
+.price .vr .txtb .n {
+  padding-left: 10px;
+}
+
+.price .vr .txtb .n text {
+  color: #4a4a4a;
+}
+
+.tab {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  display: flex;
+  background: #eee;
+  margin-top: 10px;
+}
+
+.tab view {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+.tab .hover {
+  background-color: #fff;
+  color: #14bab4;
+  border-top: 1px solid #14bab4;
+}
+
+.cpxqlista {
+  background-color: #fff;
+  display: inline-block;
+  padding: 15px 5% 75px 5%;
+  font-size: 12px;
+}
+
+.cpbox .vili {
+  width: 50%;
+  float: left;
+  color: #666;
+  display: flex;
+  line-height: 22px;
+  border-bottom: 1px solid #eee;
+}
+
+.cpbox .vili:nth-child(2n+1) .txtb {
+  border-right: 1px solid #eee;
+}
+
+.cpbox .vili:nth-child(1), .cpxqlista .vili:nth-child(2) {
+  border-top: 1px solid #eee;
+}
+
+.cpbox .vili .txta {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.cpbox .vili .txtb {
+  flex: 1;
+  text-align: center;
+}
+
+.cpxqlista .viul {
+  line-height: 30px;
+  font-size: 12px;
+  padding-left: 20px;
+  border-top: 1px solid #ddd;
+  clear: both;
+}
+
+.cpbox .viul text {
+  padding-left: 10px;
+}
+
+.cpbox {
+  clear: both;
+}
+
+.bottom {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+.bottom .a {
+  flex: 2;
+}
+
+.bottom .a .sc, .bottom .a .ysc {
+  width: 30px;
+  padding: 0 10px;
+  border-right: 1px solid #eee;
+  height: 50px;
+}
+
+.bottom .a image {
+  width: 20px;
+  height: 20px;
+  padding: 5px 0 0 5px;
+}
+
+.bottom .a text {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  line-height: 16px;
+}
+
+.bottom .b {
+}
+
+.bottom .c {
+}
+
+.bottom .b button, .bottom .c button {
+  border-radius: 0;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.bottom .a .ysc text {
+  color: #14bab4;
+}
+
+.cpxqlistb {
+  padding: 10px 15px;
+  background-color: #fff;
+}
+
+.zlmxlist {
+  display: flex;
+  width: 750px;
+  padding: 2px 0;
+  line-height: 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.zlmxlist text text {
+  display: block;
+}
+
+.zlmxlist text {
+  font-size: 12px;
+  color: #6a6a6a;
+  display: block;
+  flex: 1;
+}
+
+.zlmxlist text:nth-child(2) {
+  flex: 1.5;
+}

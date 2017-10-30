@@ -1,0 +1,30 @@
+<block wx:if="{{items.length > 0}}">
+  <block wx:key="item" wx:for="{{items}}">
+    <view class="wdlist" id="{{item.paymentID}}" bindtap="toChequesDetail">
+      <view class="l">
+        <view class="m">{{item.buyMemberName}}</view>
+        <view class="n">{{item.payDate}}</view>
+      </view>
+      <view class="r">
+        <view class="m">{{item.payMoneyFmt}}</view>
+        <view class="n">
+          <block wx:if="{{item.status == 0}}"><text class="a">未确认</text></block>
+          <block wx:if="{{item.status == 1}}"><text class="b">已确认</text></block>
+          <block wx:if="{{item.status == 9}}"><text class="c">已作废</text></block>
+        </view>
+      </view>
+      <view class="yjt">
+        <image src="../../../images/other/yjt.png" />
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{moreFlag}}">
+    <view class="moreList" bindtap="moreList">点击查看更多</view>
+  </block>
+</block>
+<block wx:else>
+  <block wx:if="{{!firstDataFlag}}">
+    <view class="zwsj">暂无收款信息</view>
+  </block>
+</block>
