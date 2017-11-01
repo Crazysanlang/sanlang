@@ -28,18 +28,6 @@ App({
     loginCode_1138:1138,	// 会员不存在
     loginCode_1147:1147,	// 未认证会员
     loginCode_1139:1139,	// 会员已冻结
-    // 订单确认数据源
-    orderInItemDetail: [],
-    // 仓库公用主键/名称
-    baseDepotID: '',
-    baseCorpName: '',
-    // 卖家发货批次选择数据源
-    sendInItems: [],
-    // 融资详情/质押详情
-    loanBeanItem: {},
-    // 消息详情缓存
-    messageItem: {},
-    // 买家卖家联系人
     contactsItem: {},
     // 可使用窗口高度
     windowHeight: 0,

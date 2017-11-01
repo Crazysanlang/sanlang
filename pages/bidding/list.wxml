@@ -1,0 +1,325 @@
+<!-- 顶部筛选条件 -->
+<view class="filtrate">
+  <view class="nav">
+    <view class="navTable {{shownavindex == 1? 'active' : ''}}" bindtap="bindnavTable" data-nav="1">
+      <view class="navTxt">类型</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 2? 'active' : ''}}" bindtap="bindnavTable" data-nav="2">
+      <view class="navTxt">交货地</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 3? 'active' : ''}}" bindtap="bindnavTable" data-nav="3">
+      <view class="navTxt">品种</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 4? 'active' : ''}}" bindtap="bindnavTable" data-nav="4">
+      <view class="navTxt">状态</view>
+      <view class="arrows"></view>
+    </view>
+    <view class="navTable {{shownavindex == 5? 'active' : ''}}" bindtap="bindnavTable" data-nav="5">
+      <view class="navTxt">更多</view>
+      <view class="arrows"></view>
+    </view>
+  </view>
+<!-- 筛选内容 -->
+  <!-- 类型 -->
+  <view class='navCont {{shownavindex == 1? "showCont" : "hideCont"}}'>
+    <navigator url='/pages/bidding/detail'>跳转</navigator>
+  </view>
+  <!--交货地 -->
+  <view class='navCont {{shownavindex == 2 ? "showCont" : "hideCont"}}'>交货地</view>
+  <!--品种 -->
+  <view class='navCont {{shownavindex == 3 ? "showCont" : "hideCont"}}'>品种</view>
+  <!--状态 -->
+  <view class='navCont {{shownavindex == 4 ? "showCont" : "hideCont"}}'>状态</view>
+  <!--更多 -->
+  <view class='navCont {{shownavindex == 5 ? "showCont" : "hideCont"}}'>更多</view>
+  <view class='shade {{isShow ? "showShade" : ""}}' bindtap='hideAll'></view>
+</view>
+
+<!-- 列表 -->
+<view class='list nowRun'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+    <view><text>00:00:00</text>后结束</view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+        <view>300人出价</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+         <view><image src='/images/other/redHand.png' style='width:34rpx;height:36rpx;'></image> </view>
+        <view>立即出价</view> 
+        <!-- <view><image src='/images/other/baoming.png' style='width:56rpx;height:38rpx;'></image> </view>
+        <view>我要报名</view> -->
+      </view>
+      <view class='remind'> <image src='/images/other/remind.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
+    </view>
+  </view>
+</view>
+<view class='list nowRun'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+    <view><text>00:00:00</text>后结束</view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+        <view>300人出价</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+        <view><image src='/images/other/baoming.png' style='width:56rpx;height:38rpx;'></image> </view>
+        <view>我要报名</view>
+      </view>
+      <view class='remind'> <image src='/images/other/remind.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
+    </view>
+  </view>
+</view>
+<view class='list noStart'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+    <view><text>00:00:00</text>后结束</view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+        <view>300人报名</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+        <view><image src='/images/other/baoming-green.png' style='width:56rpx;height:38rpx;'></image> </view>
+        <view>我要报名</view>
+      </view>
+      <view class='remind'> <image src='/images/other/remind-green.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
+    </view>
+  </view>
+</view>
+<view class='list noStart'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+    <view><text>11月5号 10:00 开始</text></view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+        <view>300人报名</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+        <view><image src='/images/other/baoming-green-after.png' style='width:43rpx;height:38rpx;'></image> </view>
+        <view>已经报名</view>
+      </view>
+      <view class='remind'> <image src='/images/other/remind-green.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
+    </view>
+  </view>
+</view>
+<view class='list noStart'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+    <view><text>00:00:00</text>后结束</view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+        <view>300人报名</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+        <view><image src='/images/other/baoming-green-after.png' style='width:43rpx;height:38rpx;'></image> </view>
+        <view>已经报名</view>
+      </view>
+      <view class='remind'> <image src='/images/other/remind-green.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
+    </view>
+  </view>
+</view>
+<view class='list finish'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+        <view>3人领先</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+        <view><image src='/images/other/finish.png' style='width:63rpx;height:65rpx;'></image> </view>
+        <view>招标结束</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='list finish finish-flow'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+        <view><image src='/images/other/finish-flow.png' style='width:65rpx;height:65rpx;'></image> </view>
+        <view>已流标</view>
+      </view>
+    </view>
+  </view>
+</view>

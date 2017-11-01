@@ -1,19 +1,12 @@
 {
   "pages": [
-    "pages/auction/list",    
+    "pages/example/index",
+    "pages/bidding/detail",
     "pages/index/index",
-    "pages/newAdd/JPList",
-    "pages/newAdd/JPgoodsDetail",
-    "pages/newAdd/goodsDetail",
-    "pages/newAdd/hang",
-    "pages/newAdd/quote",
-    "pages/newAdd/bidRecord",
-    "pages/newAdd/JPBidHall",
-    "pages/newAdd/hang3",
-    "pages/newAdd/hang2",
-    "pages/newAdd/JPhang",
+    "pages/bidding/list",
+    
     "pages/index/orderIndex",
-    "pages/contact/index",
+
     "pages/user/login",
     "pages/user/reg",
     "pages/user/auth",
@@ -29,7 +22,6 @@
     "pages/shop/searchlist",    
 
     "pages/userCenter/index",
-
     "pages/userCenter/buyer/order",
     "pages/userCenter/buyer/orderDetail",
     "pages/userCenter/buyer/orderManagement",
@@ -77,55 +69,69 @@
     "pages/userCenter/account/editPwd",
     "pages/userCenter/account/findPwd",
     "pages/userCenter/account/ticketInfo",
-
     "pages/userCenter/share/index",
 
-    "pages/store/list",
-
-    "pages/auction/apply",
-    "pages/auction/analysis",
-
-    "pages/finance/apply",
-    "pages/finance/result",
-    
-    "pages/pledge/apply",
-    "pages/pledge/result"
+    "pages/example/button/button",
+    "pages/example/list/list",
+    "pages/example/input/input",
+    "pages/example/slider/slider",
+    "pages/example/uploader/uploader",
+    "pages/example/article/article",
+    "pages/example/badge/badge",
+    "pages/example/flex/flex",
+    "pages/example/footer/footer",
+    "pages/example/gallery/gallery",
+    "pages/example/grid/grid",
+    "pages/example/icons/icons",
+    "pages/example/loadmore/loadmore",
+    "pages/example/panel/panel",
+    "pages/example/preview/preview",
+    "pages/example/progress/progress",
+    "pages/example/actionsheet/actionsheet",
+    "pages/example/dialog/dialog",
+    "pages/example/msg/msg",
+    "pages/example/msg/msg_success",
+    "pages/example/msg/msg_fail",
+    "pages/example/picker/picker",
+    "pages/example/toast/toast",
+    "pages/example/navbar/navbar",
+    "pages/example/tabbar/tabbar",
+    "pages/example/searchbar/searchbar"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFF",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "储备粮演示",
-    "backgroundColor": "#14BAB4"
+    "navigationBarTitleText": "招标Demo"
   },
   "tabBar": {
-    "color": "#333",
+    "color": "#999",
     "selectedColor": "#14BAB4",
     "backgroundColor": "#f7f7f7",
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/bidding/1.png",
-        "selectedIconPath": "images/bidding/2.png",
+        "pagePath": "pages/example/index",
+        "iconPath": "images/index/3.png",
+        "selectedIconPath": "images/index/4.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/shop/list",
-        "iconPath": "images/shop/1.png",
-        "selectedIconPath": "images/shop/2.png",
+        "iconPath": "images/shop/3.png",
+        "selectedIconPath": "images/shop/4.png",
         "text": "商城"
       },
       {
-        "pagePath": "pages/auction/list",
-        "iconPath": "images/auction/1.png",
-        "selectedIconPath": "images/auction/2.png",
+        "pagePath": "pages/bidding/list",
+        "iconPath": "images/bidding/3.png",
+        "selectedIconPath": "images/bidding/4.png",
         "text": "竞价"
       },
       {
         "pagePath": "pages/userCenter/index",
-        "iconPath": "images/me/1.png",
-        "selectedIconPath": "images/me/2.png",
+        "iconPath": "images/me/3.png",
+        "selectedIconPath": "images/me/4.png",
         "text": "账户"
       }
     ]

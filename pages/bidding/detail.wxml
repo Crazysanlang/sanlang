@@ -1,0 +1,182 @@
+<!-- 产品图片 -->
+
+<view class='topPic '>
+  <image src='/images/other/pic.png'></image>
+  <view class='suspend over'>
+    <view>华东市场</view>
+    <!-- <view>距结束还有<text>00:00:00</text> </view> -->
+    <!-- <view>距开始还有<text>00:00:00</text> </view> -->
+     <view><text>招标结束</text> </view> 
+  </view>
+</view>
+
+<!-- 产品信息 -->
+
+<view class='goodsMsg over'>
+  <view class='goodName'>2016  二级 早籼稻 长两优39  江西鄱阳</view>
+  <view class='msg'>
+    <view class='ml'>
+      <view class='SX'>
+        <view>水份: <text>14.4%</text></view>
+        <view>杂质: <text>0.2%</text></view> 
+      </view>
+      <view class='weight'>招标数量:<text class='weightNum'>1200</text>吨 <text class='qb'>（500吨起标）</text> </view>
+    </view>
+    <view class='mr'>
+      <view>最新出价</view>
+      <view class='price'><text>2950</text>元/吨</view>
+      <view>1.475元/斤</view>
+    </view>
+  </view>
+  <view class='msgBot'>
+    <view><image src='/images/other/weiguan.png' style='width:25rpx;height:19rpx;margin-top:-2px;'></image> 200次围观</view>
+    <view><image src='/images/other/tixing.png' style='width:23rpx;height:24rpx;'></image>200次设置提醒</view>
+    <!-- <view><image src='/images/other/bm.png' style='width:28rpx;height:25rpx;'></image>200人已报名</view> -->
+    <!-- 招标结束时显示中标人数 -->
+    <view><image src='/images/other/zb.png' style='width:25rpx;height:25rpx;'></image>3人中标</view>
+  </view>
+</view>
+
+
+<!-- 出价记录 -->
+
+<view class='bidRecord pd40'>
+  <view class='rTop'>
+    <view><image src='/images/other/record.png' style='width:25rpx;height:28rpx;margin-top:-3px;'></image>出价记录<text></text>3条</view>
+    <view>查看更多>></view>
+  </view>
+  <view class='recordList lead'>
+    <view>L843</view>
+    <view>领先</view>
+    <view>2940元</view>
+    <view>1200吨</view>
+    <view>12:00</view>
+  </view>
+  <view class='recordList'>
+    <view>L843</view>
+    <view>领先</view>
+    <view>2940元</view>
+    <view>1200吨</view>
+    <view>12:00</view>
+  </view>
+</view>
+
+<!-- 交易属性 -->
+<view class='JY pd40'>
+  <view class='JYCont'>
+    <view>保证金：1000元</view>
+    <view>价格类型：到库价</view>
+  </view>
+  <view class='JYCont'>
+    <view>招标价：2900元</view>
+    <view>调价幅度：10元</view>
+  </view>
+  <view class='JYCont'>
+    <view>开始时间：10-12 10:00</view>
+    <view>结束时间：10-12 10:00</view>
+  </view>
+  <view class='JYCont'>
+    <view>最晚交货：10月12号</view>
+    <view>交货地：江西潘阳</view>
+  </view>
+</view>
+
+<!-- 仓库 -->
+<view class='wareHouse'>
+  <view class='WL'>
+    <view><image src='/images/other/house.png' style='width:82rpx;height:76rpx;margin-right:20rpx;'></image></view>
+    <view class='wareTxt'>
+      <view>交货地：江西潘阳</view>
+      <view>江西潘阳国家粮食储备库</view>
+    </view>
+  </view>
+  <view class='WR'>仓库信息 <image src='/images/other/yjt.png' style='width:12rpx;height:24rpx;'></image> </view>
+</view>
+
+
+<!-- 买方信息 -->
+<view class='buyComp'>
+  <view class='BL'>
+    <view class='BLPic'><image src='/images/other/buy.png' style='width:81rpx;height:91rpx;margin-right:20rpx;'></image></view>
+    <view class='compName'>
+      <view>江西云翔商贸公司 <image src='/images/other/rz1.png' style='width:20rpx;height:20rpx;'></image> <image src='/images/other/rz2.png' style='width:22rpx;height:22rpx;'></image></view>
+      <view class='credit'><text>5次成交</text><text>0次违约</text> </view>
+      <view>13800138000  张三</view>
+    </view>
+  </view>
+  <view class='BR'>买方信息 <image src='/images/other/yjt.png' style='width:12rpx;height:24rpx;'></image> </view>
+</view>
+
+
+<!-- 招标详情  竞拍说明 -->
+
+<view class='tab'>
+  <view class='{{showtab == 1? "cur" : ""}}' bindtap='bindTabnav' data-tabnav="1"><text>招标详情</text></view>
+  <view class='{{showtab == 2? "cur" : ""}}' bindtap='bindTabnav' data-tabnav="2"><text>招标说明</text></view>
+</view>
+
+<!-- 招标详情内容 -->
+<view class='goodDetail pd40 {{showtab == 1? "" : "contHide"}}'>
+  <view class='detailList'>
+    <view>品种：早籼稻</view>
+    <view>品种：长两优39</view>
+  </view>
+  <view class='detailList'>
+    <view>年份：2016</view>
+    <view>产地：江西潘阳</view>
+  </view>
+  <view class='detailList'>
+    <view>等级：二等</view>
+    <view>容重：>=540g/L</view>
+  </view>
+  <view class='detailList'>
+    <view>水份：{{char_lt}}=14.4% </view>
+    <view>杂质：{{char_lt}}=0.2% </view>
+  </view>
+  <view class='detailList'>
+    <view>不完善率：{{char_lt}}=5%</view>
+    <view>霉变率：{{char_lt}}=2%</view>
+  </view>
+  <view class='detailList'>
+    <view>色泽、气味：正常</view>
+  </view>
+  <view class='border'></view>
+  <view class='detailList'>
+    <view>交货地：江西潘阳</view>
+    <view>最晚交货：10月20日</view>
+  </view>
+  <view class='detailList'>
+    <view>包装方式：不限</view>
+  </view>
+  <view class='border'></view>
+  <view>开始时间：10月12号 10:00</view>
+  <view>结束时间：10月12号 10:30</view>
+  <view class='border'></view>
+  <view class='detailList'>
+    <view>保证金：1000</view>
+    <view>价格类型：到库价</view>
+  </view>
+  <view class='detailList'>
+    <view>招标价：2900元</view>
+    <view>减价幅度：10元</view>
+  </view>
+  <view class='detailList'>
+    <view>招标量：1200吨</view>
+    <view>可否拆量：可以</view>
+  </view>
+  <view class='detailList'>
+    <view>起标量：500吨</view>
+    <view>加量幅度：100吨</view>
+  </view>
+  <view>特别说明：招标结束即可签订合约，现款现算。</view>
+</view>
+<!-- 招标说明 -->
+<view class='goodDetail pd40 {{showtab == 2? "" : "contHide"}}'>招标说明</view>
+
+<!-- 底部按钮 -->
+ <view class='botBtn'>
+    <view class='zx'> <image src='/images/other/zx.png' style='width:28rpx;height:30rpx'></image> 咨询</view>
+     <view class='tx'> <image src='/images/other/remind.png' style='width:28rpx;height:28rpx;margin-right:5px'></image>提醒</view> 
+    <!-- <view class='tx'> <image src='/images/other/tx.png' style='width:28rpx;height:28rpx;margin-right:5px'></image>提醒</view> -->
+    <view class='btn nowRun'>立即出价</view>
+ </view>
