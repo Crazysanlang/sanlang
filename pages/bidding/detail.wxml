@@ -64,20 +64,19 @@
 <!-- 交易属性 -->
 <view class='JY pd40'>
   <view class='JYCont'>
-    <view>保证金：1000元</view>
-    <view>价格类型：到库价</view>
+    <view>保证金：固定金额，1000元</view>
   </view>
   <view class='JYCont'>
     <view>招标价：2900元</view>
-    <view>调价幅度：10元</view>
+    <view>减价幅度：10元</view>
   </view>
   <view class='JYCont'>
-    <view>开始时间：10-12 10:00</view>
-    <view>结束时间：10-12 10:00</view>
+    <view>保留价：10-12 10:00</view>
+    <view>保留量：10-12 10:00</view>
   </view>
+  <view>招标时间：10月12号 10:00 ~ 10月12号 10:30</view>
   <view class='JYCont'>
-    <view>最晚交货：10月12号</view>
-    <view>交货地：江西潘阳</view>
+    <view>延长周期：2分钟/次</view>
   </view>
 </view>
 
@@ -141,6 +140,7 @@
     <view>色泽、气味：正常</view>
   </view>
   <view class='border'></view>
+  <view>交货仓库：江西潘阳国家粮食储备库</view>
   <view class='detailList'>
     <view>交货地：江西潘阳</view>
     <view>最晚交货：10月20日</view>
@@ -177,6 +177,7 @@
  <view class='botBtn'>
     <view class='zx'> <image src='/images/other/zx.png' style='width:28rpx;height:30rpx'></image> 咨询</view>
      <view class='tx'> <image src='/images/other/remind.png' style='width:28rpx;height:28rpx;margin-right:5px'></image>提醒</view> 
-    <!-- <view class='tx'> <image src='/images/other/tx.png' style='width:28rpx;height:28rpx;margin-right:5px'></image>提醒</view> -->
-    <view class='btn nowRun'>立即出价</view>
+    <!-- <view class='tx' style="color:#999;"> <image src='/images/other/tx.png' style='width:28rpx;height:28rpx;margin-right:5px'></image>提醒</view> -->
+    <!-- <view class='btn nowRun'>立即出价</view> -->
+    <view class='btn noStart'>立即出价</view>
  </view>

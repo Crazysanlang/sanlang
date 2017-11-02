@@ -210,12 +210,16 @@ image{
 }
 .JY .JYCont{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: 30px;
   line-height: 30px;
 }
 .JY .JYCont view{
    width: 50%; 
+  color: #999;
+  font-size: 24rpx;
+}
+.JY view{
   color: #999;
   font-size: 24rpx;
 }
@@ -350,7 +354,10 @@ image{
   font-size: 26rpx;
   color: #333;
 }
-
+.goodDetail view{
+  font-size: 26rpx;
+  color: #333;
+}
 
 .botBtn{
   width: 100%;

@@ -118,9 +118,11 @@ page{
 }
 .list .listTop>view:first-child{
   color: #333;
-  font-size: 32rpx;
-  /* font-weight: 600; */
+   font-size: 32rpx; 
+  /* font-size: 28rpx; */
+  font-weight: 500;
 }
+
 .list .listTop>view:first-child text{
   display: inline-block;
   width: 60rpx;
@@ -138,7 +140,8 @@ page{
 .list .listTop>view:last-child text{
   font-size: 28rpx;
   margin-right: 5px;
-  }
+  vertical-align: middle;
+}
 
 .list .listCont{
   display: flex;
@@ -255,7 +258,10 @@ page{
   font-size: 28rpx;
   margin-bottom: none;
 }
-
+.list.finish .listTop>view:first-child{
+  color: #333;
+  font-size: 32rpx;
+}
 /* 已结束-流标 */
 .finish.finish-flow .listCont .contR .bid{
   color: #999;
