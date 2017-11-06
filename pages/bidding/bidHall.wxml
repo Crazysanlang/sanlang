@@ -1,0 +1,78 @@
+<!-- 顶部倒计时 -->
+
+<view class='time'>
+  <view>正在进行</view>
+  <view class='mid'>距结束还有 <text>00：00:00</text></view>
+  <view>华东市场</view>
+</view>
+
+<view class='goodsMsg nowRun'>
+  <view class='goodName'>2016  二级 早籼稻 长两优39  江西鄱阳</view>
+  <view class='msg'>
+    <view class='ml'>
+      <view class='SX'>
+        <view>水份: <text>14.4%</text></view>
+        <view>杂质: <text>0.2%</text></view> 
+      </view>
+      <view class='weight'>招标数量:<text class='weightNum'>1200</text>吨 <text class='qb'>（500吨起标）</text> </view>
+    </view>
+    <view class='mr'>
+      <view>最新出价</view>
+      <view class='price'><text>2950</text>元/吨</view>
+      <view>1.475元/斤</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='PW'>
+  <view>应标数量（吨）</view>
+  <view class='weight'>1200</view>
+  <view>金额：3，526，000元</view>
+
+<!-- 减号 -->
+  <view class='minus'>-<text>100</text></view>
+<!-- 加号 -->
+  <view class='plus'>+<text>100</text></view>
+</view>
+<view class='PW'>
+  <view>应标价格（元/吨）</view>
+  <view class='weight'>2930</view>
+  <view>约1.480元/斤</view>
+
+<!-- 减号 -->
+  <view class='minus'>-<text>10</text></view>
+<!-- 加号 -->
+  <view class='plus'>+<text>10</text></view>
+</view>
+<view class='deposRule'>
+  <view> <image src='/images/other/black-warn.png' style='width:40rpx;height:40rpx;'></image> </view>
+  <view>保证金为固定金额100,000元且已冻结，应标数量可能会部分成交，请慎重出价。</view>
+</view>
+
+
+
+
+<view class='record'>
+  <view class='rTop'>
+    <view>出价记录</view>
+    <view>查看更多>></view>
+  </view>
+  <view class='recordList'>
+    <view>L843</view>
+    <view>领先</view>
+    <view>2950元</view>
+    <view>1200吨</view>
+    <view>12:02</view>
+  </view>
+  <view class='recordList'>
+    <view>L843</view>
+    <view>领先</view>
+    <view>2950元</view>
+    <view>1200吨</view>
+    <view>12:02</view>
+  </view>
+</view>
+
+<view class='botBtn'>立即出价</view>

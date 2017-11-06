@@ -1,0 +1,87 @@
+.rightArrow{
+  display: flex;
+  align-items: center;
+}
+.arrow{
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  transform: rotate(45deg);
+}
+.title{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #14bab4;
+  padding-left: 23rpx;
+  text-align: left;
+}
+.outerView{
+  padding: 0 23rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.outerView .viewLeft{
+  width: 88%;
+}
+/* 商品信息 */
+
+
+
+.mlTxt{
+  height: 88rpx;
+  font-size: 30rpx;
+  color: #999;
+  text-align: left;
+  line-height: 88rpx
+}
+.attribute{
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  line-height: 30px;
+}
+.attribute view{
+  color:#999;
+  font-size: 22rpx;
+}
+.attribute view text{
+  color:#333;
+  font-size: 26rpx;
+}
+
+/* 设置招标价格 */
+  
+.leftTxt{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+}
+.leftTxt view{
+  font-size: 24rpx;
+  color: #333;
+  text-align: left;
+  width: 50%;
+  white-space: nowrap;
+}
+.leftTxt view text{
+  font-size: 28rpx;
+  color: #eb334f;
+  white-space: nowrap;
+}
+
+.botBtn{
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  background-color: #14bab4;
+  position: fixed;
+  bottom: 0;
+
+}

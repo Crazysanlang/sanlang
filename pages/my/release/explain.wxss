@@ -1,0 +1,21 @@
+
+
+textarea{
+  border: 1px solid #ccc;
+  margin: 40rpx;
+  width: 670rpx; 
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.botBtn{
+  margin: 0 40rpx;
+  background-color: #14bab4;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 3px;
+  margin-top: 60rpx;
+}

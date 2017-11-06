@@ -1,0 +1,113 @@
+page{
+  background-color: #dedede;
+}
+.ybzl{
+  padding: 0 26rpx;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+}
+.yb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+  
+}
+.yb view:first-child{
+  font-size: 28rpx;
+  color: #000;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.notice{
+  background-color: #fff;
+  font-size: 24rpx;
+  border-bottom: 1px solid #dedede;
+  padding: 10rpx 0;
+}
+.notice text{
+  color: #eb344f
+}
+.yb view:last-child{
+  color: #000;
+  font-size: 24rpx;
+}
+.yb view:last-child text{
+  color: #eb344f;
+  font-size: 48rpx;
+}
+.yb view:last-child input{
+  color: #eb344f
+}
+.yb view:last-child input:placeholder{
+  color: #eb344f
+}
+.money{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.money view:first-child{
+  font-size: 24rpx;
+  color: #000;
+}
+.money view:last-child{
+  font-size: 22rpx;
+  color: #000;
+}
+.money view:last-child text{
+  color: #eb344f;
+  font-size: 30rpx;
+}
+
+.text{
+  background-color: #fff;
+  margin-top: 37rpx;
+  margin-bottom: 10rpx;
+  padding:30rpx 25rpx;
+}
+.text view{
+  margin-bottom: 20rpx;
+}
+.text view:first-child{
+  text-indent: 40rpx;
+}
+.text view:last-child{
+  color: #14bab4;
+  text-decoration: underline;
+}
+
+
+.xy{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 86rpx;
+  line-height: 86rpx;
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+.xy view:last-child{
+  color: #14bab4;
+  text-decoration: underline;
+}
+ .xy icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top:-10px;
+  margin-right:5px;
+} 
+
+
+.botBtn{
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #eb344f;
+}

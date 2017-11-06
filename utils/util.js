@@ -1,36 +1,25 @@
 var app = getApp();
 
-/**
- * 延迟加载-等待获取openid
- * flag: true-跳转，false-打开新窗口
- */
-function loginAuth() {
-  setTimeout(function () {
-    if (!app.globalData.isWxLoginComplete) {
-      loginAuth()
-      return;
+// 页面跳转业务
+function toPageFlag() {
+  var flag = false;
+  // 已登录
+  if (app.globalData.loginFlag) {
+    var applyMember = app.globalData.applyMember;
+    if (applyMember == -1) {
+      wx.navigateTo({ url: '/pages/user/auth?skipAuth=true' })
+      flag = true;
     }
-    var that = this;
-    wx.request({
-      url: app.globalData.server + '/user/wxLogin',
-      data: { open_id: app.globalData.open_id, js_code: app.globalData.js_code },
-      method: 'POST',
-      header: { "content-type": "application/x-www-form-urlencoded" },
-      success: function (res) {
-        console.log("用户登录返回的code:" + res.data.code)
-        app.globalData.isLoginCode = res.data.code
-        // if (!res.data.success) {
-        //   if (flag)
-        //     wx.redirectTo({ url: '../../pages/user/login' })
-        //   else
-        //     wx.navigateTo({ url: '../../pages/user/login' })
-        // }
-      },
-      fail: function (res) {
-        console.log("登录失败：" + res)
-      }
-    })
-  }, 300);
+    else if (applyMember == 2) {
+      alert('您的会员申请正在审核中，请耐心等待');
+      flag = true;
+    }
+  }
+  else {
+    wx.navigateTo({ url: '/pages/user/login' })
+    flag = true;
+  }
+  return flag;
 }
 
 // 校验手机号
@@ -111,11 +100,11 @@ function getLocation() {
  */
 function httpReq(url, data, method, success, fail) {
   // showLoading()
-  var mydata = data || {};
+  var params = data || {};
   if (isEmpty(method)) method = "POST";
   wx.request({
     url: app.globalData.server + url,
-    data: data,
+    data: params,
     method: method,
     header: { "content-type": "application/x-www-form-urlencoded" },
     success: success,
@@ -174,30 +163,7 @@ function alertToBack(message) {
     }
   })
 }
-// 公用跳转业务
-function loginAuthToLogin(code) {
-  // 登录
-  if (code == app.globalData.loginCode_1125 || code == app.globalData.loginCode_9999) {
-    wx.navigateTo({ url: '/pages/user/login' })
-    return true;
-  }
-  // 用户已冻结
-  else if (code == app.globalData.loginCode_1144) {
-    alert("该用户已冻结")
-    return true;
-  }
-  // 会员已冻结
-  else if (code == app.globalData.loginCode_1139) {
-    alert("该会员已冻结")
-    return true;
-  }
-  // 未认证会员
-  else if (code == app.globalData.loginCode_1147 || code == app.globalData.loginCode_1138) {
-    wx.navigateTo({ url: '/pages/user/auth' })
-    return true;
-  }
-  return false;
-}
+
 // 身份证校验
 function isCardNo(card) {
   var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
@@ -218,18 +184,157 @@ function getDateFormat(dayNum) {
   return y + "-" + m + "-" + d;
 }
 
-function encodeChar(data)
-{
-   return encodeURIComponent(data);
+function encodeChar(data) {
+  return encodeURIComponent(data);
 }
-function decodeChar(data)
-{
-    return decodeURI(data);
+function decodeChar(data) {
+  return decodeURI(data);
+}
+
+function setStorageSync(sessionId) {
+  try {
+    wx.setStorageSync(app.globalData.storageSessionId, sessionId)
+  } catch (e) {
+    alert("无法缓存您的回话状态，请检查手机存储空间")
+  }
+}
+
+function getStorageSync() {
+  var value = '';
+  try {
+    value = wx.getStorageSync(app.globalData.storageSessionId)
+  } catch (e) {
+    alert("获取回话状态有误，请检查手机存储空间")
+  }
+  return value;
+}
+
+function setLoginStatus(value) {
+  app.globalData.loginFlag = true;
+  app.globalData.sessionId = value;
+  // 用户身份认证信息
+  userIdentity();
+}
+
+// 用户身份认证信息
+function userIdentity() {
+  if (!app.globalData.loginFlag)
+    return;
+  httpReq("/user/userIdentity", { sessionId: app.globalData.sessionId }, "POST",
+    function (result) {
+      var data = result.data;
+      if (!data.success)
+        return;
+      var entity = data.entity;
+      if (entity == null)
+        return;
+      app.globalData.tradingEligibility = entity.tradingEligibility;
+      app.globalData.auctionQualification = entity.auctionQualification;
+      app.globalData.applyMember = entity.applyMember;
+    },
+    function (result) { });
+}
+
+// 根据粮食等级id获取粮食等级
+function levelStr(level) {
+  if (level == 1)
+    return '一等品';
+  else if (level == 2)
+    return '二等品';
+  else if (level == 3)
+    return '三等品';
+  else if (level == 4)
+    return '四等品';
+  else if (level == 5)
+    return '五等品';
+  return '未知';
+}
+
+//扩展Date的format方法   
+Date.prototype.format = function (format) {
+  var o = {
+    "M+": this.getMonth() + 1,
+    "d+": this.getDate(),
+    "h+": this.getHours(),
+    "m+": this.getMinutes(),
+    "s+": this.getSeconds(),
+    "q+": Math.floor((this.getMonth() + 3) / 3),
+    "S": this.getMilliseconds()
+  }
+  if (/(y+)/.test(format)) {
+    format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+  }
+  for (var k in o) {
+    if (new RegExp("(" + k + ")").test(format)) {
+      format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+    }
+  }
+  return format;
+}
+
+function getFormatDate(date, pattern) {
+  if (date == undefined) {
+    date = new Date();
+  }
+  if (pattern == undefined) {
+    pattern = "yyyy-MM-dd hh:mm:ss";
+  }
+  return date.format(pattern);
+}
+
+function getSmpFormatDateByLong(time, pattern) {
+  return getFormatDate(new Date(time), pattern);
+}
+
+// 拨打电话
+function makePhoneCall(phone) {
+  wx.makePhoneCall({ phoneNumber: phone })
+}
+
+// 打开文档
+function openDocument(key) {
+  showLoading();
+  wx.downloadFile({
+    url: app.globalData.server + '/file/public/read?type=2&key=' + key,
+    success: function (res) {
+      // wx.showToast({ title: '文档下载成功', icon: 'success', duration: 1500 })
+      var filePath = res.tempFilePath
+      wx.openDocument({
+        filePath: filePath,
+        success: function (res) {
+        },
+        fail: function (e) {
+          alert('该文档无法打开');
+          console.log(e)
+        },
+        complete: function () {
+          hideLoading();
+        }
+      })
+    },
+    fail: function (e) {
+      alert('下载文件失败');
+    },
+    complete: function () {
+      hideLoading();
+    }
+  })
+}
+
+// 获取图片
+function getImageInfo(key) {
+  var path = '';
+  wx.getImageInfo({
+    src: app.globalData.server + '/file/public/read?type=1&key=' + key,
+    success: function (res) {
+      path = res.path;
+    }
+  })
+  return path;
 }
 
 // 定义
 module.exports = {
-  loginAuth: loginAuth,
   checkMobile: checkMobile,
   isEmpty: isEmpty,
   alert: alert,
@@ -244,9 +349,18 @@ module.exports = {
   getNowFormatDate: getNowFormatDate,
   formatMoney: formatMoney,
   alertToBack: alertToBack,
-  loginAuthToLogin: loginAuthToLogin,
   isCardNo: isCardNo,
   getDateFormat: getDateFormat,
-  encodeChar:encodeChar,
-  decodeChar:decodeChar
+  encodeChar: encodeChar,
+  decodeChar: decodeChar,
+  setStorageSync: setStorageSync,
+  getStorageSync: getStorageSync,
+  setLoginStatus: setLoginStatus,
+  levelStr: levelStr,
+  getSmpFormatDateByLong: getSmpFormatDateByLong,
+  makePhoneCall: makePhoneCall,
+  openDocument: openDocument,
+  getImageInfo: getImageInfo,
+  toPageFlag: toPageFlag,
+  userIdentity: userIdentity
 }

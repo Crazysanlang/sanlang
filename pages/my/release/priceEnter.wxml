@@ -1,0 +1,27 @@
+
+<view class="title">价格类型</view>
+
+<view class='lx'>
+  <view>当前选择：</view>
+  <view>到库价</view>
+  <view class='arrow'></view>
+</view>
+<view class='priceEnter'>
+  <view>起标价格(元）</view>
+  <view> <input placeholder='若为空则视为不限价'></input> </view>
+</view>
+<view class='priceEnter'>
+  <view>减价幅度(元/次）</view>
+  <view> <input placeholder='每次减价只能是该数h或其倍数'></input> </view>
+</view>
+<view class='priceEnter'>
+  <view>最低限价(元/次）</view>
+  <view> <input placeholder='低于该价应价无效,为空则不限'></input> </view>
+</view>
+<view class='priceEnter'>
+  <view>保留价(元）</view>
+  <view> <input placeholder='全部应价低于该价则视为流标'></input> </view>
+</view>
+
+
+<view class='botBtn'>确定</view>

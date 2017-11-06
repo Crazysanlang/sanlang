@@ -1,0 +1,2 @@
+<textarea focus='true' maxlength='200' placeholder="请输入招标的其他要求或注意事项，不要超过200个汉字"></textarea>
+<view class='botBtn'>确定</view>

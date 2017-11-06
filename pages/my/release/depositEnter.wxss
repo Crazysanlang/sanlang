@@ -1,0 +1,44 @@
+.title{
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #333;
+  font-size: 30rpx;
+  padding-left: 40rpx;
+}
+.lx{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 40rpx;
+  margin-bottom: 20rpx;
+}
+.lx view{
+  color: #14bab4;
+  font-size: 32rpx;
+}
+.arrow{
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  transform: rotate(45deg);
+}
+
+
+.input{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  color: #14bab4;
+  font-size: 32rpx;
+  padding: 0 40rpx;
+}
+.input input{
+  color: #14bab4;
+  font-size: 32rpx;
+}

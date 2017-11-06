@@ -85,7 +85,7 @@
 <view class='list nowRun'>
   <view class='listTop'>
     <view>华东市场<text>招标</text> </view>
-    <view><text>00:00:00</text>后结束</view>
+    <view><text>10-13 10:12</text>结束</view>
   </view>
   <view class='listCont'>
     <view class='contL'>
@@ -249,6 +249,7 @@
 <view class='list finish'>
   <view class='listTop'>
     <view>华东市场<text>招标</text> </view>
+    <view><text>已结束</text>（待确认）</view>
   </view>
   <view class='listCont'>
     <view class='contL'>
@@ -275,6 +276,46 @@
         <view>ZB20180801012</view>
         <view>5200次围观</view>
         <view>3人领先</view>
+      </view>
+    </view>
+    <view class='contR'>
+      <view class='bid'>
+        <view><image src='/images/other/finish.png' style='width:63rpx;height:65rpx;'></image> </view>
+        <view>招标结束</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='list finish'>
+  <view class='listTop'>
+    <view>华东市场<text>招标</text> </view>
+    <view><text>已结束</text>（已成交）</view>
+  </view>
+  <view class='listCont'>
+    <view class='contL'>
+      <view class='attribute'>
+        <view>2016</view>
+        <view>二级</view>
+        <view>早籼稻</view>
+        <view>长两优39</view>
+        <view>江西潘阳</view>
+      </view>
+      <view class='number'>
+        <view>14.4</view>
+        <view>0.2</view>
+        <view class='weight'>1200</view>
+        <view class='price'>2900</view>
+      </view>
+      <view class='unit'>
+        <view>水份（%）</view>
+        <view>杂质（%）</view>
+        <view>重量（吨）</view>
+        <view>最新价（元/吨）</view>
+      </view>
+      <view class='botnum'>
+        <view>ZB20180801012</view>
+        <view>5200次围观</view>
+        <view>3人成交</view>
       </view>
     </view>
     <view class='contR'>
@@ -313,6 +354,7 @@
       <view class='botnum'>
         <view>ZB20180801012</view>
         <view>5200次围观</view>
+        <view>0次报名</view>
       </view>
     </view>
     <view class='contR'>

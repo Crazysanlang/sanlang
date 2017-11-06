@@ -1,0 +1,27 @@
+<view class='weightEnter'>
+  <view>招标数量(吨）</view>
+  <view> <input placeholder='请输入招标的具体数量'></input> </view>
+</view>
+<view class='weightEnter'>
+  <view>起标数量(吨）</view>
+  <view> <input placeholder='为空表示必须应标全量'></input> </view>
+</view>
+<view class='weightEnter'>
+  <view>调量幅度(吨/次)</view>
+  <view> <input placeholder='每次调量只能是该数或其倍数'></input> </view>
+</view>
+<view class='weightEnter'>
+  <view>最高限量(吨)</view>
+  <view> <input placeholder='应标量超过该量无效，为空则不限'></input> </view>
+</view>
+<view class='weightEnter'>
+  <view>保留量(吨)</view>
+  <view> <input placeholder='总应标量小于该量则视为流标处理'></input> </view>
+</view>
+<view class='isCL'>
+  <view>是否允许应标者拆量</view>  
+  <view>
+    <switch checked color='#14bab4'/>
+</view>
+</view> 
+<view class='botBtn'>确定</view>

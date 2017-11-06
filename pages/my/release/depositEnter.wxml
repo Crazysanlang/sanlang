@@ -1,0 +1,11 @@
+
+<view class="title">缴纳方式选择</view>
+
+<view class='lx'>
+  <view>当前选择：</view>
+  <view>固定金额</view>
+  <view class='arrow'></view>
+</view>
+
+<view class="title">缴纳金额(元）</view>
+<view class='input'><input></input> </view>

@@ -1,0 +1,43 @@
+
+<!-- 按应标重量 -->
+<view class='ybzl'>
+  <view class='yb'>
+    <view>应标重量（吨）</view>
+    <view><input placeholder='请输入您要应标的重量' value='请输入您要应标的重量'></input></view>
+  </view>
+  <view class='yb'>
+    <view>应缴纳保证金(30元/吨计算)</view>
+    <view><text>300,000</text>元</view>
+  </view>
+</view>
+
+<view class='ybzl'>
+  <view class='notice'>请注意：保证金按您 <text>应标重量计算（30元/吨）</text> 缴纳且在
+  您应价的时候实时冻结。</view>
+  <view class='money'>
+    <view>平台账户余额 ：</view>
+    <view> <text>312,122,000.000</text>元</view>
+  </view>
+</view>
+
+
+
+
+<view class='text'>
+  <view>
+    本次招标将根据您的应标重量实时冻结您平台账户中的余额，若账户余额不足将影响您的应价，请提前做好汇款准备。
+  </view>
+  <view>(1)若汇入的银行支持实时入金，一般会在1小时内到账。</view>
+  <view>(2)若汇入的银行不支持实时入金，需要使用“账户-资金转入”功能录入汇款信息，再经平台人工核对后方可到账，一般为1个工作日。</view>
+  <view>查看平台账户</view>
+</view>
+
+
+<view class='xy'>
+  <icon type='success' color='#14bab4' size='18'></icon>
+  <view>招标需先同意本平台的招标协议。</view>
+  <view>查看协议</view>
+</view>
+
+
+<view class='botBtn'>报名，交保证金</view>

@@ -1,0 +1,131 @@
+<!-- 商品信息 -->
+
+<view class='outerView'>
+  <view class='viewLeft'>
+    <view class='mlTxt'>请填写粮食所需规格</view>
+    <view class='attribute'>
+      <view>水分：<text>-</text></view>
+      <view>杂质：<text>-</text></view>
+      <view>不完善率：<text>-</text></view>
+    </view>
+    <view class='attribute'>
+      <view>容重：<text>-</text></view>
+      <view>霉变率：<text>-</text></view>
+      <view>色泽气味：<text>-</text></view>
+    </view>
+  </view>
+  <view class='rightArrow'>
+    <view class='arrow'></view>
+  </view>
+</view>
+
+
+<view class='title'>设置招标价格</view>
+
+<!-- 设置招标价格 -->
+
+<view class='outerView'>
+  <view class='viewLeft'>
+    <view class='leftTxt'>
+      <view>到库价： <text>1000</text>元/吨</view>
+      <view>保留价： <text>1200</text>元/吨</view>
+    </view>
+    <view class='leftTxt'>
+      <view>调价幅度： <text>10</text>元/吨</view>
+      <view>最低限价： <text>500</text>元/吨</view>
+    </view>
+  </view>
+  <view class='rightArrow'>
+    <view class='arrow'></view>
+  </view>
+</view>
+
+<view class='title'>设置招标数量</view>
+
+<!-- 设置招标数量 -->
+
+<view class='outerView'>
+  <view class='viewLeft'>
+    <view class='leftTxt'>
+      <view>招标数量： <text>1000</text>元/吨</view>
+      <view>起标数量： <text>1200</text>元/吨</view>
+    </view>
+    <view class='leftTxt'>
+      <view>加量幅度： <text>10</text>元/吨</view>
+      <view>最高限量： <text>500</text>元/吨</view>
+    </view>
+    <view class='leftTxt'>
+      <view>保留量： <text>700</text>元/吨</view>
+    </view>
+  </view>
+  <view class='rightArrow'>
+    <view class='arrow'></view>
+  </view>
+</view>
+
+
+<view class='title'>选择保证金方式</view>
+
+<!-- 选择保证金方式 -->
+
+<view class='outerView'>
+  <view class='viewLeft'>
+    <view class='leftTxt'>
+      <view>固定金额(元）</view>
+      <view><text>1200</text></view>
+    </view>
+  </view>
+  <view class='rightArrow'>
+    <view class='arrow'></view>
+  </view>
+</view>
+
+<view class='title'>设置时间</view>
+
+<!-- 设置时间 -->
+
+<view class='outerView'>
+  <view class='viewLeft'>
+    <view class='leftTxt'>
+      <view>开始时间：<text>2017-10-23-10:00</text></view>
+    </view>
+    <view class='leftTxt'>
+      <view>结束时间：<text>2017-10-23-11:00</text></view>
+    </view>
+  </view>
+  <view class='rightArrow'>
+    <view class='arrow'></view>
+  </view>
+</view>
+
+<view class='title'>交货设置</view>
+
+<!-- 交货设置 -->
+
+<view class='outerView'>
+  <view class='viewLeft'>
+    <view class='leftTxt'>
+      <view>交货地：<text>江西潘阳</text></view>
+      <view>最晚交货：<text>2017-10-23</text></view>
+    </view>
+    <view class='leftTxt'>
+      <view>交货仓库：<text>江西潘阳国家粮食储备库</text></view>
+    </view>
+  </view>
+  <view class='rightArrow'>
+    <view class='arrow'></view>
+  </view>
+</view>
+<view class='outerView' style='margin:20px auto;margin-bottom:100rpx;'>
+  <view class='viewLeft'>
+    <view>特别说明：现款结算,如果z招标量低于800吨,将不做成交处理</view>
+  </view>
+  <view class='rightArrow'>
+    <view class='arrow'></view>
+  </view>
+</view>
+
+
+<!-- 底部按钮 -->
+
+<view class='botBtn'>发布资源</view>

@@ -1,0 +1,228 @@
+page{
+  background-color: #dedede;
+  padding-bottom: 100rpx;
+}
+
+.time{
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #eb344f;
+  padding: 0 22rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.time view{
+  color: #fff;
+}
+.time view:first-child{
+  font-size:28rpx;
+}
+.time view:last-child{
+  font-size:38rpx;
+}
+.time .mid{
+  font-size: 16rpx;
+}
+.time .mid text{
+  font-size: 40rpx;
+  vertical-align: middle;
+}
+
+
+
+/* 产品信息 */
+.goodsMsg{
+  padding: 0 40rpx;
+  background-color: #fff;
+  border-bottom:1px dashed #dedede;
+}
+.goodsMsg .goodName{
+  height: 66rpx;
+  line-height: 66rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+.goodsMsg .msg{
+  display: flex;
+  justify-content: space-between;
+}
+.goodsMsg .msg .ml{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 152rpx;
+}
+.goodsMsg .msg .ml .SX{
+  display: flex;
+  justify-content: flex-start;
+}
+.goodsMsg .msg .ml .SX view{
+  font-size: 24rpx;
+  color: #999;
+}
+.goodsMsg .msg .ml .SX view:first-child{
+  margin-right: 30rpx;
+}
+.goodsMsg .msg .ml .SX view text{
+  color: #333;
+  font-size: 26rpx;
+}
+.goodsMsg .msg .ml .weight{
+  font-size: 22rpx;
+  color: #999;
+  align-self: flex-end;
+}
+.goodsMsg .msg .ml .weight .weightNum{
+  font-size: 36rpx;
+}
+/* 重量 */
+/* 正在进行 */
+.goodsMsg.nowRun .msg .ml .weight .weightNum{
+  color: #eb344f;
+}
+/* 未开始 */
+.goodsMsg.noStart .msg .ml .weight .weightNum{
+  color: #14bab4;
+}
+
+.goodsMsg .msg .ml .weight .qb{
+  font-size: 20rpx;
+  color: #000;
+}
+.goodsMsg .msg .mr{
+  text-align: right;
+  width: 30%;
+}
+.goodsMsg .msg .mr view:first-child{
+  color: #666;
+}
+.goodsMsg .msg .mr view{
+  font-size:20rpx;
+  color: #999;
+}
+.goodsMsg .msg .mr .price text{
+  font-size: 44rpx;
+  font-family: "Arial"
+}
+/* 价格 */
+/* 正在进行 */
+.goodsMsg.nowRun .msg .mr .price text{
+  color: #eb344f;
+}
+/* 未开始 */
+.goodsMsg.noStart .msg .mr .price text{
+  color: #14bab4;
+}
+
+
+.PW{
+  background-color: #fff;
+  position: relative;
+  padding-top: 46rpx;
+}
+.PW view{
+  text-align: center;
+}
+.PW view:first-child{
+  font-size: 30rpx;
+  color: #333;
+}
+.PW view:first-child{
+  font-size: 30rpx;
+  color: #333;
+}
+.PW .weight{
+  font-size: 70rpx;
+  color: #eb344f;
+  font-weight: bold;
+}
+/* 
+.PW view:last-child{
+  font-size: 26rpx;
+} */
+
+.PW .minus,.PW .plus{
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #dedede;
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.PW .minus text,.PW .plus text{
+  font-size: 34rpx;
+}
+.PW .minus{
+  position: absolute;
+  left: 125rpx;
+  top: 116rpx;
+}
+.PW .plus{
+  position: absolute;
+  right: 125rpx;
+  top: 116rpx;
+}
+
+.deposRule{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 23rpx;
+  background-color: #fff;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  margin-bottom: 30rpx;
+}
+.deposRule view:first-child{
+  width: 15%;
+}
+
+
+
+
+.record{
+  background-color: #fff;
+  padding: 0 23rpx;
+  padding-bottom: 10rpx;
+}
+
+.record .rTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95rpx;
+  line-height: 95rpx;
+}
+.record .rTop view:first-child{
+  font-size: 28rpx;
+  color: #333;
+}
+.record .rTop view:last-child{
+  font-size: 24rpx;
+  color: #999;
+}
+.recordList{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  line-height: 30px;
+}
+.recordList view{
+  color: #eb344f;
+}
+
+.botBtn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #eb344f;
+}

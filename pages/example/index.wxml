@@ -28,4 +28,6 @@
     <view class="page__ft">
         <image src="images/icon_footer.png" style="width: 84px; height: 19px;"></image>
     </view>
+
+    <view><input value='特别声明' style='border:1px solid red;background-color:#fff;'></input> </view>
 </view>
