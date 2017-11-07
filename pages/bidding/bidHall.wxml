@@ -2,7 +2,7 @@
 
 <view class='time'>
   <view>正在进行</view>
-  <view class='mid'>距结束还有 <text>00：00:00</text></view>
+  <view class='mid'>距结束还有 <text>00：00：00</text></view>
   <view>华东市场</view>
 </view>
 

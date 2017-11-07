@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/bidding/bidHall",
+    "pages/my/release/msgEnter",
     "pages/my/release/release",
     "pages/my/release/area",
-    "pages/bidding/bidHall",
     "pages/bidding/deposit",
     "pages/my/release/explain",
     "pages/my/release/depositEnter",
     "pages/my/release/weightEnter",
     "pages/my/release/priceEnter",
-    "pages/my/release/msgEnter",
     "pages/example/index",
     "pages/bidding/detail",
     "pages/index/index",

@@ -10,6 +10,7 @@ page{
   padding: 0 22rpx;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .time view{
   color: #fff;
@@ -146,11 +147,13 @@ page{
   height: 60rpx;
   line-height: 60rpx;
   text-align: center;
-  background-color: #dedede;
-  color: #333;
+  /* background-color: #dedede; */
+  color: #eb344f;
   font-size: 30rpx;
   font-weight: bold;
   border-radius: 3px;
+  border: 1px solid #eb344f;
+
 }
 .PW .minus text,.PW .plus text{
   font-size: 34rpx;
