@@ -1,24 +1,33 @@
 
 
 <view class='topView'>
-  <view class='comView' style='border-bottom:1px solid #f5f5f5'>
+  <view class='comView' style='border-bottom:1px solid #f5f5f5' >
     <view class='left'>品种</view>
-    <view class='mid'>早籼稻Y两优9918</view>
-    <view class='arrow'></view>
+    <picker mode="multiSelector" bindchange="breedChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{breedArray}}" range-key="{{'cottonTypeName'}}">
+      <view class="picker">{{breedPlaceholder}}{{breedValue}} {{breedValue1}}</view>
+    </picker>
+    <view class='arrow'></view>     
   </view>
-  <view class='comView'>
+
+  <view class='comView'  style='border-bottom:1px solid #f5f5f5' >
     <view class='left'>等级</view>
-    <view class='mid'>一等品</view>
-    <view class='arrow'></view>
+      <picker mode="selector" range-key="name" value="{{gradeIndex}}" range="{{gradeArray}}" bindchange="gradeChange">
+      <view class="picker">{{gradePlaceholder}}{{gradeArray[gradeIndex]['name']}}    
+      </view>
+    </picker>
+       <view class='arrow'></view>
   </view>
 </view> 
 
 
 <view class='attribute'>
-  <view class='comView'>
+  <view class='comView'  style='border-bottom:1px solid #f5f5f5'>
     <view class='left'>年份</view>
-    <view class='mid'>2017</view>
-    <view class='arrow'></view>
+    <picker mode="selector" range-key="name" value="{{yearIndex}}" range="{{yearArray}}" bindchange="yearChange">
+      <view class="picker">{{yearPlaceholder}}{{yearArray[yearIndex]['name']}}           
+      </view>       
+    </picker>
+     <view class='arrow'></view>
   </view>
   <view class='comView'>
     <view class='left'>产地</view>
@@ -27,23 +36,23 @@
   </view>
   <view class='comView'>
     <view class='left'>杂质(%)</view>
-    <view class='mid txtInput'> <input placeholder='请输入含杂量'></input></view>
+    <view class='mid txtInput'> <input type="number" bindblur='impurit' placeholder='0~5'></input></view>
   </view>
   <view class='comView'>
     <view class='left'>不完善率(%)</view>
-    <view class='mid txtInput'> <input placeholder='请输入不完善率'></input></view>
+    <view class='mid txtInput'> <input type="number" bindblur='water' placeholder='0~5'></input></view>
   </view>
   <view class='comView'>
     <view class='left'>霉变率(%)</view>
-    <view class='mid txtInput'> <input placeholder='请输入霉变率'></input></view>
+    <view class='mid txtInput'> <input type="number" bindblur='decay' placeholder='请输入霉变率'></input></view>
   </view>
   <view class='comView'>
     <view class='left'>容重(g/L)</view>
-    <view class='mid txtInput'> <input placeholder='请输入容重'></input></view>
+    <view class='mid txtInput'> <input type="number" bindblur='weight' placeholder='请输入容重'></input></view>
   </view>
   <view class='comView'>
     <view class='left'>色泽气味 </view>
-    <view class='mid txtInput'> <input placeholder='正常/有霉味'></input></view>
+    <view class='mid txtInput'> <input type="text"  placeholder='正常/有霉味'></input></view>
   </view>
 </view>
 
@@ -93,4 +102,4 @@
   </view>
 </view>
 
-<view class='botBtn'>保存</view>
+<view class='botBtn' bindtap='toBlack'>保存</view>

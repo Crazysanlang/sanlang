@@ -1,16 +1,17 @@
+
 <!-- 顶部筛选条件 -->
 <view class="filtrate">
   <view class="nav">
     <view class="navTable {{shownavindex == 1? 'active' : ''}}" bindtap="bindnavTable" data-nav="1">
-      <view class="navTxt">交货地</view>
+      <view class="navTxt">类型</view>
       <view class="arrows"></view>
     </view>
     <view class="navTable {{shownavindex == 2? 'active' : ''}}" bindtap="bindnavTable" data-nav="2">
-      <view class="navTxt">品种</view>
+      <view class="navTxt">交货地</view>
       <view class="arrows"></view>
     </view>
     <view class="navTable {{shownavindex == 3? 'active' : ''}}" bindtap="bindnavTable" data-nav="3">
-      <view class="navTxt">等级</view>
+      <view class="navTxt">品种</view>
       <view class="arrows"></view>
     </view>
     <view class="navTable {{shownavindex == 4? 'active' : ''}}" bindtap="bindnavTable" data-nav="4">
@@ -41,7 +42,7 @@
 <!-- 列表 -->
 <view class='list nowRun'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
+    <view>华东市场<text>竞拍</text> </view>
     <view><text>00:00:00</text>后结束</view>
   </view>
   <view class='listCont'>
@@ -67,10 +68,7 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-         <view><image src='/images/other/redHand.png' style='width:34rpx;height:36rpx;'></image> </view>
-        <view>立即出价</view> 
-        <!-- <view><image src='/images/other/baoming.png' style='width:56rpx;height:38rpx;'></image> </view>
-        <view>我要报名</view> -->
+        <view class='pic red'><image src='/images/other/nowRun.png'></image> <view>我要报名</view> </view>
       </view>
       <view class='remind'> <image src='/images/other/remind.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
     </view>
@@ -78,7 +76,7 @@
 </view>
 <view class='list nowRun'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
+    <view>华东市场<text>竞拍</text> </view>
     <view><text>10-13 10:12</text>结束</view>
   </view>
   <view class='listCont'>
@@ -104,8 +102,7 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-        <view><image src='/images/other/baoming.png' style='width:56rpx;height:38rpx;'></image> </view>
-        <view>我要报名</view>
+        <view class='pic red'><image src='/images/other/nowRun.png'></image> <view>立即出价</view> </view>
       </view>
       <view class='remind'> <image src='/images/other/remind.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
     </view>
@@ -113,7 +110,7 @@
 </view>
 <view class='list noStart'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
+    <view>华东市场<text>竞拍</text> </view>
     <view><text>00:00:00</text>后结束</view>
   </view>
   <view class='listCont'>
@@ -139,8 +136,7 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-        <view><image src='/images/other/baoming-green.png' style='width:56rpx;height:38rpx;'></image> </view>
-        <view>我要报名</view>
+        <view class='pic green'><image src='/images/other/noStart1.png'></image> <view>我要报名</view> </view>
       </view>
       <view class='remind'> <image src='/images/other/remind-green.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
     </view>
@@ -148,7 +144,7 @@
 </view>
 <view class='list noStart'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
+    <view>华东市场<text>竞拍</text> </view>
     <view><text>11月5号 10:00 开始</text></view>
   </view>
   <view class='listCont'>
@@ -174,8 +170,7 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-        <view><image src='/images/other/baoming-green-after.png' style='width:43rpx;height:38rpx;'></image> </view>
-        <view>已经报名</view>
+        <view class='pic green'><image src='/images/other/noStart2.png'></image> <view>已经报名</view> </view>
       </view>
       <view class='remind'> <image src='/images/other/remind-green.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
     </view>
@@ -183,7 +178,7 @@
 </view>
 <view class='list noStart'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
+    <view>华东市场<text>竞拍</text> </view>
     <view><text>00:00:00</text>后结束</view>
   </view>
   <view class='listCont'>
@@ -209,8 +204,7 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-        <view><image src='/images/other/baoming-green-after.png' style='width:43rpx;height:38rpx;'></image> </view>
-        <view>已经报名</view>
+        <view class='pic green'><image src='/images/other/noStart2.png'></image> <view>已经报名</view> </view>
       </view>
       <view class='remind'> <image src='/images/other/remind-green.png' style='width:24rpx;height:24rpx;margin-right:3px;margin-top:-3px;'></image> 设置提醒</view>
     </view>
@@ -218,8 +212,8 @@
 </view>
 <view class='list finish'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
-    <view><text>已结束</text>（待确认）</view>
+    <view>华东市场<text>竞拍</text> </view>
+    <view><text>已成交</text></view>
   </view>
   <view class='listCont'>
     <view class='contL'>
@@ -244,16 +238,15 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-        <view><image src='/images/other/finish.png' style='width:63rpx;height:65rpx;'></image> </view>
-        <view>招标结束</view>
+        <view class='pic gray'><image src='/images/other/over.png'></image><view>竞拍结束</view> </view>
       </view>
     </view>
   </view>
 </view>
 <view class='list finish'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
-    <view><text>已结束</text>（已成交）</view>
+    <view>华东市场<text>竞拍</text> </view>
+    <view><text>已成交</text></view>
   </view>
   <view class='listCont'>
     <view class='contL'>
@@ -278,15 +271,14 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-        <view><image src='/images/other/finish.png' style='width:63rpx;height:65rpx;'></image> </view>
-        <view>招标结束</view>
+        <view class='pic gray'><image src='/images/other/over.png'></image><view>竞拍结束</view> </view>
       </view>
     </view>
   </view>
 </view>
 <view class='list finish finish-flow'>
   <view class='listTop'>
-    <view>华东市场<text>招标</text> </view>
+    <view>华东市场<text>竞拍</text> </view>
   </view>
   <view class='listCont'>
     <view class='contL'>
@@ -311,8 +303,7 @@
     </view>
     <view class='contR'>
       <view class='bid'>
-        <view><image src='/images/other/finish-flow.png' style='width:65rpx;height:65rpx;'></image> </view>
-        <view>已流标</view>
+        <view class='pic gray'><image src='/images/other/over.png'></image><view>已经流拍</view></view>
       </view>
     </view>
   </view>

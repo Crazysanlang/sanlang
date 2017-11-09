@@ -1,8 +1,13 @@
 <!-- 商品信息 -->
 
-<view class='outerView'>
-  <view class='viewLeft' style='width:88%'>
-    <view class='mlTxt'>请填写粮食所需规格</view>
+
+<view class='outerView' bindtap='toMsgEnter'>
+  <view class='viewLeft'>
+    <view class='mlTxt'>
+    {{trdListBean.cottonYear!=undefined ? trdListBean.cottonYear : '请填写粮食所需规格'}}
+    {{trdListBean.gradeValue!=undefined ? trdListBean.gradeValue : ''}}
+    {{trdListBean.breedValue!=undefined ? trdListBean.breedValue : ''}}
+    </view>
     <view class='attribute'>
       <view>水分：<text>-</text></view>
       <view>杂质：<text>-</text></view>
@@ -24,7 +29,7 @@
 
 <!-- 设置招标价格 -->
 
-<view class='outerView'>
+<view class='outerView' bindtap='toPriceEnter'>
   <view class='viewLeft'>
     <view class='leftTxt'>
       <view>到库价： <text>1000</text>元/吨</view>
@@ -44,7 +49,7 @@
 
 <!-- 设置招标数量 -->
 
-<view class='outerView'>
+<view class='outerView' bindtap='toWeightEnter'>
   <view class='viewLeft'>
     <view class='leftTxt'>
       <view>招标数量： <text>1000</text>元/吨</view>
@@ -68,7 +73,7 @@
 
 <!-- 选择保证金方式 -->
 
-<view class='outerView'>
+<view class='outerView' bindtap='toDepositEnter	'>
   <view class='viewLeft'>
     <view class='leftTxt'>
       <view>固定金额(元）</view>

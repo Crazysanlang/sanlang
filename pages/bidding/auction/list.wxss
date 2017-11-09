@@ -1,16 +1,16 @@
 
 @import "/pages/style/listStyle.wxss";
 
-
+/* 列表右侧状态样式 */
 .list .listCont .contR{
-  width: 20%;
+  width: 23%;
 }
 .listCont .contR .bid{
   font-size: 24rpx;
-  margin-top: 46rpx;
-  margin-bottom: 44rpx;
+   margin-top: 46rpx; 
+   margin-bottom: 34rpx; 
   text-align: center;
-  border-left: 1px solid #d5d5d5;
+  /* border-left: 1px solid #d5d5d5; */
 }
 .listCont .contR .bid view:last-child{
   margin-top: 8px;
@@ -77,4 +77,32 @@
 /* 已结束-流标 */
 .finish.finish-flow .listCont .contR .bid{
   color: #999;
+}
+
+
+.bid{
+  position: relative;
+  
+}
+.bid image{
+  width: 150rpx;
+  height: 100rpx;
+}
+.pic{
+  position: relative;
+}
+.pic view{
+  position: absolute;
+   top: 2%; 
+   left: 22%; 
+  font-size: 24rpx;
+}
+.pic.red view{
+  color: #eb344f;  
+}
+.pic.green view{
+  color: #14bab4;  
+}
+.pic.gray view{
+  color: #666; 
 }

@@ -1,0 +1,309 @@
+page{
+  background-color: #dedede;
+}
+image{
+  margin-right: 5px;
+}
+/* 产品图片样式 */
+.topPic{
+  width: 100%;
+  height: 440rpx;
+  overflow: hidden;
+  position: relative;
+}
+.topPic image{
+  width: 100%;
+  height: 100%;
+}
+.topPic .suspend{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding:0 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  
+}
+/* 正在进行 */
+.topPic .suspend.nowRun{
+  background-color: #eb344f;
+}
+/* 未开始 */
+.topPic .suspend.noStart{
+  background-color: #14bab4;
+}
+/* 已结束 */
+.topPic .suspend.over{
+  background-color: #666666;
+}
+
+
+.topPic .suspend view:first-child{
+  font-size: 38rpx;
+  color: #fff;
+}
+.topPic .suspend view:last-child{
+  font-size: 16rpx;
+  color: #fff;
+}
+.topPic .suspend view:last-child text{
+  font-size: 40rpx;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+/* 已结束 */
+.topPic .suspend.over view:last-child text{
+  font-size: 28rpx;
+}
+/* 产品信息 */
+.goodsMsg{
+  padding: 0 40rpx;
+  background-color: #fff;
+  margin-bottom: 8rpx;
+}
+.goodsMsg .goodName{
+  height: 66rpx;
+  line-height: 66rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+.goodsMsg .msg{
+  display: flex;
+  justify-content: space-between;
+}
+.goodsMsg .msg .ml{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 152rpx;
+}
+.goodsMsg .msg .ml .SX{
+  display: flex;
+  justify-content: flex-start;
+}
+.goodsMsg .msg .ml .SX view{
+  font-size: 24rpx;
+  color: #999;
+}
+.goodsMsg .msg .ml .SX view:first-child{
+  margin-right: 30rpx;
+}
+.goodsMsg .msg .ml .SX view text{
+  color: #333;
+  font-size: 26rpx;
+}
+.goodsMsg .msg .ml .weight{
+  font-size: 22rpx;
+  color: #999;
+  align-self: flex-end;
+}
+.goodsMsg .msg .ml .weight .weightNum{
+  font-size: 36rpx;
+}
+/* 重量 */
+/* 正在进行 */
+.goodsMsg.nowRun .msg .ml .weight .weightNum{
+  color: #eb344f;
+}
+/* 未开始 */
+.goodsMsg.noStart .msg .ml .weight .weightNum{
+  color: #14bab4;
+}
+/* 已结束 */
+.goodsMsg.over .msg .ml .weight .weightNum{
+  color: #666;
+}
+.goodsMsg .msg .ml .weight .qb{
+  font-size: 20rpx;
+  color: #000;
+}
+.goodsMsg .msg .mr{
+  text-align: right;
+  width: 30%;
+}
+.goodsMsg .msg .mr view:first-child{
+  color: #666;
+}
+.goodsMsg .msg .mr view{
+  font-size:20rpx;
+  color: #999;
+}
+.goodsMsg .msg .mr .price text{
+  font-size: 44rpx;
+  font-family: "Arial"
+}
+/* 价格 */
+/* 正在进行 */
+.goodsMsg.nowRun .msg .mr .price text{
+  color: #eb344f;
+}
+/* 未开始 */
+.goodsMsg.noStart .msg .mr .price text{
+  color: #14bab4;
+}
+/* 已结束 */
+.goodsMsg.over .msg .mr .price text{
+  color: #666;
+}
+.goodsMsg .msgBot{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goodsMsg .msgBot view image{
+  margin-top: -2px;
+}
+.bidRecord{
+  background-color: #fff;
+  padding-bottom: 20rpx;
+  margin-bottom: 8rpx;
+}
+.bidRecord .rTop{
+  height:80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.bidRecord .rTop view:first-child{
+  font-size: 24rpx;
+  color: #666;
+}
+.bidRecord .rTop view:first-child image{
+  margin-right: 5px;
+}
+.bidRecord .rTop view:first-child text{
+  display: inline-block;
+  height: 28rpx;
+  width: 1px;
+  background-color: #666;
+  margin: 0 20rpx;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+.bidRecord .rTop view:last-child{
+  color: #999;
+}
+
+.bidRecord .recordList{
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.bidRecord .recordList.lead{
+  color: #eb344f;
+}
+
+
+
+/* 交易属性、 */
+.JY{
+  background-color: #fff;
+  padding: 10rpx 40rpx;
+  margin-bottom: 8rpx;
+}
+.JY .JYCont{
+  display: flex;
+  justify-content: flex-start;
+  height: 30px;
+  line-height: 30px;
+}
+.JY .JYCont view{
+   width: 50%; 
+  color: #999;
+  font-size: 24rpx;
+}
+.JY view{
+  color: #999;
+  font-size: 24rpx;
+}
+
+
+
+/* 仓库 */
+
+.wareHouse{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 136rpx;
+  padding: 30rpx 40rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 8rpx;
+}
+.wareHouse .WL{
+  display: flex;
+  justify-content: flex-start;
+}
+/* .wareHouse .WL .wareTxt{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+} */
+.wareHouse .WR{
+  color: #c9c9c9;
+  font-size: 26rpx;
+}
+.wareHouse .WR image{
+  margin-left: 20rpx;
+}
+
+
+/* 买方信息 */
+
+.buyComp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 160rpx;
+  padding: 30rpx 40rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 8rpx;
+}
+.buyComp .BL{
+  display: flex;
+  justify-content: flex-start;
+}
+.buyComp .BL .BLPic{
+  /* width: 80rpx; */
+  /* height:90rpx; */
+  /* line-height: 90rpx; */
+  display: flex;
+  align-items: center;
+}
+.buyComp .BL .compName{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+.buyComp .BL .compName view{
+  width: 100%;
+}
+.buyComp .BL .credit{
+  line-height: 24rpx;
+}
+.buyComp .BL .credit text{
+  color: #999;
+  font-size: 20rpx;
+  display:inline-block;
+  margin-right: 25rpx; 
+}
+.buyComp .BR{
+  color: #c9c9c9;
+  font-size: 26rpx;
+  width: 40%;
+  text-align: right;
+}
+.buyComp .BR image{
+  margin-left: 20rpx;
+}
+

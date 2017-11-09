@@ -20,6 +20,8 @@ App({
     isWxLoginComplete: false,
     latitude: 0,
     longitude: 0,
+    trdlist:{},
+    trdListBean:{}, //数据回填
     userInfo: {},
     isLoginCode: 9999,
     loginCode_9999:9999,  // 登录

@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/bidding/auction/detail",
+    "pages/bidding/auction/list",
     "pages/bidding/bidHall",
     "pages/my/release/msgEnter",
     "pages/my/release/release",
@@ -14,7 +16,7 @@
     "pages/index/index",
     "pages/bidding/list",
     "pages/bidding/apply",
-    
+
     "pages/index/orderIndex",
 
 
